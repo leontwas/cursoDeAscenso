@@ -99,7 +99,7 @@ body {
       background-size: cover;
   }
   .bungee-regularspice- {
-    font-size: 1.6rem; /* Ajusta el tamaño del texto del título para pantallas tablets*/
+    font-size: 1.5rem; /* Ajusta el tamaño del texto del título para pantallas tablets*/
   }
   .btn-custom, .btn-warning {
     font-size: 1rem; /* Ajusta el tamaño del texto para pantallas tablets */
