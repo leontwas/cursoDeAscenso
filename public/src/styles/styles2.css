@@ -76,7 +76,7 @@ body {
 @media only screen and (min-width: 651px) and (max-width: 850px) {
   body {
       position: relative;
-      margin-top: 100px;
+      margin-top: 50px;
   }
   
   body::before {
