@@ -93,6 +93,8 @@ body {
 
 #question-container {
   margin-bottom: 20px;
+  left: 10px;
+  right: 10px;
   text-align: justify;
 }
 
