@@ -27,7 +27,7 @@ body {
 }
 
 .btn-custom, .btn-warning {
-  width: 200%; /* Asegura que los botones ocupen el ancho completo del contenedor */
+  width: 100%; /* Asegura que los botones ocupen el ancho completo del contenedor */
   margin: 5px 0; /* Reduce el espacio entre los botones */
   height: 100px; /* Establece una altura fija para los botones */
   padding: 10px; /* Agrega un relleno para un mejor aspecto */
