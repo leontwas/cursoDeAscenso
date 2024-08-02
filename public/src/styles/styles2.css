@@ -12,6 +12,26 @@ body {
   overflow: auto; /* Permite el scroll si el contenido es mayor que la pantalla */
 }
 
+.btn-abandonar {
+  background-color: rgb(199, 6, 6);
+  border-radius: 8%;
+  color: white;
+  margin-top: 550px;
+  position:absolute;
+  flex-direction: column;
+  font-size: 1.7vw; /* Ajusta el tamaño del texto como desees */
+}
+
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4CAF50; /* Color verde para la notificación */
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
 .container {
   width: 90%;
   max-width: 600px;
@@ -61,6 +81,35 @@ body {
 .btn-14 { background-color: #0ab237; }
 .btn-15 { background-color: #f1ae27; }
 .btn-16 { background-color: #9f6e24; }
+
+#quiz-container {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#question-container {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.option-button {
+  display: block;
+  width: 100%;
+  min-height: 50px;
+  margin-bottom: 20px;
+  font-size: 1.15vw;
+  text-align: justify;
+  border: none;
+  border-radius: 5px;
+  background-color: #0056b3;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
 /*************************************** Notebooks ******************************************/
 @media only screen and (min-width: 851px) {
