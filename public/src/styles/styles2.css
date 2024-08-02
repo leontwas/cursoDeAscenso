@@ -93,8 +93,6 @@ body {
 
 #question-container {
   margin-bottom: 20px;
-  left: 10px;
-  right: 10px;
   text-align: justify;
 }
 
@@ -102,8 +100,7 @@ body {
   display: block;
   width: 100%;
   min-height: 50px;
-  margin-bottom: 20px;
-  font-size: 4vw;
+  margin: 20px;
   text-align: justify;
   border: none;
   border-radius: 5px;
@@ -161,5 +158,8 @@ body {
   .btn-custom, .btn-warning {
     font-size: 1.45rem; /* Ajusta el tamaño del texto del menú para pantallas Celulares */
     height: 70px; /* Ajusta la altura de los botones para pantallas Celulares */
+  }
+  .option-button {
+  font-size: 4vw;
   }
 }
