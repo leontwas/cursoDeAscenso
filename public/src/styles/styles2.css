@@ -65,7 +65,7 @@ body {
 
 @media (max-width: 992px) {
   .bungee-regularspice- {
-    font-size: 1.8rem; /* Ajusta el tamaño del texto del título para pantallas medianas */
+    font-size: 1.6rem; /* Ajusta el tamaño del texto del título para pantallas medianas */
   }
   .btn-custom, .btn-warning {
     font-size: 1rem; /* Ajusta el tamaño del texto para pantallas medianas */
