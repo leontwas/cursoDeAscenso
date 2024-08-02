@@ -144,6 +144,9 @@ body {
     font-size: 0.8rem; /* Ajusta el tamaño del texto del menú para pantallas tablets */
     height: 80px; /* Ajusta la altura de los botones para pantallas tablets */
   }
+  .option-button {
+    font-size: 5vw; /* Ajusta el tamaño del texto de las opciones de respuestas */
+    }
 }
 
 /*************************************** Celulares ******************************************/
