@@ -63,7 +63,7 @@ body {
 .btn-15 { background-color: #f1ae27; }
 .btn-16 { background-color: #9f6e24; }
 
-@media (max-width: 992px) {
+@media only screen and (min-width: 851px) {
   .bungee-regularspice- {
     font-size: 1.6rem; /* Ajusta el tamaño del texto del título para pantallas medianas */
   }
@@ -73,7 +73,29 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media only screen and (min-width: 651px) and (max-width: 850px) {
+  body {
+      position: relative;
+  }
+  
+  body::before {
+      content: "";
+      position: absolute;
+      background-size: cover;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1; 
+  }
+  
+  body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      overflow-x: hidden;
+      background-size: cover;
+  }
   .bungee-regularspice- {
     font-size: 1.6rem; /* Ajusta el tamaño del texto del título para pantallas pequeñas */
   }
@@ -83,7 +105,10 @@ body {
   }
 }
 
-@media (max-width: 576px) {
+@media only screen and (max-width: 650px) {
+  body {
+      position: relative;
+  }
   .bungee-regularspice- {
     font-size: 1.4rem; /* Ajusta el tamaño del texto del título para pantallas extra pequeñas */
   }
