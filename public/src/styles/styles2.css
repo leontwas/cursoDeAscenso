@@ -7,32 +7,43 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; /* Añadido para que el título y botones se alineen verticalmente */
+  flex-direction: column;
   height: 100vh;
-  overflow: auto; /* Asegura que se pueda hacer scroll si el contenido es mayor que la pantalla */
+  overflow: auto; /* Permite el scroll si el contenido es mayor que la pantalla */
 }
 
 .container {
   width: 90%;
-  max-width: 600px; /* Establece un ancho máximo para pantallas grandes */
-  text-align: center; /* Centra el contenido */
+  max-width: 600px;
+  text-align: center;
 }
 
 .bungee-regularspice- {
-  margin-bottom: 20px; /* Aumenta el margen inferior para separación con los botones */
-  font-size: 1.8rem; /* Ajusta el tamaño del texto del título */
+  margin-bottom: 10px; /* Reduce el margen inferior para separación con los botones */
+  font-size: 2rem; /* Ajusta el tamaño del texto del título */
   font-family: "Bungee Spice", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
 
 .btn-custom, .btn-warning {
-  width: calc(100% - 20px); /* Asegura que los botones no se desborden */
-  margin: 10px; /* Agrega un margen para separación */
-  height: auto; /* Ajusta la altura automática para dispositivos móviles */
-  font-size: 1rem; /* Ajusta el tamaño del texto */
+  width: 100%; /* Asegura que los botones ocupen el ancho completo del contenedor */
+  margin: 5px 0; /* Reduce el espacio entre los botones */
+  height: 100px; /* Establece una altura fija para los botones */
+  font-size: 1.2rem; /* Ajusta el tamaño del texto */
   padding: 10px; /* Agrega un relleno para un mejor aspecto */
   box-sizing: border-box; /* Incluye el padding y el borde en el ancho y alto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow-wrap: break-word; /* Permite que el texto se ajuste dentro del botón */
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.btn-custom:hover, .btn-warning:hover {
+  transform: scale(1.05);
 }
 
 .btn-1 { background-color: #b644fc; }
@@ -52,44 +63,32 @@ body {
 .btn-15 { background-color: #f1ae27; }
 .btn-16 { background-color: #9f6e24; }
 
-.btn-warning:hover,
-.btn-custom:hover {
-  transform: scale(1.05);
-}
-
-.btn-full-width {
-  width: 100%; /* Asegura que el botón ocupe el ancho completo del contenedor */
-  height: 120px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  border: 2px solid #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  box-sizing: border-box; /* Incluye el padding y el borde en el ancho y alto */
-}
-
-@media (max-width: 1200px) {
-  .btn-custom {
-    font-size: 1rem;
-  }
-}
-
 @media (max-width: 992px) {
-  .btn-custom {
-    font-size: 0.875rem;
+  .bungee-regularspice- {
+    font-size: 1.8rem; /* Ajusta el tamaño del texto del título para pantallas medianas */
+  }
+  .btn-custom, .btn-warning {
+    font-size: 1rem; /* Ajusta el tamaño del texto para pantallas medianas */
+    height: 90px; /* Ajusta la altura de los botones para pantallas medianas */
   }
 }
 
 @media (max-width: 768px) {
-  .btn-custom {
-    font-size: 0.75rem;
+  .bungee-regularspice- {
+    font-size: 1.6rem; /* Ajusta el tamaño del texto del título para pantallas pequeñas */
+  }
+  .btn-custom, .btn-warning {
+    font-size: 0.875rem; /* Ajusta el tamaño del texto para pantallas pequeñas */
+    height: 80px; /* Ajusta la altura de los botones para pantallas pequeñas */
   }
 }
 
 @media (max-width: 576px) {
-  .btn-custom {
-    font-size: 0.65rem;
+  .bungee-regularspice- {
+    font-size: 1.4rem; /* Ajusta el tamaño del texto del título para pantallas extra pequeñas */
+  }
+  .btn-custom, .btn-warning {
+    font-size: 0.75rem; /* Ajusta el tamaño del texto para pantallas extra pequeñas */
+    height: 70px; /* Ajusta la altura de los botones para pantallas extra pequeñas */
   }
 }
