@@ -103,7 +103,7 @@ body {
     font-size: 1.6rem; /* Ajusta el tamaño del texto del título para pantallas pequeñas */
   }
   .btn-custom, .btn-warning {
-    font-size: 3rem; /* Ajusta el tamaño del texto para pantallas pequeñas */
+    font-size: 1rem; /* Ajusta el tamaño del texto para pantallas pequeñas */
     height: 80px; /* Ajusta la altura de los botones para pantallas pequeñas */
   }
 }
