@@ -63,6 +63,7 @@ body {
 .btn-15 { background-color: #f1ae27; }
 .btn-16 { background-color: #9f6e24; }
 
+/*************************************** Notebooks ******************************************/
 @media only screen and (min-width: 851px) {
   .bungee-regularspice- {
     font-size: 1.6rem; /* Ajusta el tamaño del texto del título para pantallas medianas */
@@ -73,6 +74,7 @@ body {
   }
 }
 
+/*************************************** Tablets ******************************************/
 @media only screen and (min-width: 651px) and (max-width: 850px) {
   body {
       position: relative;
@@ -101,11 +103,12 @@ body {
     font-size: 1.6rem; /* Ajusta el tamaño del texto del título para pantallas pequeñas */
   }
   .btn-custom, .btn-warning {
-    font-size: 0.875rem; /* Ajusta el tamaño del texto para pantallas pequeñas */
+    font-size: 1rem; /* Ajusta el tamaño del texto para pantallas pequeñas */
     height: 80px; /* Ajusta la altura de los botones para pantallas pequeñas */
   }
 }
 
+/*************************************** Celulares ******************************************/
 @media only screen and (max-width: 650px) {
   body {
       position: relative;
