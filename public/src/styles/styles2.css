@@ -9,24 +9,23 @@ body {
   align-items: center;
   flex-direction: column; /* Añadido para que el título y botones se alineen verticalmente */
   height: 100vh;
+  overflow: auto; /* Asegura que se pueda hacer scroll si el contenido es mayor que la pantalla */
 }
 
-
-
-
-  .bungee-regularspice- {
-    margin-bottom: 20px; /* Aumenta el margen inferior para separación con los botones */
-    font-size: 1.8rem; /* Ajusta el tamaño del texto del título */
-    font-family: "Bungee Spice", sans-serif;
-    font-weight: 300;
-    font-style: normal;
+.container {
+  width: 90%;
+  max-width: 600px; /* Establece un ancho máximo para pantallas grandes */
+  text-align: center; /* Centra el contenido */
 }
 
-  .container {
-    width: 90%;
-    max-width: 600px; /* Establece un ancho máximo para pantallas grandes */
-    text-align: center; /* Centra el contenido */
+.bungee-regularspice- {
+  margin-bottom: 20px; /* Aumenta el margen inferior para separación con los botones */
+  font-size: 1.8rem; /* Ajusta el tamaño del texto del título */
+  font-family: "Bungee Spice", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
+
 .btn-custom, .btn-warning {
   width: calc(100% - 20px); /* Asegura que los botones no se desborden */
   margin: 10px; /* Agrega un margen para separación */
@@ -36,33 +35,30 @@ body {
   box-sizing: border-box; /* Incluye el padding y el borde en el ancho y alto */
 }
 
-  .btn-1 { background-color: #b644fc; }
-  .btn-2 { background-color: #f07e0b; }
-  .btn-3 { background-color: #08cfc8; }
-  .btn-4 { background-color: #7fea14; }
-  .btn-5 { background-color: #528f52; }
-  .btn-6 { background-color: #fb2a2a; }
-  .btn-7 { background-color: #0b6a6a; }
-  .btn-8 { background-color: #e907c7; }
-  .btn-9 { background-color: #a87ef6; }
-  .btn-10 { background-color: #810af8; }
-  .btn-11 { background-color: #f67293; }
-  .btn-12 { background-color: #2c61cb; }
-  .btn-13 { background-color: #f62840; }
-  .btn-14 { background-color: #0ab237; }
-  .btn-15 { background-color: #f1ae27; }
-  .btn-16 { background-color: #9f6e24; }
-  
-  .btn-warning:hover {
-    transform: scale(1.05);
-  }
-  
-  .btn-custom:hover {
-    transform: scale(1.05);
-  }
+.btn-1 { background-color: #b644fc; }
+.btn-2 { background-color: #f07e0b; }
+.btn-3 { background-color: #08cfc8; }
+.btn-4 { background-color: #7fea14; }
+.btn-5 { background-color: #528f52; }
+.btn-6 { background-color: #fb2a2a; }
+.btn-7 { background-color: #0b6a6a; }
+.btn-8 { background-color: #e907c7; }
+.btn-9 { background-color: #a87ef6; }
+.btn-10 { background-color: #810af8; }
+.btn-11 { background-color: #f67293; }
+.btn-12 { background-color: #2c61cb; }
+.btn-13 { background-color: #f62840; }
+.btn-14 { background-color: #0ab237; }
+.btn-15 { background-color: #f1ae27; }
+.btn-16 { background-color: #9f6e24; }
+
+.btn-warning:hover,
+.btn-custom:hover {
+  transform: scale(1.05);
+}
 
 .btn-full-width {
-  grid-column: span 4;
+  width: 100%; /* Asegura que el botón ocupe el ancho completo del contenedor */
   height: 120px;
   font-size: 1.5rem;
   font-weight: bold;
@@ -71,28 +67,29 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  box-sizing: border-box; /* Incluye el padding y el borde en el ancho y alto */
 }
- 
+
 @media (max-width: 1200px) {
   .btn-custom {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 992px) {
   .btn-custom {
-      font-size: 0.875rem;
+    font-size: 0.875rem;
   }
 }
 
 @media (max-width: 768px) {
   .btn-custom {
-      font-size: 0.75rem;
+    font-size: 0.75rem;
   }
 }
 
 @media (max-width: 576px) {
   .btn-custom {
-      font-size: 0.65rem;
+    font-size: 0.65rem;
   }
 }
