@@ -78,20 +78,6 @@ body {
   body {
       position: relative;
       margin-top: 50px;
-  }
-  
-  body::before {
-      content: "";
-      position: absolute;
-      background-size: cover;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: -1; 
-  }
-  
-  body {
       display: flex;
       flex-direction: column;
       min-height: 100vh;
