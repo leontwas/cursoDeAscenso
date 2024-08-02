@@ -87,7 +87,7 @@ body {
   padding: 20px;
   border-radius: 10px;
   max-width: 600px;
-  width: 100%;
+  width: 80%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -160,6 +160,6 @@ body {
     height: 70px; /* Ajusta la altura de los botones para pantallas Celulares */
   }
   .option-button {
-  font-size: 5vw;
+  font-size: 5vw; /* Ajusta el tamaño del texto de las opciones de respuestas */
   }
 }
