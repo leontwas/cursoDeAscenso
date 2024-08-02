@@ -70,7 +70,7 @@ body {
   .btn-custom, .btn-warning {
     font-size: 1rem; /* Ajusta el tamaño del texto para pantallas medianas */
     height: 100px; /* Ajusta la altura de los botones para pantallas medianas */
-    width: 100px; /* Ajusta el ancho de los botones para pantallas medianas */
+    width: 200px; /* Ajusta el ancho de los botones para pantallas medianas */
   }
 }
 
