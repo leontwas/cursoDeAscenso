@@ -68,7 +68,7 @@ body {
     font-size: 1.6rem; /* Ajusta el tamaño del texto del título para pantallas medianas */
   }
   .btn-custom, .btn-warning {
-    font-size: 1rem; /* Ajusta el tamaño del texto para pantallas medianas */
+    font-size: 0.80rem; /* Ajusta el tamaño del texto para pantallas medianas */
     height: 90px; /* Ajusta la altura de los botones para pantallas medianas */
   }
 }
