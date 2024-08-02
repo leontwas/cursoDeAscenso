@@ -69,7 +69,8 @@ body {
   }
   .btn-custom, .btn-warning {
     font-size: 1rem; /* Ajusta el tamaño del texto para pantallas medianas */
-    height: 90px; /* Ajusta la altura de los botones para pantallas medianas */
+    height: 100px; /* Ajusta la altura de los botones para pantallas medianas */
+    width: 100px; /* Ajusta el ancho de los botones para pantallas medianas */
   }
 }
 
@@ -93,7 +94,7 @@ body {
     font-size: 1.5rem; /* Ajusta el tamaño del texto del título para pantallas tablets*/
   }
   .btn-custom, .btn-warning {
-    font-size: 0.8rem; /* Ajusta el tamaño del texto para pantallas tablets */
+    font-size: 0.8rem; /* Ajusta el tamaño del texto del menú para pantallas tablets */
     height: 80px; /* Ajusta la altura de los botones para pantallas tablets */
   }
 }
@@ -108,7 +109,7 @@ body {
     font-size: 1.5rem; /* Ajusta el tamaño del texto del título para pantallas Celulares */
   }
   .btn-custom, .btn-warning {
-    font-size: 1.45rem; /* Ajusta el tamaño del texto para pantallas Celulares */
+    font-size: 1.45rem; /* Ajusta el tamaño del texto del menú para pantallas Celulares */
     height: 70px; /* Ajusta la altura de los botones para pantallas Celulares */
   }
 }
