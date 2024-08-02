@@ -1,39 +1,89 @@
 body {
-  background: linear-gradient(135deg, #7d1d1d, #4c0000);
-  color: #fff;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+    background: linear-gradient(135deg, #7d1d1d, #4c0000);
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.btn-custom {
+    width: 100%;
+    height: 120px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .btn-custom:hover {
+    transform: scale(1.05);
+  }
+
+  .bungee-regularspice- {
+    margin-bottom: 5px;
+    font-size: 2.6vw;
+    font-family: "Bungee Spice", sans-serif;
+    font-weight: 300;
+    font-style:normal;
+  } 
+  
+  .btn-1 { background-color: #b644fc; }
+  .btn-2 { background-color: #f07e0b; }
+  .btn-3 { background-color: #08cfc8; }
+  .btn-4 { background-color: #7fea14; }
+  .btn-5 { background-color: #528f52; }
+  .btn-6 { background-color: #fb2a2a; }
+  .btn-7 { background-color: #0b6a6a; }
+  .btn-8 { background-color: #e907c7; }
+  .btn-9 { background-color: #a87ef6; }
+  .btn-10 { background-color: #810af8; }
+  .btn-11 { background-color: #f67293; }
+  .btn-12 { background-color: #2c61cb; }
+  .btn-13 { background-color: #f62840; }
+  .btn-14 { background-color: #0ab237; }
+  .btn-15 { background-color: #f1ae27; }
+  .btn-16 { background-color: #9f6e24; }
+  
+  .btn-warning {
+    width: 100%;
+    height: 120px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .btn-warning:hover {
+    transform: scale(1.05);
+  }
+
+.btn-full-width {
+  grid-column: span 4;
+  height: 120px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: 2px solid #000;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; /* Añadido para que el título y botones se alineen verticalmente */
-  height: 100vh;
+  text-align: center;
 }
-
-.container {
-  width: 90%;
-  max-width: 600px; /* Establece un ancho máximo para pantallas grandes */
-  text-align: center; /* Centra el contenido */
-}
-
-.bungee-regularspice- {
-  margin-bottom: 20px; /* Aumenta el margen inferior para separación con los botones */
-  font-size: 1.8rem; /* Ajusta el tamaño del texto del título */
-  font-family: "Bungee Spice", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.btn-custom, .btn-warning {
-  width: calc(100% - 20px); /* Asegura que los botones no se desborden */
-  margin: 10px; /* Agrega un margen para separación */
-  height: auto; /* Ajusta la altura automática para dispositivos móviles */
-  font-size: 1rem; /* Ajusta el tamaño del texto */
-  padding: 10px; /* Agrega un relleno para un mejor aspecto */
-  box-sizing: border-box; /* Incluye el padding y el borde en el ancho y alto */
-}
-
+ 
 @media (max-width: 1200px) {
   .btn-custom {
       font-size: 1rem;
