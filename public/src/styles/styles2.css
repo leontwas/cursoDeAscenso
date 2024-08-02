@@ -1,13 +1,14 @@
 body {
-    background: linear-gradient(135deg, #7d1d1d, #4c0000);
-    color: #fff;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  background: linear-gradient(135deg, #7d1d1d, #4c0000);
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Añadido para que el título y botones se alineen verticalmente */
+  height: 100vh;
 }
 
 .btn-custom {
@@ -31,12 +32,18 @@ body {
   }
 
   .bungee-regularspice- {
-    margin-bottom: 5px;
-    font-size: 2.6vw;
+    margin-bottom: 20px; /* Aumenta el margen inferior para separación con los botones */
+    font-size: 1.8rem; /* Ajusta el tamaño del texto del título */
     font-family: "Bungee Spice", sans-serif;
     font-weight: 300;
-    font-style:normal;
-  } 
+    font-style: normal;
+}
+
+  .container {
+    width: 90%;
+    max-width: 600px; /* Establece un ancho máximo para pantallas grandes */
+    text-align: center; /* Centra el contenido */
+}
   
   .btn-1 { background-color: #b644fc; }
   .btn-2 { background-color: #f07e0b; }
