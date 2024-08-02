@@ -120,7 +120,7 @@ body {
     height: 100px; /* Ajusta la altura de los botones para pantallas medianas */
   }
   .option-button {
-    font-size: 2vw; /* Ajusta el tamaño del texto de las opciones de respuestas */
+    font-size: 1.8vw; /* Ajusta el tamaño del texto de las opciones de respuestas */
     }
 }
 
