@@ -86,7 +86,8 @@ body {
   }
   .row-cols-md-4>* {
     flex: 0 0 auto;
-    width: 28%;
+    width: 25%;
+    font-size: 1.4rem;
 }
   .bungee-regularspice- {
     font-size: 1.5rem; /* Ajusta el tamaño del texto del título para pantallas tablets*/
