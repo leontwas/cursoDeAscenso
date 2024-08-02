@@ -117,7 +117,7 @@ body {
     font-size: 1.4rem; /* Ajusta el tamaño del texto del título para pantallas Celulares */
   }
   .btn-custom, .btn-warning {
-    font-size: 0.70rem; /* Ajusta el tamaño del texto para pantallas Celulares */
+    font-size: 2rem; /* Ajusta el tamaño del texto para pantallas Celulares */
     height: 70px; /* Ajusta la altura de los botones para pantallas Celulares */
   }
 }
