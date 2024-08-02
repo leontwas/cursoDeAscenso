@@ -99,11 +99,11 @@ body {
       background-size: cover;
   }
   .bungee-regularspice- {
-    font-size: 1.6rem; /* Ajusta el tamaño del texto del título para pantallas pequeñas */
+    font-size: 1.6rem; /* Ajusta el tamaño del texto del título para pantallas tablets*/
   }
   .btn-custom, .btn-warning {
-    font-size: 1rem; /* Ajusta el tamaño del texto para pantallas pequeñas */
-    height: 80px; /* Ajusta la altura de los botones para pantallas pequeñas */
+    font-size: 1rem; /* Ajusta el tamaño del texto para pantallas tablets */
+    height: 80px; /* Ajusta la altura de los botones para pantallas tablets */
   }
 }
 
@@ -114,10 +114,10 @@ body {
   }
   .bungee-regularspice- {
     margin-top: 700px;
-    font-size: 1.4rem; /* Ajusta el tamaño del texto del título para pantallas extra pequeñas */
+    font-size: 1.4rem; /* Ajusta el tamaño del texto del título para pantallas Celulares */
   }
   .btn-custom, .btn-warning {
-    font-size: 0.75rem; /* Ajusta el tamaño del texto para pantallas extra pequeñas */
-    height: 70px; /* Ajusta la altura de los botones para pantallas extra pequeñas */
+    font-size: 0.70rem; /* Ajusta el tamaño del texto para pantallas Celulares */
+    height: 70px; /* Ajusta la altura de los botones para pantallas Celulares */
   }
 }
