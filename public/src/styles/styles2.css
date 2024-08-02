@@ -100,7 +100,7 @@ body {
   display: block;
   width: 100%;
   min-height: 50px;
-  margin: 20px;
+  margin-bottom: 20px;
   text-align: justify;
   border: none;
   border-radius: 5px;
