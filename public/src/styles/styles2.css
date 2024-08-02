@@ -84,6 +84,10 @@ body {
       overflow-x: hidden;
       background-size: cover;
   }
+  .row-cols-md-4>* {
+    flex: 0 0 auto;
+    width: 30%;
+}
   .bungee-regularspice- {
     font-size: 1.5rem; /* Ajusta el tamaño del texto del título para pantallas tablets*/
   }
