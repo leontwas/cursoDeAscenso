@@ -708,8 +708,241 @@ const questions = [
     options: ["VERDADERO", "FALSO"],
     correctAnswer: "FALSO"
   },
-  
-            
+  {
+    question: "¿Quién ordena el archivo-elevación a Juicio por persecución injustificada? Art. Ciudad 199, 201, 203, 204",
+    options: ["El Fiscal", "El Juez"],
+    correctAnswer: "El Fiscal"
+  },
+  {
+    question: "¿Un allanamiento se puede realizar sin orden judicial en un hecho en flagrancia?",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "¿Un homicidio de un Funcionario Público es un agravante?",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "¿El homicidio por parte de un hombre a una mujer (femicidio) es un agravante?",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "¿La requisa se debe realizar solamente con aviso previo a la Jurisprudencia?",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso"
+  },
+  {
+    question: "¿Puede un menor de 18 años ser testigo de actuación?",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso"
+  },
+  {
+    question: "¿Quién interviene por un delito con un detenido menor?",
+    options: ["Juzgado de Menores", "Juzgado Nacional en lo Criminal y Correccional", "Juzgado Federal" ],
+    correctAnswer: "Juzgado de Menores"
+  },
+  {
+    question: "Las personas menores de 18 años pueden ser testigos de la actuación policial, es decir que pueden ser convocados para ser testigos de requisas y allanamientos, siempre que posean documento de identidad.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso"
+  },
+  {
+    question: "¿Un mMenor damnificado testigo del hecho, puede declarar como mayor?",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso"
+  },
+  {
+    question: "Las personas menores de 18 años No pueden ser testigos de un hecho que los damnifica",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso"
+  },
+  {
+    question: "Las personas menores de 18 años pueden ser víctimas y/o testigos de un hecho por eso pueden declarar en el proceso.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "¿Un menor puede ser juzgado en la justicia CABA-NACION por los mismos parámetros que un mayor?",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso"
+  },
+  {
+    question: "¿Un imputado en la justicia (Nación) debe realizar la declaración indagatoria?",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso"
+  },
+  {
+    question: "¿La violación de clausura constituye un delito penal?",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso"
+  },
+  {
+    question: "En un delito de Acción Pública, ¿el Juez/Fiscal puede perseguir el delito?",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "¿El Fiscal es parte del proceso que se encarga de llevar adelante la investigación y la acusación?",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "Flagrancia del delincuente:",
+    options: ["Cuando es perseguido o sorprendido en el momento de delinquir.", "Horas posteriores al Hecho", "Es señalado por los testigos"],
+    correctAnswer: "Cuando es perseguido o sorprendido en el momento de delinquir."
+  },
+  {
+    question: "Las Acciones Penales son Las Acciones Privadas, Las Acciones Dependientes de Instancia Privada y Acciones que involucren daños patrimoniales",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso"
+  },
+  {
+    question: "La Policía en caso de secuestro de correspondencia, no puede abrir ni revisar la misma, sino que elevará el sobre cerrado a la autoridad competente",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "¿El juez natural es usado para no beneficiar o perjudicar imputado?",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "El derecho penal ante una amenaza defiende el bien jurídico de la libertad",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "¿Portar un arma sin justificación constituye un delito?",
+    options: ["Falso", "Verdadero"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "¿Poseer un arma de fuego sin munición es un delito?",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso"
+  },
+  {
+    question: "¿Matar a un policía es un agravante?",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "Si al momento de la Detención, el imputado no quiere que le lean los derechos, ¿no hay que hacerlo?",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso"
+  },
+  {
+    question: "¿Quienes gozan de las garantías Constitucionales?",
+    options: ["Todos menos los presos", "Los Argentinos", "Todos los ciudadanos"],
+    correctAnswer: "Todos los ciudadanos"
+  },
+  {
+    question: "El imputado solo tiene contacto con el defensor al momento de la indagatoria",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso"
+  },
+  {
+    question: "¿En un allanamiento se puede requisar todo el domicilio?",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso"
+  },
+  {
+    question: "Para que exista usurpación debe haber sí o sí violencia",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "¿Los ruidos molestos, previstos en el código contravencional, son dependientes de instancia privada?",
+    options: ["Verdadero", "Falsa"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "En un proceso penal, ¿puede disponerse la prisión preventiva del imputado, cuando existe peligro de entorpecimiento del proceso?",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "¿El personal debe comunicar inmediatamente las medidas precautorias contravencionales adoptadas a Sr. Fiscal?",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "¿La persona aprendida por una contravención puede ser incomunicada?",
+    options: ["Verdadero", "Falsa"],
+    correctAnswer: "Falso"
+  },
+  {
+    question: "¿La autoridad preventora puede ejercer la coacción directa para hacer cesar la conducta flagrante contravencional, cuando pese a la advertencia se persiste en ella?",
+    options: ["Verdadera", "Falso"],
+    correctAnswer: "Verdadera"
+  },
+  {
+    question: "¿Los fiscales pueden ordenar que se deje sin efecto una medida precautoria impuesta por el personal de las fuerzas de seguridad si entendiera que fueron mal adoptadas?",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "¿Las calumnias e injurias son un delito de Instancia Privada?",
+    options: ["Verdadero", "Falso (Son de Acción Privada)"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "¿El impedimento de contacto de los hijos menores con sus padres no convivientes es un delito de Instancia Privada?",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "¿El homicidio es un delito de Acción Pública?",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "¿Puede ser testigo de actuación el personal policial que interviene en el procedimiento?",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso"
+  },
+  {
+    question: "Si en la prevención de un hecho ilícito, el personal policial no posee certeza acerca de la edad de un menor, ¿debe actuar como si lo fuera?",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "¿Solo puede procederse a la detención de una persona por orden judicial, sin excepciones?",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso"
+  },
+  {
+    question: "¿Solo se pueden interceptar correspondencia por orden de un/a juez/a?",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "¿El Derecho de defensa es irrenunciable?",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "¿Cuándo la policía dispone realizar una requisa urgente, debe dar inmediato aviso al fiscal competente?",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+{
+  question: "En cuanto a la posibilidad de declarar contra el Imputado el CPPCABA establece que sus Cónyuges, Ascendientes, Descendientes, Hermanos, Parientes Colaterales hasta el Cuarto grado de afinidad",
+  options: ["Podrán abstenerse a declarar contra el Imputado (CPPCABA Art 122)", "Tienen Prohibido declarar contra el Imputado (Bajo Pena de Nulidad CPPN Art 242)", "Están obligados a declarar contra el Imputado"],
+  correctAnswer: "Podrán abstenerse a declarar contra el Imputado (CPPCABA Art 122)"
+},
+{
+  question: "De acuerdo con el CPPCABA, en la forma de iniciar un proceso penal es por",
+  options: ["Denuncia, querella, Prevención Policial y Oficio por el fiscal", "Denuncia y por Querella", "Denuncia, Querella, Prevención Policial y decisión del juez"],
+  correctAnswer: "Denuncia, querella, Prevención Policial y Oficio por el fiscal"
+},
+{
+  question: "Si el detenido en Flagrancia se encuentra ebrio o intoxicado, de acuerdo al CPPCABA, la Policía deberá:",
+  options: ["Convocar al SAME a efectos de trasladarlo para tratamiento médico", "Llevar a su domicilio para que se componga", "Llevar a la Cría y hacer consulta"],
+  correctAnswer: "Convocar al SAME a efectos de trasladarlo para tratamiento médico"
+}      
       ];
 
     let correctAnswersCount = 0;
