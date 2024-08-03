@@ -253,6 +253,24 @@ const questions = [
       "Comando: Es la autoridad y responsabilidad en la toma de decisiones estratégicas. Conducción: Es la capacidad para coordinar actividades operativas en situaciones de crisis."
     ],
     correctAnswer: "Comando: Es la autoridad y responsabilidad legal con que se inviste a un funcionario policial para ejercer al mando sobre una organización. Llamase también al ejercicio legal de esa autoridad, la que abarca la responsabilidad en lo que a educación, instrucción, operación y administración se refiere. Conducción: Es el arte y la ciencia de la aplicación del comando a la solución de un problema policial. Será una actividad libre y creadora, y de la ciencia ya que posee un objeto de estudio y una finalidad que le son propias."
+  },
+  {
+    question: "Los cuatro sistemas más importantes en la comunicación:",
+    options: [
+      "1. La distancia entre los interactuantes: La distancia entre los interactuantes es una dimensión codificada de la comunicación y varía según los grupos sociales y las culturas. 2. El sistema corporal: Las posiciones corporales, los movimientos y las mímicas faciales. Las expresiones faciales, los movimientos de los ojos, sonrisa, fruncimiento de cejas son fuentes de lenguaje corporal especialmente importantes en situaciones del servicio. 3. El sistema paraverbal: o vocal son las variaciones del tono de voz, de timbre, el ritmo, etc. 4. El sistema del lenguaje: propio de la especie humana es el más elaborado de los sistemas.",
+      "1. La distancia entre los interactuantes: La distancia entre las personas afecta la comunicación. 2. El sistema corporal: Incluye el lenguaje corporal y las expresiones faciales. 3. El sistema verbal: Engloba las palabras utilizadas en la comunicación. 4. El sistema de feedback: Es cómo se recibe y se responde a la comunicación.",
+      "1. La distancia entre los interactuantes. 2. El sistema corporal. 3. El sistema de tono de voz. 4. El sistema de emociones."
+    ],
+    correctAnswer: "1. La distancia entre los interactuantes: La distancia entre los interactuantes es una dimensión codificada de la comunicación y varía según los grupos sociales y las culturas. 2. El sistema corporal: Las posiciones corporales, los movimientos y las mímicas faciales. Las expresiones faciales, los movimientos de los ojos, sonrisa, fruncimiento de cejas son fuentes de lenguaje corporal especialmente importantes en situaciones del servicio. 3. El sistema paraverbal: o vocal son las variaciones del tono de voz, de timbre, el ritmo, etc. 4. El sistema del lenguaje: propio de la especie humana es el más elaborado de los sistemas."
+  },
+  {
+    question: "Barreras a la comunicación:",
+    options: [
+      "Personales: por las emociones. Físicas: por el entorno. Semánticas: Limitaciones de los símbolos con los que nos comunicamos.",
+      "Personales: por las emociones. Físicas: por las condiciones ambientales. Semánticas: por diferencias en la interpretación de palabras.",
+      "Personales: por la falta de interés. Físicas: por el ruido y el ambiente. Semánticas: por diferencias culturales en el significado de los términos."
+    ],
+    correctAnswer: "Personales: por las emociones. Físicas: por el entorno. Semánticas: Limitaciones de los símbolos con los que nos comunicamos."
   }
 ];
     let correctAnswersCount = 0;
