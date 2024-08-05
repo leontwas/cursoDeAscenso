@@ -644,9 +644,8 @@ const questions = [
                
          /**************************** dejé en la página 12 del archivo curso 2021 ***************************/
     ];
-    
-let correctAnswersCount = 0;
-let currentQuestionIndex;
+    let correctAnswersCount = 0;
+    let currentQuestionIndex;
 
 document.addEventListener('DOMContentLoaded', () => {
     displayRandomQuestion();
@@ -654,7 +653,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function displayRandomQuestion() {
     if (questions.length === 0) {
-        document.getElementById('quiz-container').innerHTML = `<h2>¡Has completado el cuestionario!</h2><p>Respuestas correctas: ${correctAnswersCount}</p>`;
+        displayCompletionMessage();
         return;
     }
 
@@ -672,6 +671,31 @@ function displayRandomQuestion() {
         button.onclick = () => checkAnswer(option);
         optionsContainer.appendChild(button);
     });
+
+    // Ensure the Abandon button is displayed and positioned correctly
+    showAbandonButton();
+}
+
+function showAbandonButton() {
+    let abandonButton = document.getElementById('abandon-button');
+    if (!abandonButton) {
+        abandonButton = document.createElement('button');
+        abandonButton.id = 'abandon-button';
+        abandonButton.classList.add('btn', 'btn-abandonar');
+        abandonButton.innerText = 'Regresar';
+        abandonButton.onclick = () => window.location.href = './index.html';
+        document.body.appendChild(abandonButton); // Append to body to ensure it's outside the question container
+    } else {
+        abandonButton.style.display = 'block'; // Ensure button is visible
+    }
+}
+
+
+function hideAbandonButton() {
+    const abandonButton = document.getElementById('abandon-button');
+    if (abandonButton) {
+        abandonButton.style.display = 'none'; // Hide the button
+    }
 }
 
 function checkAnswer(selectedAnswer) {
@@ -679,25 +703,60 @@ function checkAnswer(selectedAnswer) {
 
     if (selectedAnswer === correctAnswer) {
         correctAnswersCount++;
-        questions.splice(currentQuestionIndex, 1);  // Remove the current question from the array
+        questions.splice(currentQuestionIndex, 1);
         displayRandomQuestion();
+        displayNotification("Correcto!");
     } else {
         displayFailureMessage(correctAnswer);
+        hideAbandonButton(); // Hide the Abandon button
     }
+}
+
+function displayNotification(message) {
+    const notification = document.createElement('div');
+    notification.classList.add('notification');
+    notification.innerText = message;
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        document.body.removeChild(notification);
+    }, 2000);
 }
 
 function displayFailureMessage(correctAnswer) {
     const quizContainer = document.getElementById('quiz-container');
     quizContainer.innerHTML = `
-        <h2>Incorrecto.</h2>
-        <p>La respuesta correcta es: ${correctAnswer}</p>
-        <p>Debes seguir estudiando.</p>
-        <p>Respuestas correctas: ${correctAnswersCount}</p>
-        <img src="./images/image1.png" alt="Imagen de error" class="img-fluid">
+        <h1 class="error-message">Incorrecto.</h1>
+        <h2 class="error-message">La respuesta correcta es: ${correctAnswer}</h2>
+        <h2 class="error-message">Respuestas correctas: ${correctAnswersCount}</h2>
+        <img src="../src/images/image1.png" alt="Imagen de error" class="img-fluid">
         <button id="retry-button" class="btn btn-danger mt-3">Reintentar</button>
     `;
 
     document.getElementById('retry-button').onclick = () => {
         window.location.href = './index.html';
     };
+}
+
+function displayCompletionMessage() {
+    const quizContainer = document.getElementById('quiz-container');
+    let imageSrc = '';
+
+    if (correctAnswersCount < 5) {
+        imageSrc = '../src/images/image1.png';
+    } else if (correctAnswersCount >= 6 && correctAnswersCount <= 10) {
+        imageSrc = '../src/images/image2.png';
+    } else if (correctAnswersCount >= 11 && correctAnswersCount <= 20) {
+        imageSrc = '../src/images/image3.png';
+    } else if (correctAnswersCount >= 21 && correctAnswersCount <= 30) {
+        imageSrc = '../src/images/image4.png';
+    }
+
+    quizContainer.innerHTML = `
+        <h2>¡Has completado el cuestionario!</h2>
+        <p>Respuestas correctas: ${correctAnswersCount}</p>
+        <img src="${imageSrc}" alt="Resultado" class="img-fluid">
+    `;
+
+    hideAbandonButton(); // Hide the Abandon button on completion
 }

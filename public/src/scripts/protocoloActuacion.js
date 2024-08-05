@@ -340,7 +340,6 @@ const questions = [
     correctAnswer: "FALSO"
   }        
 ];
-
 let correctAnswersCount = 0;
 let currentQuestionIndex;
 
@@ -375,18 +374,18 @@ showAbandonButton();
 
 function showAbandonButton() {
 let abandonButton = document.getElementById('abandon-button');
-
 if (!abandonButton) {
     abandonButton = document.createElement('button');
     abandonButton.id = 'abandon-button';
-    abandonButton.classList.add('btn', 'btn-abandonar', 'mt-3');
-    abandonButton.innerText = 'Abandonar';
+    abandonButton.classList.add('btn', 'btn-abandonar');
+    abandonButton.innerText = 'Regresar';
     abandonButton.onclick = () => window.location.href = './index.html';
     document.body.appendChild(abandonButton); // Append to body to ensure it's outside the question container
 } else {
     abandonButton.style.display = 'block'; // Ensure button is visible
 }
 }
+
 
 function hideAbandonButton() {
 const abandonButton = document.getElementById('abandon-button');
