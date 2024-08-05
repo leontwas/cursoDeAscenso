@@ -172,7 +172,7 @@ body {
   font-size: 5vw; /* Ajusta el tamaño del texto de las opciones de respuestas */
   }
   .btn-abandonar {
-    font-size: 2rem; /* Aumenta el tamaño del texto en dispositivos móviles */
+    font-size: 1.5rem; /* Aumenta el tamaño del texto en dispositivos móviles */
     padding: 20px 40px; /* Aumenta el padding para un botón más grande */
   }
 
