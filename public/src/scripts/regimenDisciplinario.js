@@ -150,7 +150,7 @@ const questions = [
 },
 {
     question: "Señale la respuesta correcta:",
-    options: ["Las órdenes impartidas por los Superiores deben ser cumplidas en todo momento, sin excepción.","Las órdenes impartidas por los Superiores deben ser cumplidas en todo momento, a excepción de aquellas órdenes que puedan significar delito o una trasgresión a las normas." ],
+    options: ["Las órdenes impartidas por los Superiores deben ser cumplidas en todo momento, sin excepción.","Las órdenes impartidas por los Superiores deben ser cumplidas en todo momento, a excepción de aquellas órdenes que puedan significar delito o una trasgresión a las normas."],
     correctAnswer: "Las órdenes impartidas por los Superiores deben ser cumplidas en todo momento, a excepción de aquellas órdenes que puedan significar delito o una trasgresión a las normas."
 },
 
@@ -383,6 +383,39 @@ const questions = [
         question: "El trato con personas conocidas por la Institución como de mala reputación, cuando no sea por razones de servicio debidamente autorizadas por sus superiores o en cumplimiento de un mandato judicial. Es una falta del tipo:",
         options: ["Leve", "Moderada", "Grave"],
         correctAnswer: "Moderada"
+    },
+    {
+        question: "Ante el eventual concurso de faltas a las que corresponda una misma especie de sanción, para la determinación del quantum aplicable debe tenerse en cuenta como máximo la suma aritmética de las sanciones máximas correspondientes a los distintos hechos.",
+        options: ["Verdadero", "Falso"],
+        correctAnswer: "Verdadero"
+    },
+
+    {
+        question: "El Subjefe de la Policía de la Ciudad puede aplicar apercibimiento y suspensión de empleo hasta un máximo de treinta (30) días de duración.",
+        options: ["Verdadero", "Falso"],
+        correctAnswer: "Verdadero"
+    },
+
+    {
+        question: "El Comisario puede aplicar apercibimiento y suspensión de empleo por un máximo de...",
+        options: ["15 días", "8 días", "10 días"],
+        correctAnswer: "8 días"
+    },
+    
+    {
+        question: "El Subcomisario puede aplicar apercibimiento y suspensión de empleo por un máximo de...",
+        options: ["5 días", "8 días", "6 días"],
+        correctAnswer: "6 días"
+    },
+    {
+        question: "El Principal puede aplicar apercibimiento y suspensión de empleo por un máximo de...",
+        options: ["4 días", "5 días", "6 días"],
+        correctAnswer: "4 días"
+    },
+    {
+        question: "El Inspector puede aplicar apercibimiento y suspensión de empleo por un máximo de...",
+        options: ["2 días", "3 días", "4 días"],
+        correctAnswer: "3 días"
     },
     {
         question: "Las deudas frecuentes que se contraigan, cuando de dicha conducta se demuestre el desapego notorio al deber de satisfacerlas, ya sea por acción u omisión, de cualquier modo. Es una falta del tipo:",
