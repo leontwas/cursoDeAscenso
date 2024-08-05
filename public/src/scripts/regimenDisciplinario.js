@@ -34,6 +34,126 @@ const questions = [
       options: ["Leve", "Moderada", "Grave"],
       correctAnswer: "Leve"
   },
+
+{
+    question:"Adulterar un certificado médico para justificar la inasistencia al servicio puede constituir - además de delito - una falta administrativa. Qué tipo de falta administrativa se trata incumplir el servicio invocando falsa causa, ardid o engaño?",
+    options: ["Leve", "Moderada", "Grave"],
+    correctAnswer: "Grave"
+},
+{
+    question:"Contra las resoluciones que ordenan sanciones disciplinarias es posible interponer recursos administrativos. Identifique cuáles son las vías para impugnar una sanción disciplinaria:",
+    options: ["Recurso de Alzada", "Recurso de Ilegitimidad", "Recurso de Reconsideración", "Recurso Jerárquico", "Solo proceden los recursos de reconsideración o recurso jerárquico en subsidio. Si presento un recurso de reconsideración, este lleva implícito el recurso jerárquico y no es necesario que vuela a presentarlo."],
+    correctAnswer: "Solo proceden los recursos de reconsideración o recurso jerárquico en subsidio. Si presento un recurso de reconsideración, este lleva implícito el recurso jerárquico y no es necesario que vuela a presentarlo."
+},
+{
+    question:"Cuáles son las facultades disciplinarias de un Inspector de la Policía de la Ciudad respecto a las inconductas de las que tome conocimiento en el marco de sus funciones?",
+    options: ["Apercibimiento o suspención de empleo hasta un máximo de 3 días.", "Apercibimiento o suspensión de empleo hasta un máximo de 5 días.","Apercibimiento o suspención de empleo hasta un máximo de 4 días."],
+    correctAnswer: "Apercibimiento o suspención de empleo hasta un máximo de 4 días."
+},
+
+{
+    question: "El personal retirado se encuentra sometido al régimen disciplinario?",
+    options: ["Sí, cuando deba responder por hechos cometidos cuando se encontraba en actividad.","Sí, cuando se encuentre convocado a prestar servicio.", "Ambas son correctas."],
+    correctAnswer: "Ambas son correctas"
+},
+
+{
+    question: "El consumo de estupefacientes está siempre prohibido; sea en servicio, o fuera de él. En estos casos resulta necesario, a fin de velar por el correcto y eficiente servicio policial, convocar una junta médica institucional que evalúe las condiciones psicofísicas del agente y determine si se encuentra en condiciones de portar armamento. En este supuesto, de qué tipo de falta se trata?",
+    options: ["Leve", "Moderada", "Grave"],
+    correctAnswer: "Grave"
+},
+
+{
+    question: "El personal, salvo casos de fuerza mayor, debe dar aviso de la enfermedad o accidente y del lugar en que se encuentra, durante el transcurso de la primera jornada en la cual estuviera imposibilitado de concurrir por alguna de esas causas. El personal que se ausenta 3 (tres) días consecutivos al servicio en forma injustificada incurre en qué falta disciplinaria?",
+    options: ["Incumplimiento de órdenes del servicio","Abandono del puesto de trabajo", "Abandono de servicio", "Negligencia en el incumplimiento del servicio"],
+    correctAnswer: "Abandono de servicio"
+},
+{
+    question: "Es posible aplicar una sanción disciplinaria con prescindencia a que el mismo hecho signifique la comisión de un delito.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+},
+{
+    question: "Existen faltas administrativas colectivas, cuando es cometida por 3 o más agentes policiales. En este supuesto, es posible aplicar un apercibimiento en forma colectiva?",
+    options: ["Verdadero, pero siempre que se trate de faltas leves.", "Falso, nunca es posible aplicar sanciones colectivas."],
+    correctAnswer: "Falso, nunca es posible aplicar sanciones colectivas."
+},
+{
+    question: "La comisión de 2 (dos) faltas administrativas de tipo moderado se transforman en una falta de tipo grave.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+},
+{
+    question: "La inasistencia al servicio en forma injustificada en 5 (cinco) oportunidades durante un año calendario constituye falta disciplinaria. De qué tipo de falta se trata?",
+    options: ["Leve", "Moderada","Grave"],
+    correctAnswer: "Leve"
+},
+{
+    question: "La pérdida de custodia de un elemento institucional constituye falta disciplinaria. Cuando se trata del armamento provisto por la Institución, ¿qué tipo de falta se tata?",
+    options: ["Leve", "Moderada", "Grave"],
+    correctAnswer: "Grave"
+},
+{
+    question: "La pérdida de custodia de un elemento institucional constituye falta disciplinaria. Cuando se trata del equipo provisto por la Institución, como el uniforme (pérdida de alguna de las piezas o pérdida total), la placa de grado o el equipo de comunicaciones, ¿qué tipo de falta se trata?",
+    options: ["Leve", "Moderada", "Grave"],
+    correctAnswer: "Leve"
+},
+{
+    question: "La Policía de la Ciudad repudia totalmente el maltrato animal. Los animales que se encuentran bajo custodia del agente policial deben ser siempre tratados con dignidad y respeto. Ocasionar la muerte de un animal afectado al servicio, ¿qué tipo de falta es?",
+    options: ["Leve", "Moderada", "Grave"],
+    correctAnswer: "Grave"
+},
+{
+    question: "La reincidencia y la reiteración de faltas administrativas son consideradas agravantes y pueden significar una sanción disciplinaria mayor a la prevista para la infracción. Sin embargo existen diferencias entre la reincidencia y la reiteración. Señale la afirmación correcta:",
+    options: ["Mientras la reincidencia se vincula a la comisión de una nueva falta de igual naturaleza a la anterior sancionada, la reiteración se vincula a la comisión de una nueva falta de distinta naturaleza.", "Mientras la reincidencia se vincula a la comisión de una nueva falta en un período de tiempo determinado, la reiteración se vincula a una nueva trasgresión de igual naturaleza que la anterior sancionada."],
+    correctAnswer: "Mientras la reincidencia se vincula a la comisión de una nueva falta en un período de tiempo determinado, la reiteración se vincula a una nueva trasgresión de igual naturaleza que la anterior sancionada."
+},
+{
+    question: "Las faltas disciplinarias son sancionadas de acuerdo a la gravedad de las inconductas del personal policial. Las faltas LEVES, cómo son sancionadas?",
+    options: ["Con apercibimiento escrito o suspensión en el empleo por un máximo de hasta 15 (quince) días.","Con suspensión en el empleo por un máximo de hasta 45 (cuarenta y cinco) días.", "Con suspensión en el empleo por un máximo de hasta 90 (noventa) días, cesantía o exoneración."],
+    correctAnswer: "Con apercibimiento escrito o suspensión en el empleo por un máximo de hasta 15 (quince) días."
+},
+{
+    question: "Las faltas disciplinarias son sancionadas de acuerdo a la gravedad de las inconductas del personal policial. Las faltas MODERADAS, cómo son sancionadas?",
+    options: ["Con apercibimiento escrito o suspensión en el empleo por un máximo de hasta 15 (quince) días.","Con suspensión en el empleo por un máximo de hasta 45 (cuarenta y cinco) días.", "Con suspensión en el empleo por un máximo de hasta 90 (noventa) días, cesantía o exoneración."],
+    correctAnswer: "Con suspensión en el empleo por un máximo de hasta 45 (cuarenta y cinco) días."
+},
+{
+    question: "Las faltas disciplinarias son sancionadas de acuerdo a la gravedad de las inconductas del personal policial. Las faltas GRAVES, cómo son sancionadas?",
+    options: ["Con apercibimiento escrito o suspensión en el empleo por un máximo de hasta 15 (quince) días.","Con suspensión en el empleo por un máximo de hasta 45 (cuarenta y cinco) días.", "Con suspensión en el empleo por un máximo de hasta 90 (noventa) días, cesantía o exoneración."],
+    correctAnswer: "Con suspensión en el empleo por un máximo de hasta 90 (noventa) días, cesantía o exoneración."
+},
+{
+    question: "Las medidas preventivas son medios cautelares quese adoptan durante la sustanciación de un sumario administrativo. Identifique la afirmación correcta:",
+    options: ["pueden ser modificadas,sustituidas o dejadas sin efecto en cualquier momento.", "no pueden ser modificadas, sustituidas o dejadas sin efecto en ningún momento.","por regla, se adoptan hasta el final del procedimiento, aunque pueden ser modificadas, sustituidas o dejadas sin efecto en cualquier momento."],
+    correctAnswer: "por regla, se adoptan hasta el final del procedimiento, aunque pueden ser modificadas, sustituidas o dejadas sin efecto en cualquier momento."
+},
+{
+    question: "Las medidas preventivas son medios precautorios tendientes a proteger el curso de la investigación administrativa, además de evitar eventuales daños al servicio policial. Este tipo de medidas se adopta de acuerdo a la gravedad de la falta. El Decreto 53/17 establece distintas medidas preventivas que se pueden adoptar durante la sustanciación de un sumario administrativo. Indique los distintos tipos de medidas preventivas que podrían adoptarse:",
+    options: ["Cambio de situación de revista, ordenando el pase de servicio efectivo, ya sea a disponibilidad o servicio pasivo.", "El desarme preventivo del agente.", "Todas las ociones son correctas."],
+    correctAnswer: "Todas las opciones son correctas"
+},
+{
+    question: "Las sanciones directas solo pueden aplicarse ante faltas del tipo leve, ya que resulta obligatorio ante inconductas de tipo moderadas o graves sustanciar un sumario administrativo.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+},
+{
+    question: "Las sanciones disciplinarias previstas en el régimen son aplicadas de acuerdo a la calificación de la falta y el daño o perjuicio ocacionado; sea sobre la ciudadanía,o sobre el servicio mismo encomendado a la Policía de la Ciudad. Señale la opción correcta:",
+    options: ["El Jefe de la Policía de la Ciudad puede aplicar apercibimiento, suspensión de empleo, cesantía o exoneración.", "El Jefe de la Policía de la Ciudad puede aplicar apercibimiento o suspención de empleo hasta un máximo de 45 días, ya que la medidda segregativa de cesantía o exoneración corresponde aplicarla al Secretario de Justicia y Seguridad.", "El Secretario de Justicia y Seguridad no aplica sanciones."],
+    correctAnswer: "El Jefe de la Policía de la Ciudad puede aplicar apercibimiento o suspención de empleo hasta un máximo de 45 días, ya que la medidda segregativa de cesantía o exoneración corresponde aplicarla al Secretario de Justicia y Seguridad"
+},
+{
+    question: "Si un hecho encuadra en más de una falta disciplinaria, sólo se considera la más leve.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso"
+},
+{
+    question: "Señale la respuesta correcta:",
+    options: ["Las órdenes impartidas por los Superiores deben ser cumplidas en todo momento, sin excepción.","Las órdenes impartidas por los Superiores deben ser cumplidas en todo momento, a excepción de aquellas órdenes que puedan significar delito o una trasgresión a las normas." ],
+    correctAnswer: "Las órdenes impartidas por los Superiores deben ser cumplidas en todo momento, a excepción de aquellas órdenes que puedan significar delito o una trasgresión a las normas."
+},
+
   {
       question: "El uso indebido de la sirena o baliza de un vehículo policial o equipo de comunicaciones.",
       options: ["Leve", "Moderada", "Grave"],
