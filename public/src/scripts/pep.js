@@ -837,7 +837,28 @@ const questions = [
           question: "¿La palanca de seguro manual se utiliza para abatir el martillo de forma segura?",
           options: ["Verdadero", "Falso"],
           correctAnswer: "Verdadero"
-        }      
+        },
+        {
+          question: "Cuál debe ser la posicion de las manos en las postura que el oficial debe adoptar durante su servicio mientras se encuentra estático?",
+          options: ["Ambas manos a la altura de la hebilla del cinturón posando la mano que asiste sobre el dorso de la mano hábil.", "Ambas manos a la altura de la hebilla del cinturón posando la mano hábil sobre el dorso de la mano que asiste."],
+          correctAnswer: "Ambas manos a la altura de la hebilla del cinturón posando la mano que asiste sobre el dorso de la mano hábil."
+        }, 
+        {
+          question: "Cuál debe ser la posición de los pies en la postura que el oficial debe adoptar durante su servicio mientras se encuentra estático?",
+          options: ["Pié derecho delante 30 cm respecto del pié izquierdo", "Pies juntos", "Pies separados a una distancia equivalente a un ancho de hombros."],
+          correctAnswer: "Pies separados a una distancia equivalente a un ancho de hombros."
+        },
+        {
+          question: "Cuál es el pie que el funcionario debe ubicar un poco retrasado mientras se encuentra estático durante su servicio?",
+          options: ["El pié de la mano hábil.", "El pié de la mano que asiste."],
+          correctAnswer: "El pié de la mano hábil."
+        },
+        {
+          question: "De qué lado del correaje debe ubicarse el equipo de comunicación provisto?",
+          options: ["Debe sujetarse cercano al oído y del lado de la mano hábil.", "Debe sujetarse cercano al oído y del lado de la mano que asiste."],
+          correctAnswer: "Debe sujetarse cercano al oído y del lado de la mano que asiste."
+        },
+        
 ];
 let correctAnswersCount = 0;
 let currentQuestionIndex;
