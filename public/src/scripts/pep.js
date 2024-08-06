@@ -858,6 +858,81 @@ const questions = [
           options: ["Debe sujetarse cercano al oído y del lado de la mano hábil.", "Debe sujetarse cercano al oído y del lado de la mano que asiste."],
           correctAnswer: "Debe sujetarse cercano al oído y del lado de la mano que asiste."
         },
+        {
+          question: "Qué denotan las manos en los bolsillos del personal durante el servicio?",
+          options: ["Denotan cansancio y hastío", "Demuestra excesiva confianza en el entorno, falta de preocupación", "Ninguna es correcta"],
+          correctAnswer: "Demuestra excesiva confianza en el entorno, falta de preocupación"
+        },
+        {
+          question: "Qué mano debe utilizar para extraer las esposas?",
+          options: ["La mano hábil.", "La mano inhabil."],
+          correctAnswer: "La mano hábil."
+        },
+        {
+          question: "Qué reflejan las manos del personal sobre pistola asignada y porta cargador?",
+          options: ["Demuestra desdén y falta de interés en el ciudadano.", "Denota hostilidad, puede generar rechazo en el ciudadano."],
+          correctAnswer: "Denota hostilidad, puede generar rechazo en el ciudadano."
+        },
+        {
+          question: "Qué reflejan las manos del personal dentro del chaleco a la altura de las axilas?",
+          options: ["Demuestra desdén y falta de interés en el ciudadano.", "Denota cansancio y hastío."],
+          correctAnswer: "Demuestra desdén y falta de interés en el ciudadano."
+        },
+        {
+          question: "El personal policial de brazos cruzados...",
+          options: ["Demuestra desdén y falta de interés en el ciudadano.", "Pierde capacidad operativa dificultando el acceso a los elementos asignados."],
+          correctAnswer: "Pierde capacidad operativa dificultando el acceso a los elementos asignados."
+        },
+        {
+          question: "Qué reflejan las manos dentro de los bolsillos del personal policial?",
+          options: ["Denota excesiva confianza en el entorno, falta de preocupación.", "Pérdida de la capacidad operativa dificultando el acceso a los elementos asignados.", "Ambas son correctas."],
+          correctAnswer: "Ambas son correctas."
+        },
+        {
+          question: "Qué reflejan las manos en la espalda del personal policial?",
+          options: ["Denota excesiva confianza en el entorno, falta de preocupación.", "Falta de apertura o predisposición."],
+          correctAnswer: "Falta de apertura o predisposición."
+        },
+        {
+          question: "El personal policial con la espalda apoyada contra la pared y/o planta de un pié contra la misma...",
+          options: ["Afecta gravemente la imagen institucional.", "Demuestra comodidad y un total desinterés en el entorno.", "Todas son correctas."],
+          correctAnswer: "Todas son correctas."
+        },
+        {
+          question: "Qué reflejan las manos del personal colgadas del cuello del chaleco balístico? ",
+          options: ["Demuestra desdén y falta de interés en el ciudadano.", "Denota cansancio y hastío."],
+          correctAnswer: "Denota cansancio y hastío."
+        },
+        {
+          question: "Adoptar una postura incorrecta durante el servicio afecta la imagen de la institucion policial?", 
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Verdadero"
+        },
+        {
+          question: "El correaje policial es de uso obligatorio para el personal policial en servicio?", 
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Verdadero"
+        },
+        {
+          question: "La posición correcta mientras se encuentra estático le permite adoptar rápidamente una posición defensiva ante una potencial agresión?", 
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Verdadero"
+        },
+        {
+          question: "En el caso que el intervenido porte un arma blanca, un arma de fuego o tenga las manos ocultas, debe priorizar su seguridad alejándose y buscando una cubierta si es posible?", 
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Verdadero"
+        },
+        {
+          question: "La distribución de los elementos en el correaje busca que el acceso sea fácil y liberar la zona lumbar de objetos que puedan atentar contra la integridad física del funcionario ante una eventual caída.", 
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Verdadero"
+        },
+        {
+          question: "El porta tonfa debe ubicarse:", 
+          options: ["En el mismo lateral a la ubicación de la pistolera", "En el lateral opuesto a la ubicación de la pistolera"],
+          correctAnswer: "En el lateral opuesto a la ubicación de la pistolera"
+        },
         
 ];
 let correctAnswersCount = 0;
