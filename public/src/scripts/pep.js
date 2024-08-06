@@ -566,19 +566,278 @@ const questions = [
             "Se relacionan directamente con la orientación sexual de cada individuo."
           ],
           correctAnswer: "Definen cómo se espera que actuemos, hablemos, nos vistamos, nos arreglemos y nos comportemos según nuestro género asignado."
-        }
+        },
 
-      
-     
-
-
- 
-  
-
-
-
-
-
+        {
+          question: "Es recomendable entrenar 3 o 4 veces por semana para generar un hábito y lograr mejoras", 
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Verdadero"
+        },
+        {
+          question: "Entrenando 1 o 2 veces por semana solo se mantiene el estado pero no se logran mejoras", 
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Verdadero"
+        },
+        {
+          question: "Es recomendable realizar actividad física de manera solitaria, para no depender del resto y mantener la constancia", 
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Falso"
+        },
+        {
+          question: "A la hora de planificar su entrenamiento, es importante fijarse metas y objetivos lo más ambicioso posible para estimular la superación", 
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Falso"
+        },
+        {
+          question: "Fijarse metas y objetivos acordes a las posibilidades de cada uno es clave para planificar el entrenamiento", 
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Verdadero"
+        },
+        {
+          question: "Las horas de descanso no influyen en el estado físico general siempre y cuando se entrene regularmente", 
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Falso"
+        },
+        {
+          question: "¿Debe realizar chequeos médicos independientemente de si se siente bien?", 
+          options: ["No", "Si"],
+          correctAnswer: "Si"
+        },
+        {
+          question: "¿Cuando debe hidratarse al realizar actividad física?", 
+          options: ["Cuando tiene sed", "Antes, durante y después del ejercicio físico.", "Después del ejercicio físico."],
+          correctAnswer: "Antes, durante y después del ejercicio físico."
+        },
+        {
+          question: "¿Es saludable realizar un solo encuentro deportivo semanal de alta intensidad?", 
+          options: ["No", "Si"],
+          correctAnswer: "No"
+        },
+        {
+          question: "¿Es cierto que las muchas lesiones ocurren por no utilizar el calzado correcto?", 
+          options: ["Si", "No"],
+          correctAnswer: "Si"
+        },
+        {
+          question: "¿Por qué es importante entrenar la zona media del cuerpo?", 
+          options: ["Mejora la coordinación y el equilibrio.", "Optimiza la postura corporal.", "Todas son correctas.", "Previene lesiones y molestias."],
+          correctAnswer: "Todas son correctas."
+        },
+        {
+          question: "¿Hay que entrenar siempre a intensidades altas?", 
+          options: ["No", "Si"],
+          correctAnswer: "No"
+        },
+        {
+          question: "¿Salud es sinónimo de enfermedad?", 
+          options: ["No", "Si"],
+          correctAnswer: "No"
+        },
+        {
+          question: "¿Salud es sinónimo de ausencia de enfermedad?", 
+          options: ["No", "Si"],
+          correctAnswer: "No"
+        },
+        {
+          question: "¿Es conveniente abrigarse o usar fajas para perder peso durante la actividad física?", 
+          options: ["Si", "No"],
+          correctAnswer: "No"
+        },
+        {
+          question: "Entendemos por actividad física a todo movimiento del cuerpo que hace trabajar a los músculos y requiere más energía que estar en reposo", 
+          options: ["Falso", "Verdadero"],
+          correctAnswer: "Verdadero"
+        },
+        {
+          question: "El ejercicio aporta beneficios para todas las edades", 
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Verdadero"
+        },
+        {
+          question: "Elija la opción que considere correcta ¿cuándo realizar los ejercicios de elongación?", 
+          options: ["Al final de cada entrenamiento físico", "Solamente cuando tengo dolores musculares.", "Antes, durante y después de cada actividad física."],
+          correctAnswer: "Antes, durante y después de cada actividad física"
+        },
+        {
+          question: "¿Cuántos mecanismos de seguridad posee la pistola Pietro Beretta PX4 Storm?", 
+          options: ["Uno", "Dos", "Tres"],
+          correctAnswer: "Dos"
+        },
+        {
+          question: "La pistola Pietro Beretta PX4 Storn posee dos mecanismos de seguridad. El automático y el manual", 
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Verdadero"
+        },
+        {
+          question: "El mecanismo de seguridad manual de la pistola Pietro Beretta PX4 Storn se desactiva momentos antes de que el martillo impacte el saliente de percutor", 
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Falso"
+        },
+        {
+          question: "Como medida esencial de seguridad, debemos considerar toda arma como si estuviera cargada salvo que sepamos que no lo está", 
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Falso"
+        },
+        {
+          question: "Como medida esencial de seguridad, coloque el dedo en contacto con la cola del disparador y luego decida si realizara el disparo", 
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Falso"
+        },
+        {
+          question: "Como medida esencial de seguridad, no apunte a nada ni nadie que no se quiera herir o dañar", 
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Verdadero"
+        },
+        {
+          question: "Como medida esencial de seguridad, dispare solo si se aseguró el objetivo, lo que hay detrás y a sus laterales", 
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Verdadero"
+        },
+        {
+          question: "La pistola Pietro Beretta, modelo PX4 Storm, es un arma", 
+          options: ["Automática", "Semiautomática"],
+          correctAnswer: "Semiautomática"
+        },
+        {
+          question: "La pistola Pietro Beretta, modelo PX4 Storm, es un arma", 
+          options: ["De simple acción.", "De doble acción.", "De simple y doble acción."],
+          correctAnswer: "De simple y doble acción."
+        },
+        {
+          question: "Al ser una pistola semiautomática, el procedimiento de carga, descarga y recarga, se produce automáticamente", 
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Verdadero"
+        },
+        {
+          question: "Al ser una pistola semiautomática, el tirador no debe liberar y presionar el disparador entre cada disparo", 
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Falso"
+        },
+        {
+          question: "La pistola Pietro Beretta, modelo PX4 Storm Full Size, tiene una capacidad del cargador de", 
+          options: ["15 cartuchos", "17 cartuchos", "9 cartuchos"],
+          correctAnswer: "17 cartuchos"
+        },
+        {
+          question: "La pistola Px4 Storm “F” posee DOS mecanismos de seguro", 
+          options: ["Un seguro automático de percutor y otro manual ambidiestro ubicado en los laterales posteriores de la corredera con función de abatimiento del martillo.", "Un seguro automático de percutor y otro manual ambidiestro ubicado en la parte superior de la corredera."],
+          correctAnswer: "Un seguro automático de percutor y otro manual ambidiestro ubicado en los laterales posteriores de la corredera con función de abatimiento del martillo."
+        },
+        {
+          question: "El seguro automático debe activarse cada vez que se recarga el arma.", 
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Falso"
+        },
+        {
+          question: "El seguro manual se activa al girar la palanca hacia abajo", 
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Verdadero"
+        },
+        {
+          question: "El seguro manual", 
+          options: ["Inutiliza el disparador.", "Desalinea el saliente de percutor.", "Desarticula el martillo.", "Todas las opciones son correctas."],
+          correctAnswer: "Todas las opciones son correctas."
+        },
+        {
+          question: "POSICION DE TIRO ISOSCELES MODIFICADA. Se optó por el empleo de esta posición de tiro, porque se adopta y abandona con rapidez y facilidad", 
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Verdadero"
+        },
+        {
+          question: "POSICION DE TIRO ISOSCELES MODIFICADA. Permite que, estando de costado al objetivo, haya menos volumen del cuerpo del tirador expuesto al blanco desde donde es posible que provenga una agresión por lo que el tirador estará más protegido",
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Falso"
+        },
+        {
+          question: "En la POSICION DE TIRO ISOSCELES MODIFICADA, las piernas deben estar separadas el ancho de hombros, para permitir al tirador desplazarse y disparar al mismo tiempo",
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Verdadero"
+        },
+        {
+          question: "La carga administrativa e inicial es la que produce el operador cuando el arma se encuentra descargada",
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Verdadero"
+        },
+        {
+          question: "La carga administrativa del arma siempre se realiza dirigiendo el arma a un lugar seguro",
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Verdadero"
+        },
+        {
+          question: "La carga administrativa, ¿es posible realizarla con el seguro colocado?",
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Verdadero"
+        },
+        {
+          question: "Descarga administrativa del arma: es la descarga que se produce cuando el arma se encuentra con cartucho en la recamara y el operador requiere descargar la misma",
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Verdadero"
+        },
+        {
+          question: "Una interrupción que impide la continuidad en el empleo del arma de fuego necesita de una solución lo más rápida y eficiente posible. Existen diversas causas de interrupción",
+          options: ["Falla de fulminante.", "Cargador mal colocado.", "Chimenea.", "Todas las opciones son correctas."],
+          correctAnswer: "Todas las opciones son correctas."
+        },
+        {
+          question: "En una “INTERRUPCION LARGA”, el perfil del arma se encuentra cerrada, por efecto de elementos que obstruyen la recamara",
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Falso"
+        },
+        {
+          question: "¿En cuál de las interrupciones cortas el arma no se encuentra acerrojada (cerrada)?",
+          options: ["Falla de fulminante.", "Cargador mal colocado.", "Chimenea."],
+          correctAnswer: "Chimenea."
+        },
+        {
+          question: "En las prácticas de tiro voluntarias en polígonos, está permitida la utilización de cualquier tipo de munición",
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Falso"
+        },
+        {
+          question: "En las prácticas de tiro voluntarias en polígonos, está prohibido la modificación del armamento asignado, en todo o alguna de sus partes",
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Verdadero"
+        },
+        {
+          question: "En la práctica de tiro voluntarias en polígono, está prohibido efectuar desarme primario y desarme explosivo del armamento",
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Verdadero"
+        },
+        {
+          question: "Un cuchillo en manos de una persona con actitud hostil, ¿Debe considerarse un arma letal?",
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Verdadero"
+        },
+        {
+          question: "Respecto de la manera de empuñar de la pistola de dotación policial al momento de disparar en un enfrentamiento",
+          options: ["Debe intentarse, siempre que la situación lo permita, empuñar con ambas manos para su mejor control y precisión.", "Realmente no importa si se aplica simple o doble empuñe, dado que el estrés genera una momentánea cuota de fuerza extra, suficiente para ser preciso, aún disparando con una sola mano.", "La precisión no es necesaria al momento de disparar en defensa propia, dado que lo que se busca es responder al fuego a toda costa."],
+          correctAnswer: "Debe intentarse, siempre que la situación lo permita, empuñar con ambas manos para su mejor control y precisión."
+        },
+        {
+          question: "Para la intervención ante un agresor que esgrime un arma blanca ¿Cuál cree que debe ser el modo recomendable de proceder?",
+          options: ["Acercarse y desarmarlo a mano limpia.", "Utilizar la tonfa como medio racionalmente idóneo para emplear frente a una agresión equivalente.", "Aumentar la distancia de seguridad y empuñar el arma."],
+          correctAnswer: "Aumentar la distancia de seguridad y empuñar el arma."
+        },
+        {
+          question: "No se debe llegar al lugar del hecho delictivo con autores en el lugar, empuñando el arma de fuego provista",
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Falso"
+        },
+        {
+          question: "¿Qué debe tenerse en cuenta antes de la dar la voz de “Alto Policía”?",
+          options: ["Tener la mayor proximidad posible a la persona a identificar y evitar la toma de coberturas para que la orden sea correctamente interpretada.", "Tomar cobertura, observar que no existan otras posibles amenazas y empuñar el arma si es necesario."],
+          correctAnswer: "Tomar cobertura, observar que no existan otras posibles amenazas y empuñar el arma si es necesario."
+        },
+        {
+          question: "En el caso que el intervenido porte un arma blanca, un arma de fuego o tenga las manos ocultas, debe priorizar su seguridad alejándose y buscando una cubierta si es posible",
+          options: ["Falso", "Verdadero"],
+          correctAnswer: "Verdadero"
+        },
+        {
+          question: "¿La palanca de seguro manual se utiliza para abatir el martillo de forma segura?",
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Verdadero"
+        }      
 ];
 let correctAnswersCount = 0;
 let currentQuestionIndex;
