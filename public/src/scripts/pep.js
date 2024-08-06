@@ -135,7 +135,6 @@ const questions = [
       ],
       correctAnswer: "Definen cómo se espera que actuemos, hablemos, nos vistamos, nos arreglemos y nos comportemos según nuestro género asignado."
     },
-    [
       {
         question: "El patriarcado es:",
         options: [
@@ -431,8 +430,145 @@ const questions = [
           "No establece una obligación de paridad entre hombres y mujeres de la policía de la ciudad."
         ],
         correctAnswer: "Guarda estricta representación de géneros para la policía de la ciudad."
-      }
-    ]
+      },
+        {
+          question: "El concepto de GENERO se refiere a:",
+          options: [
+            "Las capacidades diferenciales de cada persona en función de su determinación biológica.",
+            "Un conjunto de características sociales y culturales asignadas a las personas en función de su sexo.",
+            "Diferencias biológicas y naturales que las personas tenemos al nacer."
+          ],
+          correctAnswer: "Un conjunto de características sociales y culturales asignadas a las personas en función de su sexo."
+        },
+        {
+          question: "La perspectiva de género trata de:",
+          options: [
+            "Analizar la sociedad partiendo de la base de que hay una igualdad clara de oportunidades entre hombres y mujeres.",
+            "Analizar la sociedad haciendo visible la desigualdad y discriminación de género reinantes como presupuesto."
+          ],
+          correctAnswer: "Analizar la sociedad haciendo visible la desigualdad y discriminación de género reinantes como presupuesto."
+        },
+        {
+          question: "Los estereotipos de género comprenden:",
+          options: [
+            "Las ideas preconcebidas sobre lo que debe ser el comportamiento social de hombres y mujeres.",
+            "El conjunto de características vinculadas a las diferencias biológicas entre hombres y mujeres.",
+            "La división de roles funcionales que se hace familiarmente entre hombres y mujeres."
+          ],
+          correctAnswer: "Las ideas preconcebidas sobre lo que debe ser el comportamiento social de hombres y mujeres."
+        },
+        {
+          question: "La violencia de género está ligada a las relaciones desiguales de poder que ejerce el hombre sobre la mujer por el hecho de serlo:",
+          options: [
+            "Verdadero",
+            "Falso"
+          ],
+          correctAnswer: "Verdadero"
+        },
+        {
+          question: "La violencia doméstica es:",
+          options: [
+            "La violencia de cualquier tipo que se produce en el marco de una pareja casada legalmente.",
+            "La violencia de cualquier tipo que se produce entre dos personas que tienen un vínculo afectivo actual o previo, más allá de que convivan o no."
+          ],
+          correctAnswer: "La violencia de cualquier tipo que se produce entre dos personas que tienen un vínculo afectivo actual o previo, más allá de que convivan o no."
+        },
+        {
+          question: "La forma más común de violencia experimentada por las mujeres en todo el mundo es la violencia de pareja:",
+          options: [
+            "Verdadero",
+            "Falso"
+          ],
+          correctAnswer: "Verdadero"
+        },
+        {
+          question: "La Ley 26.485 de 'Protección integral para prevenir, sancionar y erradicar la violencia contra las mujeres en los ámbitos en que se desarrollen sus relaciones interpersonales':",
+          options: [
+            "Deja en la victima la decisión exclusiva de denunciar o no los delitos de violencia domestica.",
+            "Establece para los funcionarios y funcionarias que tomen conocimiento de estos hechos la obligación de denunciar."
+          ],
+          correctAnswer: "Establece para los funcionarios y funcionarias que tomen conocimiento de estos hechos la obligación de denunciar."
+        },
+        {
+          question: "La reciente reforma del código penal introdujo la figura del FEMICIDIO como delito autónomo que contempla los casos en los que el hecho se comete contra:",
+          options: [
+            "A una mujer cuando el hecho sea perpetrado por un hombre o mediare violencia de género.",
+            "A una mujer cuando sea cometido por su marido legalmente constituido.",
+            "Ninguna de las opciones es correcta.",
+            "A una mujer en cualquier contexto o situación."
+          ],
+          correctAnswer: "Ninguna de las opciones es correcta."
+        },
+        {
+          question: "La reciente reforma del código penal introdujo la figura del FEMICIDIO como un agravante del homicidio para los casos en los que el hecho se comete contra:",
+          options: [
+            "A una mujer cuando el hecho sea perpetrado por un hombre y mediare violencia de género.",
+            "A una mujer cuando sea cometido por su marido legalmente constituido.",
+            "A una mujer en cualquier contexto y situación."
+          ],
+          correctAnswer: "A una mujer cuando el hecho sea perpetrado por un hombre y mediare violencia de género."
+        },
+        {
+          question: "El concepto de SEXO se refiere a:",
+          options: [
+            "Diferencias biológicas y naturales que las personas tenemos al nacer.",
+            "Un conjunto de características sociales y culturales asignadas a las personas en función de su sexo.",
+            "Las capacidades diferenciales de cada persona en función de su determinación biológica."
+          ],
+          correctAnswer: "Diferencias biológicas y naturales que las personas tenemos al nacer."
+        },
+        {
+          question: "La sociedad nos asigna los mismos roles y tiene las mismas expectativas de quien nace con el sexo femenino o masculino:",
+          options: [
+            "Verdadero",
+            "Falso"
+          ],
+          correctAnswer: "Falso"
+        },
+        {
+          question: "Las inequidades de género se formaron a raíz de que la mujer estaba relegada a la vida privada y familiar, mientras que el hombre se desempeñaba en la vida pública, definiendo y delineando la forma de organización social:",
+          options: [
+            "Verdadero",
+            "Falso"
+          ],
+          correctAnswer: "Verdadero"
+        },
+        {
+          question: "La Convención Interamericana para Prevenir, Sancionar y Erradicar la Violencia contra la mujer también conocida como la 'Convención de Belém do Pará':",
+          options: [
+            "Es la única convención dirigida exclusivamente a la eliminación de la violencia contra la mujer.",
+            "Solicita que los Estados partes actúen con la debida diligencia para prevenir, investigar y sancionar la violencia contra la mujer.",
+            "Contiene disposiciones detalladas relativas a las obligaciones de los Estados de promulgar legislación.",
+            "Todas las opciones son correctas."
+          ],
+          correctAnswer: "Todas las opciones son correctas."
+        },
+        {
+          question: "Ley Nª 26.743, de identidad de género, permite que las personas trans (travestis, transexuales y transgénero) puedan ser inscriptas en sus documentos personales con el nombre y el género de elección, luego acreditar medicamente el cambio de género realizado:",
+          options: [
+            "Verdadero",
+            "Falso"
+          ],
+          correctAnswer: "Falso"
+        },
+        {
+          question: "Género no es un concepto que se desprenda de lo biológico, sino un estereotipo construido culturalmente:",
+          options: [
+            "Verdadero",
+            "Falso"
+          ],
+          correctAnswer: "Verdadero"
+        },
+        {
+          question: "Los roles de género en la sociedad:",
+          options: [
+            "Definen cómo se espera que actuemos, hablemos, nos vistamos, nos arreglemos y nos comportemos según nuestro género asignado.",
+            "Se relacionan directamente con la orientación sexual de cada individuo."
+          ],
+          correctAnswer: "Definen cómo se espera que actuemos, hablemos, nos vistamos, nos arreglemos y nos comportemos según nuestro género asignado."
+        }
+
+      
      
 
 
