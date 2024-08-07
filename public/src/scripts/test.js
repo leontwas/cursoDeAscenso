@@ -164,21 +164,21 @@ async function displayFailureMessage(correctAnswer) {
     // Determinar la imagen a mostrar según el número de respuestas correctas
     let imageSrc = '';
     if (correctAnswersCount < 5) {
-        imageSrc = '../images/image1.png';
+        imageSrc = './image1.png';
     } else if (correctAnswersCount >= 5 && correctAnswersCount < 10) {
-        imageSrc = '../images/image2.png';
+        imageSrc = './image2.png';
     } else if (correctAnswersCount >= 10 && correctAnswersCount < 15) {
-        imageSrc = '../images/image3.png';
+        imageSrc = './image3.png';
     } else if (correctAnswersCount >= 15 && correctAnswersCount < 20) {
-        imageSrc = '../images/image4.png';
+        imageSrc = './image4.png';
     } else if (correctAnswersCount >= 20 && correctAnswersCount < 25) {
-        imageSrc = '../images/image5.png';
+        imageSrc = './image5.png';
     } else if (correctAnswersCount >= 25 && correctAnswersCount < 30) {
-        imageSrc = '../images/image6.png';
+        imageSrc = './image6.png';
     } else if (correctAnswersCount >= 30 && correctAnswersCount < 35) {
-        imageSrc = '../images/image7.png';
+        imageSrc = './image7.png';
     } else if (correctAnswersCount >= 35 && correctAnswersCount < 40) {
-        imageSrc = '../images/image8.png';
+        imageSrc = './image8.png';
     }
 
     quizContainer.innerHTML = `
@@ -197,7 +197,7 @@ async function displayFailureMessage(correctAnswer) {
         });
     } catch (error) {
         console.error(error.message);
-        imageElement.src = '../public/src/images/imagen1.png'; // Ruta de reserva en caso de error
+        imageElement.src = './image1.png'; // Ruta de reserva en caso de error
     }
 
     document.getElementById('retry-button').onclick = () => {
