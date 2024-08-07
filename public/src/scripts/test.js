@@ -80,7 +80,6 @@ const questions = [
         correctAnswer: "Verdadero"
     },
 ];
-
 let correctAnswersCount = 0;
 let currentQuestionIndex;
 
@@ -109,7 +108,6 @@ function displayRandomQuestion() {
         optionsContainer.appendChild(button);
     });
 
-    // Ensure the Abandon button is displayed and positioned correctly
     showAbandonButton();
 }
 
@@ -121,16 +119,16 @@ function showAbandonButton() {
         abandonButton.classList.add('btn', 'btn-abandonar');
         abandonButton.innerText = 'Regresar';
         abandonButton.onclick = () => window.location.href = './index.html';
-        document.body.appendChild(abandonButton); // Append to body to ensure it's outside the question container
+        document.body.appendChild(abandonButton);
     } else {
-        abandonButton.style.display = 'block'; // Ensure button is visible
+        abandonButton.style.display = 'block';
     }
 }
 
 function hideAbandonButton() {
     const abandonButton = document.getElementById('abandon-button');
     if (abandonButton) {
-        abandonButton.style.display = 'none'; // Hide the button
+        abandonButton.style.display = 'none';
     }
 }
 
@@ -144,7 +142,7 @@ function checkAnswer(selectedAnswer) {
         displayNotification("Correcto!");
     } else {
         displayFailureMessage(correctAnswer);
-        hideAbandonButton(); // Hide the Abandon button
+        hideAbandonButton();
     }
 }
 
@@ -158,27 +156,27 @@ function displayNotification(message) {
         document.body.removeChild(notification);
     }, 2000);
 }
+
 async function displayFailureMessage(correctAnswer) {
     const quizContainer = document.getElementById('quiz-container');
 
-    // Determinar la imagen a mostrar según el número de respuestas correctas
     let imageSrc = '';
     if (correctAnswersCount < 5) {
-        imageSrc = './image1.png';
+        imageSrc = 'public/src/images/image1.png';
     } else if (correctAnswersCount >= 5 && correctAnswersCount < 10) {
-        imageSrc = './image2.png';
+        imageSrc = 'public/src/images/image2.png';
     } else if (correctAnswersCount >= 10 && correctAnswersCount < 15) {
-        imageSrc = './image3.png';
+        imageSrc = 'public/src/images/image3.png';
     } else if (correctAnswersCount >= 15 && correctAnswersCount < 20) {
-        imageSrc = './image4.png';
+        imageSrc = 'public/src/images/image4.png';
     } else if (correctAnswersCount >= 20 && correctAnswersCount < 25) {
-        imageSrc = './image5.png';
+        imageSrc = 'public/src/images/image5.png';
     } else if (correctAnswersCount >= 25 && correctAnswersCount < 30) {
-        imageSrc = './image6.png';
+        imageSrc = 'public/src/images/image6.png';
     } else if (correctAnswersCount >= 30 && correctAnswersCount < 35) {
-        imageSrc = './image7.png';
+        imageSrc = 'public/src/images/image7.png';
     } else if (correctAnswersCount >= 35 && correctAnswersCount < 40) {
-        imageSrc = './image8.png';
+        imageSrc = 'public/src/images/image8.png';
     }
 
     quizContainer.innerHTML = `
@@ -197,7 +195,7 @@ async function displayFailureMessage(correctAnswer) {
         });
     } catch (error) {
         console.error(error.message);
-        imageElement.src = './image1.png'; // Ruta de reserva en caso de error
+        imageElement.src = 'public/src/images/image1.png';
     }
 
     document.getElementById('retry-button').onclick = () => {
