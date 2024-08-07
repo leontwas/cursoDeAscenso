@@ -933,7 +933,16 @@ const questions = [
           options: ["En el mismo lateral a la ubicación de la pistolera", "En el lateral opuesto a la ubicación de la pistolera"],
           correctAnswer: "En el lateral opuesto a la ubicación de la pistolera"
         },
-        
+        {
+          question: "En el procedimiento para la evaluación de la escena se deberá considerar:", 
+          options: ["El riesgo  y la pronta evacuación.", "La seguridad, la situación y los recursos necesarios", "Ninguna es correcta"],
+          correctAnswer: "La seguridad, la situación y los recursos necesarios"
+        },
+        {
+          question: "En caso de un parto en vía pública, una vez efectuado el nacimiento ¿qué hacemos con el cordón?", 
+          options: ["No cortar el cordón umbilical se utilizará hilos anchos para ligarlo", "Atarlo a cuatro dedos de separación del obligo y cortarlo", "Ninguna es correcta"],
+          correctAnswer: "No cortar el cordón umbilical se utilizará hilos anchos para ligarlo"
+        },
 ];
 let correctAnswersCount = 0;
 let currentQuestionIndex;
