@@ -943,6 +943,32 @@ const questions = [
           options: ["No cortar el cordón umbilical se utilizará hilos anchos para ligarlo", "Atarlo a cuatro dedos de separación del obligo y cortarlo", "Ninguna es correcta"],
           correctAnswer: "No cortar el cordón umbilical se utilizará hilos anchos para ligarlo"
         },
+        {
+          question: "La cadena de la vida está conformada por eslabones que se deben cumplimentar para lograr con éxito los objetivos de los primeros auxilios y estos son:", 
+          options: ["Seguridad de la escena y activación del sistema.", "Efectuar los primeros auxilios y garantizar el traslado.", "Todas son correctas."],
+          correctAnswer:  "Todas son correctas."
+        },
+        {
+          question: "Las compresiones a un niño se hacen:", 
+          options: ["A dos manos.", "A una mano.", "Con dos dedos."],
+          correctAnswrrer:  "A una mano."
+        },
+        {
+          question: "En caso de un parto en vía pública ¿qué hacemos si vemos que el bebe tiene el cordón umbilical rodeando su cuello?", 
+          options: ["Con un dedo tirar suavemente y desenrollarlo, pasándolo por arriba de la cabeza del bebe, así se evita que se estrangule.", "Pedir SAME en prioridad, o conducir al menor inmediatamente al nosocomio más cercano.", "No tratar de desenrrollar el cordón porque podría cortarse provocando un daño a la madre y al bebé."],
+          correctAnswrrer:  "Con un dedo tirar suavemente y desenrollarlo, pasándolo por arriba de la cabeza del bebe, así se evita que se estrangule."
+        },
+        {
+          question: "Ante una quemadura debo:", 
+          options: ["Cubrir la herida inmediatamente con gaza o paños limpios.", "Enfriar la zona quemada con agua de la canilla.", "Ninguna es correcta."],
+          correctAnswrrer:  "Enfriar la zona quemada con agua de la canilla."
+        },
+        {
+          question: "Cómo se llama la herramienta intelectual para ordenar las acciones y/o maniobras, que está conformada por cuatro eslabones que se deben cumplimentar para lograr con éxito los objetivos de los primeros auxilios?", 
+          options: ["Protocolo de salvataje.", "Primeros auxilios.", "Cadena de la vida."],
+          correctAnswrrer:  "Cadena de la vida."
+        },
+        
 ];
 let correctAnswersCount = 0;
 let currentQuestionIndex;
