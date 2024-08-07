@@ -160,7 +160,7 @@ function displayNotification(message) {
 }
 async function displayFailureMessage(correctAnswer) {
     const quizContainer = document.getElementById('quiz-container');
-    const imageSrc = '../src/images/image1.png'; // Cambia esta ruta si es necesario
+    const imageSrc = '../src/images/image8.png'; // Cambia esta ruta si es necesario
 
     quizContainer.innerHTML = `
         <h1 class="error-message">Incorrecto.</h1>
