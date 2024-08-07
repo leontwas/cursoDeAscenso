@@ -191,13 +191,13 @@ function displayCompletionMessage() {
     let imageSrc = '';
 
     if (correctAnswersCount < 5) {
-        imageSrc = 'public/src/images/image1.png';
+        imageSrc = '../src/images/image1.png';
     } else if (correctAnswersCount >= 5 && correctAnswersCount <= 9) {
-        imageSrc = 'public/src/images/image8.png'; // Verifica si esta imagen existe en esta ruta
+        imageSrc = '../src/images/image8.png'; // Verifica si esta imagen existe en esta ruta
     } else if (correctAnswersCount >= 10 && correctAnswersCount <= 14) {
-        imageSrc = 'public/src/images/image3.png';
+        imageSrc = '../src/images/image3.png';
     } else if (correctAnswersCount >= 15 && correctAnswersCount <= 20) {
-        imageSrc = 'public/src/images/image4.png';
+        imageSrc = '../src/images/image4.png';
     }
 
     console.log(`Correct answers: ${correctAnswersCount}`); // Depuración
