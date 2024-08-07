@@ -158,58 +158,33 @@ function displayNotification(message) {
         document.body.removeChild(notification);
     }, 2000);
 }
-
 async function displayFailureMessage(correctAnswer) {
     const quizContainer = document.getElementById('quiz-container');
-    let imageSrc = '';
+    const imagePath = '../src/images/image1.png'; // Ruta base para las imágenes
+    const imageSrc = `${imagePath}`; // Ruta específica para la imagen
 
-    if (correctAnswersCount >= 1 && correctAnswersCount <= 4) {
-        imageSrc = '../src/images/image1.png';
-    } else if (correctAnswersCount >= 5 && correctAnswersCount <= 9) {
-        imageSrc = '../src/images/image2.png';
-    } else if (correctAnswersCount >= 10 && correctAnswersCount <= 14) {
-        imageSrc = '../src/images/image3.png';
-    }
+    quizContainer.innerHTML = `
+        <h1 class="error-message">Incorrecto.</h1>
+        <h2 class="error-message">La respuesta correcta es: ${correctAnswer}</h2>
+        <h2 class="error-message">Respuestas correctas: ${correctAnswersCount}</h2>
+        <img id="failure-image" src="${imageSrc}" alt="Imagen de error" class="img-fluid">
+        <button id="retry-button" class="btn btn-danger mt-3">Reintentar</button>
+    `;
 
-    // Create a promise that resolves when the image has loaded
-    const loadImage = (src) => {
-        return new Promise((resolve, reject) => {
-            const img = new Image();
-            img.src = src;
-            img.onload = () => resolve(src);
-            img.onerror = () => reject(new Error('Image failed to load'));
-        });
-    };
-
+    const imageElement = document.getElementById('failure-image');
     try {
-        // Await the image loading
-        await loadImage(imageSrc);
-
-        quizContainer.innerHTML = `
-            <h1 class="error-message">Incorrecto.</h1>
-            <h2 class="error-message">La respuesta correcta es: ${correctAnswer}</h2>
-            <h2 class="error-message">Respuestas correctas: ${correctAnswersCount}</h2>
-            <img src="${imageSrc}" alt="Imagen de error" class="img-fluid">
-            <button id="retry-button" class="btn btn-danger mt-3">Reintentar</button>
-        `;
-
-        document.getElementById('retry-button').onclick = () => {
-            window.location.href = './index.html';
-        };
+        await new Promise((resolve, reject) => {
+            imageElement.onload = () => resolve();
+            imageElement.onerror = () => reject(new Error('Error al cargar la imagen.'));
+        });
     } catch (error) {
-        console.error(error);
-        quizContainer.innerHTML = `
-            <h1 class="error-message">Incorrecto.</h1>
-            <h2 class="error-message">La respuesta correcta es: ${correctAnswer}</h2>
-            <h2 class="error-message">Respuestas correctas: ${correctAnswersCount}</h2>
-            <p>Error al cargar la imagen.</p>
-            <button id="retry-button" class="btn btn-danger mt-3">Reintentar</button>
-        `;
-
-        document.getElementById('retry-button').onclick = () => {
-            window.location.href = './index.html';
-        };
+        console.error(error.message);
+        imageElement.src = '../src/images/image1.png'; // Ruta de reserva en caso de error
     }
+
+    document.getElementById('retry-button').onclick = () => {
+        window.location.href = './index.html';
+    };
 }
 
 function displayCompletionMessage() {
@@ -217,13 +192,13 @@ function displayCompletionMessage() {
     let imageSrc = '';
 
     if (correctAnswersCount < 5) {
-        imageSrc = '../src/images/image1.png';
+        imageSrc = 'public/src/images/image1.png';
     } else if (correctAnswersCount >= 5 && correctAnswersCount <= 9) {
-        imageSrc = '../src/images/image2.png';
+        imageSrc = 'public/src/images/image2.png';
     } else if (correctAnswersCount >= 10 && correctAnswersCount <= 14) {
-        imageSrc = '../src/images/image3.png';
-    } else if (correctAnswersCount >= 15 && correctAnswersCount <= 30) {
-        imageSrc = '../src/images/image4.png';
+        imageSrc = 'public/src/images/image3.png';
+    } else if (correctAnswersCount >= 15 && correctAnswersCount <= 20) {
+        imageSrc = 'public/src/images/image4.png';
     }
 
     quizContainer.innerHTML = `
