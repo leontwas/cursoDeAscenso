@@ -194,7 +194,7 @@ function displayCompletionMessage() {
     if (correctAnswersCount < 5) {
         imageSrc = 'public/src/images/image1.png';
     } else if (correctAnswersCount >= 5 && correctAnswersCount <= 9) {
-        imageSrc = 'public/src/images/image2.png';
+        imageSrc = 'public/src/images/image8.png';
     } else if (correctAnswersCount >= 10 && correctAnswersCount <= 14) {
         imageSrc = 'public/src/images/image3.png';
     } else if (correctAnswersCount >= 15 && correctAnswersCount <= 20) {
