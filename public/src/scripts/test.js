@@ -165,19 +165,7 @@ async function displayFailureMessage(correctAnswer) {
     if (correctAnswersCount < 5) {
         imageSrc = '../src/images/image1.png';
     } else if (correctAnswersCount >= 5 && correctAnswersCount < 10) {
-        imageSrc = '../src/images/image2.png';
-    } else if (correctAnswersCount >= 10 && correctAnswersCount < 15) {
-        imageSrc = '../src/images/image2.png';
-    } else if (correctAnswersCount >= 15 && correctAnswersCount < 20) {
-        imageSrc = '../src/images/image4.png';
-    } else if (correctAnswersCount >= 20 && correctAnswersCount < 25) {
-        imageSrc = '../src/images/image5.png';
-    } else if (correctAnswersCount >= 25 && correctAnswersCount < 30) {
-        imageSrc = '../src/images/image6.png';
-    } else if (correctAnswersCount >= 30 && correctAnswersCount < 35) {
-        imageSrc = '../src/images/image7.png';
-    } else if (correctAnswersCount >= 35 && correctAnswersCount < 40) {
-        imageSrc = '../src/images/image8.png';
+          imageSrc = '../src/images/image8.png';
     }
 
     quizContainer.innerHTML = `
