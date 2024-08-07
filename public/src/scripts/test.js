@@ -164,21 +164,21 @@ async function displayFailureMessage(correctAnswer) {
     // Determinar la imagen a mostrar según el número de respuestas correctas
     let imageSrc = '';
     if (correctAnswersCount < 5) {
-        imageSrc = 'public/src/images/image1.png';
+        imageSrc = '../images/image1.png';
     } else if (correctAnswersCount >= 5 && correctAnswersCount < 10) {
-        imageSrc = 'public/src/images/image2.png';
+        imageSrc = '../images/image2.png';
     } else if (correctAnswersCount >= 10 && correctAnswersCount < 15) {
-        imageSrc = 'public/src/images/image3.png';
+        imageSrc = '../images/image3.png';
     } else if (correctAnswersCount >= 15 && correctAnswersCount < 20) {
-        imageSrc = 'public/src/images/image4.png';
+        imageSrc = '../images/image4.png';
     } else if (correctAnswersCount >= 20 && correctAnswersCount < 25) {
-        imageSrc = 'public/src/images/image5.png';
+        imageSrc = '../images/image5.png';
     } else if (correctAnswersCount >= 25 && correctAnswersCount < 30) {
-        imageSrc = 'public/src/images/image6.png';
+        imageSrc = '../images/image6.png';
     } else if (correctAnswersCount >= 30 && correctAnswersCount < 35) {
-        imageSrc = 'public/src/images/image7.png';
+        imageSrc = '../images/image7.png';
     } else if (correctAnswersCount >= 35 && correctAnswersCount < 40) {
-        imageSrc = 'public/src/images/image8.png';
+        imageSrc = '../images/image8.png';
     }
 
     quizContainer.innerHTML = `
