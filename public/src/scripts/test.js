@@ -189,13 +189,13 @@ function displayCompletionMessage() {
     let imageSrc = '';
 
     if (correctAnswersCount < 5) {
-        imageSrc = './images/image1.png';
+        imageSrc = './src/images/image1.png';
     } else if (correctAnswersCount >= 5 && correctAnswersCount <= 9) {
-        imageSrc = './images/image2.png';
+        imageSrc = './src/images/image2.png';
     } else if (correctAnswersCount >= 10 && correctAnswersCount <= 14) {
-        imageSrc = './images/image3.png';
+        imageSrc = './src/images/image3.png';
     } else if (correctAnswersCount >= 15 && correctAnswersCount <= 30) {
-        imageSrc = './images/image4.png';
+        imageSrc = './src/images/image4.png';
     }
 
     quizContainer.innerHTML = `
