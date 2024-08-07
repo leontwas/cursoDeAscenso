@@ -1,4 +1,4 @@
-const questions = [     
+const questions = [
     {
         question: "Las inequidades de género se formaron a raíz de que la mujer estaba relegada a la vida privada y familiar, mientras que el hombre se desempeñaba en la vida pública, definiendo y delineando la forma de organización social:",
         options: [
@@ -14,7 +14,7 @@ const questions = [
             "Falso"
         ],
         correctAnswer: "Verdadero"
-    }, 
+    },
     {
         question: "La violencia de género se deriva de la desigualdad de poder entre hombres y mujeres:",
         options: [
@@ -80,6 +80,7 @@ const questions = [
         correctAnswer: "Verdadero"
     },
 ];
+
 let correctAnswersCount = 0;
 let currentQuestionIndex;
 
@@ -202,3 +203,4 @@ async function displayFailureMessage(correctAnswer) {
         window.location.href = './index.html';
     };
 }
+
