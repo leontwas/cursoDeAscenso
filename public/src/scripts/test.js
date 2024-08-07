@@ -160,8 +160,7 @@ function displayNotification(message) {
 }
 async function displayFailureMessage(correctAnswer) {
     const quizContainer = document.getElementById('quiz-container');
-    const imagePath = '../src/images/image1.png'; // Ruta base para las imágenes
-    const imageSrc = `${imagePath}`; // Ruta específica para la imagen
+    const imageSrc = '../src/images/image1.png'; // Cambia esta ruta si es necesario
 
     quizContainer.innerHTML = `
         <h1 class="error-message">Incorrecto.</h1>
@@ -194,12 +193,14 @@ function displayCompletionMessage() {
     if (correctAnswersCount < 5) {
         imageSrc = 'public/src/images/image1.png';
     } else if (correctAnswersCount >= 5 && correctAnswersCount <= 9) {
-        imageSrc = 'public/src/images/image8.png';
+        imageSrc = 'public/src/images/image8.png'; // Verifica si esta imagen existe en esta ruta
     } else if (correctAnswersCount >= 10 && correctAnswersCount <= 14) {
         imageSrc = 'public/src/images/image3.png';
     } else if (correctAnswersCount >= 15 && correctAnswersCount <= 20) {
         imageSrc = 'public/src/images/image4.png';
     }
+
+    console.log(`Correct answers: ${correctAnswersCount}`); // Depuración
 
     quizContainer.innerHTML = `
         <h2>¡Has completado el cuestionario!</h2>
@@ -209,3 +210,4 @@ function displayCompletionMessage() {
 
     hideAbandonButton(); // Hide the Abandon button on completion
 }
+
