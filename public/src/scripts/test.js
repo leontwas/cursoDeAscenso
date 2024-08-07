@@ -197,7 +197,7 @@ async function displayFailureMessage(correctAnswer) {
         });
     } catch (error) {
         console.error(error.message);
-        imageElement.src = 'public/src/images/image1.png'; // Ruta de reserva en caso de error
+        imageElement.src = '../public/src/images/imagen1.png'; // Ruta de reserva en caso de error
     }
 
     document.getElementById('retry-button').onclick = () => {
