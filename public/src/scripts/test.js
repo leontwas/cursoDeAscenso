@@ -159,7 +159,7 @@ function displayNotification(message) {
     }, 2000);
 }
 
-function displayFailureMessage(correctAnswer) {
+async function displayFailureMessage(correctAnswer) {
     const quizContainer = document.getElementById('quiz-container');
     let imageSrc = '';
 
@@ -171,17 +171,45 @@ function displayFailureMessage(correctAnswer) {
         imageSrc = '../src/images/image3.png';
     }
 
-    quizContainer.innerHTML = `
-        <h1 class="error-message">Incorrecto.</h1>
-        <h2 class="error-message">La respuesta correcta es: ${correctAnswer}</h2>
-        <h2 class="error-message">Respuestas correctas: ${correctAnswersCount}</h2>
-        <img src="${imageSrc}" alt="Imagen de error" class="img-fluid">
-        <button id="retry-button" class="btn btn-danger mt-3">Reintentar</button>
-    `;
-
-    document.getElementById('retry-button').onclick = () => {
-        window.location.href = './index.html';
+    // Create a promise that resolves when the image has loaded
+    const loadImage = (src) => {
+        return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.src = src;
+            img.onload = () => resolve(src);
+            img.onerror = () => reject(new Error('Image failed to load'));
+        });
     };
+
+    try {
+        // Await the image loading
+        await loadImage(imageSrc);
+
+        quizContainer.innerHTML = `
+            <h1 class="error-message">Incorrecto.</h1>
+            <h2 class="error-message">La respuesta correcta es: ${correctAnswer}</h2>
+            <h2 class="error-message">Respuestas correctas: ${correctAnswersCount}</h2>
+            <img src="${imageSrc}" alt="Imagen de error" class="img-fluid">
+            <button id="retry-button" class="btn btn-danger mt-3">Reintentar</button>
+        `;
+
+        document.getElementById('retry-button').onclick = () => {
+            window.location.href = './index.html';
+        };
+    } catch (error) {
+        console.error(error);
+        quizContainer.innerHTML = `
+            <h1 class="error-message">Incorrecto.</h1>
+            <h2 class="error-message">La respuesta correcta es: ${correctAnswer}</h2>
+            <h2 class="error-message">Respuestas correctas: ${correctAnswersCount}</h2>
+            <p>Error al cargar la imagen.</p>
+            <button id="retry-button" class="btn btn-danger mt-3">Reintentar</button>
+        `;
+
+        document.getElementById('retry-button').onclick = () => {
+            window.location.href = './index.html';
+        };
+    }
 }
 
 function displayCompletionMessage() {
