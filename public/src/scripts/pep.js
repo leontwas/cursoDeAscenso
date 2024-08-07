@@ -968,6 +968,11 @@ const questions = [
           options: ["Protocolo de salvataje.", "Primeros auxilios.", "Cadena de la vida."],
           correctAnswrrer:  "Cadena de la vida."
         },
+        {
+          question: "Ante una fractura debo:", 
+          options: ["No mover a la víctima y llamar a emergencia.", "Colocar dos tablillas alrededor de la fractura y sujetarlas con alguna tela.", "Ambas son correctas."],
+          correctAnswrrer:  "No mover a la víctima y llamar a emergencia."
+        },
         
 ];
 let correctAnswersCount = 0;
