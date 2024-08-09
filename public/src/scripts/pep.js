@@ -628,12 +628,7 @@ const questions = [
           options: ["No", "Si"],
           correctAnswer: "No"
         },
-        {
-          question: "¿Salud es sinónimo de enfermedad?", 
-          options: ["No", "Si"],
-          correctAnswer: "No"
-        },
-        {
+         {
           question: "¿Salud es sinónimo de ausencia de enfermedad?", 
           options: ["No", "Si"],
           correctAnswer: "No"
@@ -694,7 +689,7 @@ const questions = [
           correctAnswer: "Verdadero"
         },
         {
-          question: "La pistola Pietro Beretta, modelo PX4 Storm, es un arma", 
+          question: "La pistola Pietro Beretta, modelo PX4 Storm, es un arma...", 
           options: ["Automática", "Semiautomática"],
           correctAnswer: "Semiautomática"
         },
@@ -704,12 +699,12 @@ const questions = [
           correctAnswer: "De simple y doble acción."
         },
         {
-          question: "Al ser una pistola semiautomática, el procedimiento de carga, descarga y recarga, se produce automáticamente", 
+          question: "La pistola Pietro Beretta, modelo PX4 Storm, al ser una pistola semiautomática, el procedimiento de carga, descarga y recarga, se produce automáticamente", 
           options: ["Verdadero", "Falso"],
           correctAnswer: "Verdadero"
         },
         {
-          question: "Al ser una pistola semiautomática, el tirador no debe liberar y presionar el disparador entre cada disparo", 
+          question: "La pistola Pietro Beretta, modelo PX4 Storm, al ser una pistola semiautomática, el tirador no debe liberar y presionar el disparador entre cada disparo", 
           options: ["Verdadero", "Falso"],
           correctAnswer: "Falso"
         },
@@ -724,12 +719,12 @@ const questions = [
           correctAnswer: "Un seguro automático de percutor y otro manual ambidiestro ubicado en los laterales posteriores de la corredera con función de abatimiento del martillo."
         },
         {
-          question: "El seguro automático debe activarse cada vez que se recarga el arma.", 
+          question: "En la pistola Pietro Beretta, modelo PX4 Storm, el  automático debe activarse cada vez que se recarga el arma.", 
           options: ["Verdadero", "Falso"],
           correctAnswer: "Falso"
         },
         {
-          question: "El seguro manual se activa al girar la palanca hacia abajo", 
+          question: "En la pistola Pietro Beretta, modelo PX4 Storm, el seguro manual se activa al girar la palanca hacia abajo", 
           options: ["Verdadero", "Falso"],
           correctAnswer: "Verdadero"
         },

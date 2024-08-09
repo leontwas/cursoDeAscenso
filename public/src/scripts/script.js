@@ -644,8 +644,9 @@ const questions = [
                
          /**************************** dejé en la página 12 del archivo curso 2021 ***************************/
     ];
-    let correctAnswersCount = 0;
-    let currentQuestionIndex;
+  
+let correctAnswersCount = 0;
+let currentQuestionIndex;
 
 document.addEventListener('DOMContentLoaded', () => {
     displayRandomQuestion();
@@ -653,7 +654,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function displayRandomQuestion() {
     if (questions.length === 0) {
-        displayCompletionMessage();
+        // Se elimina la invocación a displayCompletionMessage()
         return;
     }
 
@@ -672,7 +673,6 @@ function displayRandomQuestion() {
         optionsContainer.appendChild(button);
     });
 
-    // Ensure the Abandon button is displayed and positioned correctly
     showAbandonButton();
 }
 
@@ -684,17 +684,16 @@ function showAbandonButton() {
         abandonButton.classList.add('btn', 'btn-abandonar');
         abandonButton.innerText = 'Regresar';
         abandonButton.onclick = () => window.location.href = './index.html';
-        document.body.appendChild(abandonButton); // Append to body to ensure it's outside the question container
+        document.body.appendChild(abandonButton);
     } else {
-        abandonButton.style.display = 'block'; // Ensure button is visible
+        abandonButton.style.display = 'block';
     }
 }
-
 
 function hideAbandonButton() {
     const abandonButton = document.getElementById('abandon-button');
     if (abandonButton) {
-        abandonButton.style.display = 'none'; // Hide the button
+        abandonButton.style.display = 'none';
     }
 }
 
@@ -708,7 +707,7 @@ function checkAnswer(selectedAnswer) {
         displayNotification("Correcto!");
     } else {
         displayFailureMessage(correctAnswer);
-        hideAbandonButton(); // Hide the Abandon button
+        hideAbandonButton();
     }
 }
 
@@ -717,7 +716,7 @@ function displayNotification(message) {
     notification.classList.add('notification');
     notification.innerText = message;
     document.body.appendChild(notification);
-    
+
     setTimeout(() => {
         document.body.removeChild(notification);
     }, 2000);
@@ -736,27 +735,4 @@ function displayFailureMessage(correctAnswer) {
     document.getElementById('retry-button').onclick = () => {
         window.location.href = './index.html';
     };
-}
-
-function displayCompletionMessage() {
-    const quizContainer = document.getElementById('quiz-container');
-    let imageSrc = '';
-
-    if (correctAnswersCount < 5) {
-        imageSrc = '../src/images/image1.png';
-    } else if (correctAnswersCount >= 6 && correctAnswersCount <= 10) {
-        imageSrc = '../src/images/image2.png';
-    } else if (correctAnswersCount >= 11 && correctAnswersCount <= 20) {
-        imageSrc = '../src/images/image3.png';
-    } else if (correctAnswersCount >= 21 && correctAnswersCount <= 30) {
-        imageSrc = '../src/images/image4.png';
-    }
-
-    quizContainer.innerHTML = `
-        <h2>¡Has completado el cuestionario!</h2>
-        <p>Respuestas correctas: ${correctAnswersCount}</p>
-        <img src="${imageSrc}" alt="Resultado" class="img-fluid">
-    `;
-
-    hideAbandonButton(); // Hide the Abandon button on completion
 }
