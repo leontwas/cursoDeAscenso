@@ -1,5 +1,5 @@
 const questions = [
-/*{
+{
       question: "El concepto de GÉNERO se refiere a:",
       options: [
         "Las capacidades diferenciales de cada persona en función de su determinación biológica",
@@ -587,13 +587,13 @@ const questions = [
           question: "A la hora de planificar su entrenamiento, es importante fijarse metas y objetivos lo más ambicioso posible para estimular la superación", 
           options: ["Verdadero", "Falso"],
           correctAnswer: "Falso"
-        },*/
+        },
         {
           question: "Fijarse metas y objetivos acordes a las posibilidades de cada uno es clave para planificar el entrenamiento", 
           options: ["Verdadero", "Falso"],
           correctAnswer: "Verdadero"
         },
-       /* {
+        {
           question: "Las horas de descanso no influyen en el estado físico general siempre y cuando se entrene regularmente", 
           options: ["Verdadero", "Falso"],
           correctAnswer: "Falso"
@@ -1202,7 +1202,7 @@ const questions = [
           question: "El POC tiene un app especialmente creada para comunicarse con las personas con Autismo.",
           options: ["Verdadero", "Falso"],
           correctAnswer:  "Verdadero"
-        },*/
+        },
 ];
 let correctAnswersCount = 0;
 let currentQuestionIndex;
