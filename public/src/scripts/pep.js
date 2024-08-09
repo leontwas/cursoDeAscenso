@@ -1329,8 +1329,6 @@ function displayCompletionMessage() {
       .catch(error => {
           console.error('Hubo un problema cargando la imagen:', error);
       });
-}
-
 
 quizContainer.innerHTML = `
     <h2>¡Has completado el cuestionario!</h2>
