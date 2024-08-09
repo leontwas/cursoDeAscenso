@@ -1301,7 +1301,7 @@ function displayCompletionMessage() {
   if (correctAnswersCount < 5) {
       imageSrc = '../src/images/image1.png';
   } else if (correctAnswersCount >= 6 && correctAnswersCount <= 10) {
-      imageSrc = '../images/image2.png';
+      imageSrc = '../src/images/image2.png';
   } else if (correctAnswersCount >= 11 && correctAnswersCount <= 20) {
       imageSrc = '../src/images/image3.png';
   } else if (correctAnswersCount >= 21 && correctAnswersCount <= 30) {
@@ -1321,19 +1321,14 @@ function displayCompletionMessage() {
   // Llama a la función loadImage y maneja la carga
   loadImage(imageSrc)
       .then(img => {
-          // Aquí puedes realizar las acciones necesarias con la imagen cargada
-          quizContainer.innerHTML = '';  // Limpia el contenedor del quiz
-          quizContainer.appendChild(img);  // Añade la imagen al contenedor
+          quizContainer.innerHTML = `
+              <h2>¡Has completado el cuestionario!</h2>
+              <p>Respuestas correctas: ${correctAnswersCount}</p>
+          `;
+          quizContainer.appendChild(img);  // Añade la imagen al contenedor después de limpiar el contenido
+          hideAbandonButton(); // Oculta el botón de abandono al completar el cuestionario
       })
       .catch(error => {
           console.error('Hubo un problema cargando la imagen:', error);
       });
-
-quizContainer.innerHTML = `
-    <h2>¡Has completado el cuestionario!</h2>
-    <p>Respuestas correctas: ${correctAnswersCount}</p>
-    <img src="${imageSrc}" alt="Resultado" class="img-fluid">
-`;
-
-hideAbandonButton(); // Hide the Abandon button on completion
 }
