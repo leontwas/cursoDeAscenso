@@ -973,7 +973,46 @@ const questions = [
           options: ["No mover a la víctima y llamar a emergencia.", "Colocar dos tablillas alrededor de la fractura y sujetarlas con alguna tela.", "Ambas son correctas."],
           correctAnswrrer:  "No mover a la víctima y llamar a emergencia."
         },
-        
+        {
+          question: "Ante una amputación:", 
+          options: ["Hacer presión sobre la herida. Y conservar la parte amputada en una bolsa sin colocar hielo.", "Debo conservar la parte amputada en una bolsa y esa bolsa en agua y hielo. También comprimir la herida para detener la hemorragia.", "Hacer un torniquete para detener el sangrado, y conservar la parte amputada."],
+          correctAnswrrer:  "Debo conservar la parte amputada en una bolsa y esa bolsa en agua y hielo. También comprimir la herida para detener la hemorragia."
+        },       
+        {
+         question: "Ante un desmayo debo:", 
+         options: ["Levantarle las piernas al paciente.", "Darle agua y un caramelo al paciente.", "Colocar al paciente en la posición de seguridad."],
+         correctAnswrrer:  "Levantarle las piernas al paciente."
+        },
+        {
+          question: "Ante una convulsión:", 
+          options: ["Debo sostener su cabeza hasta que se detenga la convulsión.", "Meter los dedos en su boca pare evitar que se muerda la lengua.", "Recostar boca abajo a la persona con una almohada en su cabeza."],
+          correctAnswrrer:  "Debo sostener su cabeza hasta que se detenga la convulsión."
+        },
+        {
+          question: "Ante una herida cortopunzante debo:", 
+          options: ["Llamar a emergencia y no retirar el objeto que haya penetrado el cuerpo.", "Retirar el elemento cortopunsante y hacer compresión sobre la herida.", "Ninguna es correcta."],
+          correctAnswrrer:  "Llamar a emergencia y no retirar el objeto que haya penetrado el cuerpo."
+        },
+        {
+          question: "La maniobra de Heimlich es utilizada para:", 
+          options: ["Hacerle reanimación cardio pulmonar a una persona.", "Ayudar a una persona cuando esta atragantada.", "Ayudar a una persona a normalizar su presión arterial."],
+          correctAnswrrer:  "Ayudar a una persona cuando esta atragantada."
+        },
+        {
+          question: "Ante una hemorragia debo:", 
+          options: ["Hacer un torniquete por encima y por debajo de la herida.", "Cubrir con una manta a la persona a activar el SAME", "Hacer compresión directa sobre la herida."],
+          correctAnswrrer:  "Hacer compresión directa sobre la herida.."
+        },
+        {
+          question: "Cuándo comienza a implementar un parto en vía pública", 
+          options: ["Cuando el útero se dilata unos 10cm, o si se le puede ver la cabeza al bebé.", "Cuando la madre rompe la bolsa.", "Cuando ya rompió bolsa y las contracciones superan las 10 por minuto."],
+          correctAnswrrer:  "Cuando el útero se dilata unos 10cm, o si se le puede ver la cabeza al bebé."
+        },
+        {
+          question: "Una vez presionado durante un segundo el botón de emergencia, el micrófono queda abierto durante 10 segundos sin necesidad de presionar el boton ptt para modular",
+          options: ["Verdadero", "Falso"],
+          correctAnswrrer:  "Verdadero"
+        },
 ];
 let correctAnswersCount = 0;
 let currentQuestionIndex;
