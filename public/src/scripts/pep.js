@@ -1168,6 +1168,22 @@ const questions = [
           options: ["Verdadero", "Falso"],
           correctAnswrer:  "Verdadero"
         },
+        {
+          question: "Todas las personas con autismo deberían tramitar y obtener el C.U.D. (Certificado Único de Discapacidad)?",
+          options: ["Verdadero", "Falso"],
+          correctAnswrer:  "Verdadero"
+        },
+        {
+          question: "La sigla TEA significa:",
+          options: ["Trastorno Específico de Autismo", "Trastorno del Espectro Autista"],
+          correctAnswrer:  "Trastorno del Espectro Autista"
+        },
+        {
+          question: "El TEA contiene mucha variedad de rasgos y niveles de afectación, pero son muy fáciles de identificar ya que son observables en el razgo físico.",
+          options: ["Verdadero", "Falso"],
+          correctAnswrer:  "Falso"
+        },
+
         
 
 ];
