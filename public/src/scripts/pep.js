@@ -951,166 +951,193 @@ const questions = [
         {
           question: "Las compresiones a un niño se hacen:", 
           options: ["A dos manos.", "A una mano.", "Con dos dedos."],
-          correctAnswrrer:  "A una mano."
+          correctAnswer:  "A una mano."
         },
         {
           question: "En caso de un parto en vía pública ¿qué hacemos si vemos que el bebe tiene el cordón umbilical rodeando su cuello?", 
           options: ["Con un dedo tirar suavemente y desenrollarlo, pasándolo por arriba de la cabeza del bebe, así se evita que se estrangule.", "Pedir SAME en prioridad, o conducir al menor inmediatamente al nosocomio más cercano.", "No tratar de desenrrollar el cordón porque podría cortarse provocando un daño a la madre y al bebé."],
-          correctAnswrrer:  "Con un dedo tirar suavemente y desenrollarlo, pasándolo por arriba de la cabeza del bebe, así se evita que se estrangule."
+          correctAnswer:  "Con un dedo tirar suavemente y desenrollarlo, pasándolo por arriba de la cabeza del bebe, así se evita que se estrangule."
         },
         {
           question: "Ante una quemadura debo:", 
           options: ["Cubrir la herida inmediatamente con gaza o paños limpios.", "Enfriar la zona quemada con agua de la canilla.", "Ninguna es correcta."],
-          correctAnswrrer:  "Enfriar la zona quemada con agua de la canilla."
+          correctAnswer:  "Enfriar la zona quemada con agua de la canilla."
         },
         {
           question: "Cómo se llama la herramienta intelectual para ordenar las acciones y/o maniobras, que está conformada por cuatro eslabones que se deben cumplimentar para lograr con éxito los objetivos de los primeros auxilios?", 
           options: ["Protocolo de salvataje.", "Primeros auxilios.", "Cadena de la vida."],
-          correctAnswrrer:  "Cadena de la vida."
+          correctAnswer:  "Cadena de la vida."
         },
         {
           question: "Ante una fractura debo:", 
           options: ["No mover a la víctima y llamar a emergencia.", "Colocar dos tablillas alrededor de la fractura y sujetarlas con alguna tela.", "Ambas son correctas."],
-          correctAnswrrer:  "No mover a la víctima y llamar a emergencia."
+          correctAnswer:  "No mover a la víctima y llamar a emergencia."
         },
         {
           question: "Ante una amputación:", 
           options: ["Hacer presión sobre la herida. Y conservar la parte amputada en una bolsa sin colocar hielo.", "Debo conservar la parte amputada en una bolsa y esa bolsa en agua y hielo. También comprimir la herida para detener la hemorragia.", "Hacer un torniquete para detener el sangrado, y conservar la parte amputada."],
-          correctAnswrrer:  "Debo conservar la parte amputada en una bolsa y esa bolsa en agua y hielo. También comprimir la herida para detener la hemorragia."
+          correctAnswer:  "Debo conservar la parte amputada en una bolsa y esa bolsa en agua y hielo. También comprimir la herida para detener la hemorragia."
         },       
         {
          question: "Ante un desmayo debo:", 
          options: ["Levantarle las piernas al paciente.", "Darle agua y un caramelo al paciente.", "Colocar al paciente en la posición de seguridad."],
-         correctAnswrrer:  "Levantarle las piernas al paciente."
+         correctAnswer:  "Levantarle las piernas al paciente."
         },
         {
           question: "Ante una convulsión:", 
           options: ["Debo sostener su cabeza hasta que se detenga la convulsión.", "Meter los dedos en su boca pare evitar que se muerda la lengua.", "Recostar boca abajo a la persona con una almohada en su cabeza."],
-          correctAnswrrer:  "Debo sostener su cabeza hasta que se detenga la convulsión."
+          correctAnswer:  "Debo sostener su cabeza hasta que se detenga la convulsión."
         },
         {
           question: "Ante una herida cortopunzante debo:", 
           options: ["Llamar a emergencia y no retirar el objeto que haya penetrado el cuerpo.", "Retirar el elemento cortopunsante y hacer compresión sobre la herida.", "Ninguna es correcta."],
-          correctAnswrrer:  "Llamar a emergencia y no retirar el objeto que haya penetrado el cuerpo."
+          correctAnswer:  "Llamar a emergencia y no retirar el objeto que haya penetrado el cuerpo."
         },
         {
           question: "La maniobra de Heimlich es utilizada para:", 
           options: ["Hacerle reanimación cardio pulmonar a una persona.", "Ayudar a una persona cuando esta atragantada.", "Ayudar a una persona a normalizar su presión arterial."],
-          correctAnswrrer:  "Ayudar a una persona cuando esta atragantada."
+          correctAnswer:  "Ayudar a una persona cuando esta atragantada."
         },
         {
           question: "Ante una hemorragia debo:", 
           options: ["Hacer un torniquete por encima y por debajo de la herida.", "Cubrir con una manta a la persona a activar el SAME", "Hacer compresión directa sobre la herida."],
-          correctAnswrrer:  "Hacer compresión directa sobre la herida.."
+          correctAnswer:  "Hacer compresión directa sobre la herida.."
         },
         {
           question: "Cuándo comienza a implementar un parto en vía pública", 
           options: ["Cuando el útero se dilata unos 10cm, o si se le puede ver la cabeza al bebé.", "Cuando la madre rompe la bolsa.", "Cuando ya rompió bolsa y las contracciones superan las 10 por minuto."],
-          correctAnswrrer:  "Cuando el útero se dilata unos 10cm, o si se le puede ver la cabeza al bebé."
+          correctAnswer:  "Cuando el útero se dilata unos 10cm, o si se le puede ver la cabeza al bebé."
         },
         {
           question: "Una vez presionado durante un segundo el botón de emergencia, el micrófono queda abierto durante 10 segundos sin necesidad de presionar el boton ptt para modular",
           options: ["Verdadero", "Falso"],
-          correctAnswrrer:  "Verdadero"
+          correctAnswer:  "Verdadero"
         },
         {
           question: "Para comunicarse dentro del patrullero es conveniente utilizar el ht.",
           options: ["Verdadero", "Falso"],
-          correctAnswrrer:  "Falso"
+          correctAnswer:  "Falso"
         },
         {
           question: "Es importante no modular cuando veo que hay una llamada de emergencia en el canal.",
           options: ["Verdadero", "Falso"],
-          correctAnswrrer:  "Verdadero"
+          correctAnswer:  "Verdadero"
         },
         {
           question: "En el radio del móvil (patrullero) se selecciona el modo Gateway",
           options: ["Verdadero", "Falso"],
-          correctAnswrrer:  "Verdadero"
+          correctAnswer:  "Verdadero"
         },
         {
           question: "En casos en los que hay riesgo de vida o víctimas graves se debe apretar reiteradas veces el botón ptt para modular.",
           options: ["Verdadero", "Falso"],
-          correctAnswrrer:  "Falso"
+          correctAnswer:  "Falso"
         },
         {
           question: "El Modo Directo (o Direct Mode) en el ht permite la comucicación directa entre dos ht sin pasar por Comando",
           options: ["Verdadero", "Falso"],
-          correctAnswrrer:  "Verdadero"
+          correctAnswer:  "Verdadero"
         },
         {
           question: "Para salir del modo emergencia solo se debe presionar Exit.",
           options: ["Verdadero", "Falso"],
-          correctAnswrrer:  "Falso"
+          correctAnswer:  "Falso"
         },
         {
           question: "Para salir del modo emergencia se debe presionar primero End (o Fin) y luego Exit (o Salir).",
           options: ["Verdadero", "Falso"],
-          correctAnswrrer:  "Verdadero"
+          correctAnswer:  "Verdadero"
         },
         {
           question: "Para cambiar cambiar el sonido del altavoz de ALTO a BAJO y viceversa hay que mantener pulsada la tecla #",
           options: ["Verdadero", "Falso"],
-          correctAnswrrer:  "Falso"
+          correctAnswer:  "Falso"
         },
         {
           question: "Cuando se presiona el botón rojo de emergencia del ht, el micrófono permanecerá abierto sin necesidad de presionar el PTT durante:",
           options: ["10 segundos", "20 segundos", "30 segundos"],
-          correctAnswrrer:  "10 segundos"
+          correctAnswer:  "10 segundos"
         },
         {
           question: "en las radios portatiles se selecciona el modo Direct Mode (Modo Directo) manteniendo apretado el número 0 durante un segundo",
           options: ["Verdadero", "Falso"],
-          correctAnswrrer:  "Verdadero"
+          correctAnswer:  "Verdadero"
         },
         {
           question: "El botón de emergencia se encuentra en la parte superior de la radio.",
           options: ["Verdadero", "Falso"],
-          correctAnswrrer:  "Verdadero"
+          correctAnswer:  "Verdadero"
         },
         {
           question: "Utilizando el patrullero como repetidor de alcance se garantiza la cobertura dentro de los edificios en el 100% de los casos.",
           options: ["Verdadero", "Falso"],
-          correctAnswrrer:  "Falso"
+          correctAnswer:  "Falso"
         },
         {
           question: "En caso de necesitar ampliar la señal en las cercanías del móvil se puede utilizar el equipo del patrullero como repetidor de alcance.",
           options: ["Verdadero", "Falso"],
-          correctAnswrrer:  "Verdadero"
+          correctAnswer:  "Verdadero"
         },
         {
           question: "En caso de necesitar que el HT no emita sonido ni iluminación de pantalla puede utilizar el modo cubierto, presionando la tecla:",
           options: ["0", "*", "4"],
-          correctAnswrrer:  "4"
+          correctAnswer:  "4"
         },
         {
           question: "El botón de emergencia cancela las comunicaciones en curso para dar prioridad en el uso del canal al personal que se encuentra en emergencia.",
           options: ["Verdadero", "Falso"],
-          correctAnswrrer:  "Verdadero"
+          correctAnswer:  "Verdadero"
         }, 
         {
           question: "En caso de necesitar que el HT no emita sonido ni iluminación de pantalla puede utilizar el modo cubierto, presionando la tecla:",
           options: ["0", "*", "4"],
-          correctAnswrrer:  "4"
+          correctAnswer:  "4"
         },
         {
           question: "Todas las radios tienen que estar en el mismo grupo de modulación.",
           options: ["Verdadero", "Falso"],
-          correctAnswrrer:  "Verdadero"
+          correctAnswer:  "Verdadero"
         },
         {
           question: "Para poder activar el botón de emergencia la radio debe estar encendida.",
           options: ["Verdadero", "Falso"],
-          correctAnswrrer:  "Falso"
+          correctAnswer:  "Falso"
         },
         {
           question: "Si no bajamos el volúmen del ht dentro del patrullero, se produce un ruido similar al que ocurre cuando colocamos un micrófono al lado de un parlante.",
           options: ["Verdadero", "Falso"],
-          correctAnswrrer:  "Verdadero"
+          correctAnswer:  "Verdadero"
         },
-        
-
-
+        {
+          question: "En el equipo ht Motorola,cuántos pasos se necesitan para cambiar de frecuencia?",
+          options: ["2", "3", "5"],
+          correctAnswer:  "2"
+        },
+        {
+          question: "En el equipo ht Sepura STP9000, se necesitan 3 cambiar de frecuencia.",
+          options: ["Verdadero", "Falso"],
+          correctAnswer:  "Verdadero"
+        },
+        {
+          question: "El grupo de modulación C.O.I lo utilizan en casos de catástrofes el personal de los niveles de Dirección o Jerárquicos.",
+          options: ["Verdadero", "Falso"],
+          correctAnswrer:  "Verdadero"
+        },
+        {
+          question: "El grupo de modulación C.T.I está habilitado para todo el personal de la Policía de la Ciudad. Se usa en casos que Sala de Situación, Despacho de Móviles o cuando el Comando Jefatura lo ordene.",
+          options: ["Verdadero", "Falso"],
+          correctAnswrer:  "Falso"
+        },
+        {
+          question: "Qué grupo de modulación se utiliza en el equipo Trunkin en casos de catástrofes para coordinar los distintos organismos de emergencias de la ciudad?",
+          options: ["C.T.I.", "C.O.I", "C.P.I."],
+          correctAnswrer:  "C.T.I."
+        },
+        { 
+          question: "Los equipos HT cuentan con la función “Mensaje de texto”.",
+          options: ["Verdadero", "Falso"],
+          correctAnswrer:  "Verdadero"
+        },
 ];
 let correctAnswersCount = 0;
 let currentQuestionIndex;
