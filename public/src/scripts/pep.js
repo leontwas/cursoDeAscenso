@@ -1013,6 +1013,11 @@ const questions = [
           options: ["Verdadero", "Falso"],
           correctAnswrrer:  "Verdadero"
         },
+        {
+          question: "Para comunicarse dentro del patrullero es conveniente utilizar el ht.",
+          options: ["Verdadero", "Falso"],
+          correctAnswrrer:  "Falso"
+        },
 ];
 let correctAnswersCount = 0;
 let currentQuestionIndex;
