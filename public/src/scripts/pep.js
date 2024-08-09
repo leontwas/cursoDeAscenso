@@ -1,6 +1,6 @@
 const questions = [
-    {
-      question: "El concepto de GENERO se refiere a:",
+/*{
+      question: "El concepto de GÉNERO se refiere a:",
       options: [
         "Las capacidades diferenciales de cada persona en función de su determinación biológica",
         "Un conjunto de características sociales y culturales asignadas a las personas en función de su sexo",
@@ -154,10 +154,10 @@ const questions = [
       {
         question: "Androcentrismo:",
         options: [
-          "Termino que explica la división de tareas en base a la capacidad natural de cada sexo",
-          "Termino que define lo masculino como la medida de todas las cosas y la representación global de la humanidad."
+          "Término que explica la división de tareas en base a la capacidad natural de cada sexo",
+          "Término que define lo masculino como la medida de todas las cosas y la representación global de la humanidad."
         ],
-        correctAnswer: "Termino que define lo masculino como la medida de todas las cosas y la representación global de la humanidad."
+        correctAnswer: "Término que define lo masculino como la medida de todas las cosas y la representación global de la humanidad."
       },
       {
         question: "La perspectiva de género:",
@@ -432,7 +432,7 @@ const questions = [
         correctAnswer: "Guarda estricta representación de géneros para la policía de la ciudad."
       },
         {
-          question: "El concepto de GENERO se refiere a:",
+          question: "El concepto de GÉNERO se refiere a:",
           options: [
             "Las capacidades diferenciales de cada persona en función de su determinación biológica.",
             "Un conjunto de características sociales y culturales asignadas a las personas en función de su sexo.",
@@ -587,13 +587,13 @@ const questions = [
           question: "A la hora de planificar su entrenamiento, es importante fijarse metas y objetivos lo más ambicioso posible para estimular la superación", 
           options: ["Verdadero", "Falso"],
           correctAnswer: "Falso"
-        },
+        },*/
         {
           question: "Fijarse metas y objetivos acordes a las posibilidades de cada uno es clave para planificar el entrenamiento", 
           options: ["Verdadero", "Falso"],
           correctAnswer: "Verdadero"
         },
-        {
+       /* {
           question: "Las horas de descanso no influyen en el estado físico general siempre y cuando se entrene regularmente", 
           options: ["Verdadero", "Falso"],
           correctAnswer: "Falso"
@@ -604,7 +604,7 @@ const questions = [
           correctAnswer: "Si"
         },
         {
-          question: "¿Cuando debe hidratarse al realizar actividad física?", 
+          question: "¿Cuándo debe hidratarse al realizar actividad física?", 
           options: ["Cuando tiene sed", "Antes, durante y después del ejercicio físico.", "Después del ejercicio físico."],
           correctAnswer: "Antes, durante y después del ejercicio físico."
         },
@@ -1202,7 +1202,7 @@ const questions = [
           question: "El POC tiene un app especialmente creada para comunicarse con las personas con Autismo.",
           options: ["Verdadero", "Falso"],
           correctAnswer:  "Verdadero"
-        },
+        },*/
 ];
 let correctAnswersCount = 0;
 let currentQuestionIndex;
