@@ -1183,9 +1183,26 @@ const questions = [
           options: ["Verdadero", "Falso"],
           correctAnswrer:  "Falso"
         },
-
-        
-
+        {
+          question: "Todas las personas con TEA utilizan alguna cinta, pulsera o insignia de color azul para identificar su condición.",
+          options: ["Verdadero", "Falso"],
+          correctAnswrer:  "Falso"
+        },
+        {
+          question: "La mayoría de las personas con TEA, tienen un Certificado Único de Discapacidad (CUD), que puede llevarlo la persona adulta con discapacidad o el acompañante en caso de que sea niño, niña y/o adolescente.",
+          options: ["Verdadero", "Falso"],
+          correctAnswrer:  "Verdadero"
+        },
+        {
+          question: "Entre los comportamientos de una persona con TEA se pueden encontrar:",
+          options: ["Movimientos repetitivos corporales, como por ejemplo aleteos.", "Conductas autolesivas y rabietas.", "Evitar la mirada del otro y tener lapsos atencionales muy breves.","Todas son correctas."],
+          correctAnswrer:  "Todas son correctas."
+        },
+        {
+          question: "El POC tiene un app especialmente creada para comunicarse con las personas con Autismo.",
+          options: ["Verdadero", "Falso"],
+          correctAnswrer:  "Verdadero"
+        },
 ];
 let correctAnswersCount = 0;
 let currentQuestionIndex;
