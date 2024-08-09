@@ -1038,8 +1038,27 @@ const questions = [
           options: ["Verdadero", "Falso"],
           correctAnswrrer:  "Verdadero"
         },
+        {
+          question: "Para salir del modo emergencia solo se debe presionar Exit.",
+          options: ["Verdadero", "Falso"],
+          correctAnswrrer:  "Falso"
+        },
+        {
+          question: "Para salir del modo emergencia se debe presionar primero End (o Fin) y luego Exit (o Salir).",
+          options: ["Verdadero", "Falso"],
+          correctAnswrrer:  "Verdadero"
+        },
+        {
+          question: "Para cambiar cambiar el sonido del altavoz de ALTO a BAJO y viceversa hay que mantener pulsada la tecla #",
+          options: ["Verdadero", "Falso"],
+          correctAnswrrer:  "Falso"
+        },
+        {
+          question: "Cuando se presiona el botón rojo de emergencia del ht, el micrófono permanecerá abierto sin necesidad de presionar el PTT durante:",
+          options: ["10 segundos", "20 segundos", "30 segundos"],
+          correctAnswrrer:  "10 segundos"
+        },
 
-        
 ];
 let correctAnswersCount = 0;
 let currentQuestionIndex;
