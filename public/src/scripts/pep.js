@@ -1284,6 +1284,7 @@ quizContainer.innerHTML = `
     <h1 class="error-message">Incorrecto.</h1>
     <h2 class="error-message">La respuesta correcta es: ${correctAnswer}</h2>
     <h2 class="error-message">Respuestas correctas: ${correctAnswersCount}</h2>
+    <h2 class="error-message">Ganaste la insignia: </h2>
     <img src="../src/images/image1.png" alt="Imagen de error" class="img-fluid">
     <button id="retry-button" class="btn btn-danger mt-3">Reintentar</button>
 `;
@@ -1294,18 +1295,42 @@ document.getElementById('retry-button').onclick = () => {
 }
 
 function displayCompletionMessage() {
-const quizContainer = document.getElementById('quiz-container');
-let imageSrc = '';
+  const quizContainer = document.getElementById('quiz-container');
+  let imageSrc = '';
 
-if (correctAnswersCount < 5) {
-    imageSrc = '../src/images/image1.png';
-} else if (correctAnswersCount >= 6 && correctAnswersCount <= 10) {
-    imageSrc = '../src/images/image2.png';
-} else if (correctAnswersCount >= 11 && correctAnswersCount <= 20) {
-    imageSrc = '../src/images/image3.png';
-} else if (correctAnswersCount >= 21 && correctAnswersCount <= 30) {
-    imageSrc = '../src/images/image4.png';
+  if (correctAnswersCount < 5) {
+      imageSrc = '../src/images/image1.png';
+  } else if (correctAnswersCount >= 6 && correctAnswersCount <= 10) {
+      imageSrc = '../src/images/image2.png';
+
+  } else if (correctAnswersCount >= 11 && correctAnswersCount <= 20) {
+      imageSrc = '../src/images/image3.png';
+  } else if (correctAnswersCount >= 21 && correctAnswersCount <= 30) {
+      imageSrc = '../src/images/image4.png';
+  }
+
+  // Crea una nueva Promesa para esperar a que la imagen se cargue
+  function loadImage(src) {
+      return new Promise((resolve, reject) => {
+          const img = new Image();
+          img.src = src;
+          img.onload = () => resolve(img);  // Resuelve la Promesa cuando la imagen se carga
+          img.onerror = () => reject(new Error('Error al cargar la imagen'));  // Rechaza la Promesa en caso de error
+      });
+  }
+
+  // Llama a la función loadImage y maneja la carga
+  loadImage(imageSrc)
+      .then(img => {
+          // Aquí puedes realizar las acciones necesarias con la imagen cargada
+          quizContainer.innerHTML = '';  // Limpia el contenedor del quiz
+          quizContainer.appendChild(img);  // Añade la imagen al contenedor
+      })
+      .catch(error => {
+          console.error('Hubo un problema cargando la imagen:', error);
+      });
 }
+
 
 quizContainer.innerHTML = `
     <h2>¡Has completado el cuestionario!</h2>
