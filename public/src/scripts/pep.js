@@ -1001,7 +1001,7 @@ const questions = [
         {
           question: "Ante una hemorragia debo:", 
           options: ["Hacer un torniquete por encima y por debajo de la herida.", "Cubrir con una manta a la persona a activar el SAME", "Hacer compresión directa sobre la herida."],
-          correctAnswer:  "Hacer compresión directa sobre la herida.."
+          correctAnswer:  "Hacer compresión directa sobre la herida."
         },
         {
           question: "Cuándo comienza a implementar un parto en vía pública", 
