@@ -1018,6 +1018,28 @@ const questions = [
           options: ["Verdadero", "Falso"],
           correctAnswrrer:  "Falso"
         },
+        {
+          question: "Es importante no modular cuando veo que hay una llamada de emergencia en el canal.",
+          options: ["Verdadero", "Falso"],
+          correctAnswrrer:  "Verdadero"
+        },
+        {
+          question: "En el radio del móvil (patrullero) se selecciona el modo Gateway",
+          options: ["Verdadero", "Falso"],
+          correctAnswrrer:  "Verdadero"
+        },
+        {
+          question: "En casos en los que hay riesgo de vida o víctimas graves se debe apretar reiteradas veces el botón ptt para modular.",
+          options: ["Verdadero", "Falso"],
+          correctAnswrrer:  "Falso"
+        },
+        {
+          question: "El Modo Directo (o Direct Mode) en el ht permite la comucicación directa entre dos ht sin pasar por Comando",
+          options: ["Verdadero", "Falso"],
+          correctAnswrrer:  "Verdadero"
+        },
+
+        
 ];
 let correctAnswersCount = 0;
 let currentQuestionIndex;
