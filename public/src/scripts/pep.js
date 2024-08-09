@@ -1284,7 +1284,6 @@ function displayFailureMessage(correctAnswer) {
         <h2 class="error-message">La respuesta correcta es: ${correctAnswer}</h2>
         <h2 class="error-message">Respuestas correctas: ${correctAnswersCount}</h2>
         <h2 class="error-message">Ganaste la insignia: </h2>
-        <img src="../src/images/image1.png" alt="Imagen de error" class="img-fluid">
         <button id="retry-button" class="btn btn-danger mt-3">Reintentar</button>
     `;
 
