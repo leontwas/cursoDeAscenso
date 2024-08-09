@@ -52,7 +52,7 @@ const questions = [
     {
       question: "La Ley 26.485 de 'Protección integral para prevenir, sancionar y erradicar la violencia contra las mujeres en los ámbitos en que se desarrollen sus relaciones interpersonales':",
       options: [
-        "Deja en la victima la decisión exclusiva de denunciar o no los delitos de violencia domestica.",
+        "Deja en la víctima la decisión exclusiva de denunciar o no los delitos de violencia domestica.",
         "Establece para los funcionarios y funcionarias que tomen conocimiento de estos hechos la obligación de denunciar."
       ],
       correctAnswer: "Establece para los funcionarios y funcionarias que tomen conocimiento de estos hechos la obligación de denunciar."
@@ -719,7 +719,7 @@ const questions = [
           correctAnswer: "17 cartuchos"
         },
         {
-          question: "La pistola Px4 Storm “F” posee DOS mecanismos de seguro", 
+          question: "La pistola Pietro Beretta modelo Px4 Storm posee DOS mecanismos de seguro.", 
           options: ["Un seguro automático de percutor y otro manual ambidiestro ubicado en los laterales posteriores de la corredera con función de abatimiento del martillo.", "Un seguro automático de percutor y otro manual ambidiestro ubicado en la parte superior de la corredera."],
           correctAnswer: "Un seguro automático de percutor y otro manual ambidiestro ubicado en los laterales posteriores de la corredera con función de abatimiento del martillo."
         },
@@ -1080,20 +1080,15 @@ const questions = [
         },
         {
           question: "En caso de necesitar que el HT no emita sonido ni iluminación de pantalla puede utilizar el modo cubierto, presionando la tecla:",
-          options: ["0", "*", "4"],
-          correctAnswer:  "4"
+          options: ["Cero (0)", "Asterisco (*)", "Cuatro (4)"],
+          correctAnswer:  "Cuatro (4)"
         },
         {
           question: "El botón de emergencia cancela las comunicaciones en curso para dar prioridad en el uso del canal al personal que se encuentra en emergencia.",
           options: ["Verdadero", "Falso"],
           correctAnswer:  "Verdadero"
         }, 
-        {
-          question: "En caso de necesitar que el HT no emita sonido ni iluminación de pantalla puede utilizar el modo cubierto, presionando la tecla:",
-          options: ["0", "*", "4"],
-          correctAnswer:  "4"
-        },
-        {
+         {
           question: "Todas las radios tienen que estar en el mismo grupo de modulación.",
           options: ["Verdadero", "Falso"],
           correctAnswer:  "Verdadero"
@@ -1109,9 +1104,9 @@ const questions = [
           correctAnswer:  "Verdadero"
         },
         {
-          question: "En el equipo ht Motorola,cuántos pasos se necesitan para cambiar de frecuencia?",
-          options: ["2", "3", "5"],
-          correctAnswer:  "2"
+          question: "En el equipo ht Motorola, cuántos pasos se necesitan para cambiar de frecuencia?",
+          options: ["Dos (2)", "Tres (3)", "Cinco (5)"],
+          correctAnswer:  "Dos (2)"
         },
         {
           question: "En el equipo ht Sepura STP9000, se necesitan 3 cambiar de frecuencia.",
