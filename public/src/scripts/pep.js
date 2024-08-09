@@ -1121,87 +1121,87 @@ const questions = [
         {
           question: "El grupo de modulación C.O.I lo utilizan en casos de catástrofes el personal de los niveles de Dirección o Jerárquicos.",
           options: ["Verdadero", "Falso"],
-          correctAnswrer:  "Verdadero"
+          correctAnswer:  "Verdadero"
         },
         {
           question: "El grupo de modulación C.T.I está habilitado para todo el personal de la Policía de la Ciudad. Se usa en casos que Sala de Situación, Despacho de Móviles o cuando el Comando Jefatura lo ordene.",
           options: ["Verdadero", "Falso"],
-          correctAnswrer:  "Falso"
+          correctAnswer:  "Falso"
         },
         {
           question: "Qué grupo de modulación se utiliza en el equipo Trunkin en casos de catástrofes para coordinar los distintos organismos de emergencias de la ciudad?",
           options: ["C.T.I.", "C.O.I", "C.P.I."],
-          correctAnswrer:  "C.T.I."
+          correctAnswer:  "C.T.I."
         },
         { 
           question: "Los equipos HT cuentan con la función “Mensaje de texto”.",
           options: ["Verdadero", "Falso"],
-          correctAnswrer:  "Verdadero"
+          correctAnswer:  "Verdadero"
         },
         {
           question: "Todas las personas que padecen TEA tienen el carnet de discapacidad?",
           options: ["Verdadero", "Falso"],
-          correctAnswrer:  "Falso"
+          correctAnswer:  "Falso"
         },
         {
           question: "Con qué color se identifica la personas que padecen TEA?",
           options: ["Verde", "Azul", "Rojo"],
-          correctAnswrer:  "Azul"
+          correctAnswer:  "Azul"
         },
         {
           question: "Al acercarse a un niño con autismo hay que hablarle en voz fuerte y clara.",
           options: ["Verdadero", "Falso"],
-          correctAnswrer:  "Falso"
+          correctAnswer:  "Falso"
         },
         {
           question: "Hiperactividad, impulsividad y/o agresividad moderada, son razgos que puede presentar una persona con autismo.",
           options: ["Verdadero", "Falso"],
-          correctAnswrer:  "Verdadero"
+          correctAnswer:  "Verdadero"
         },
         {
           question: "Al abordar a una persona con autismo se debe:",
           options: ["Contener a la persona a través del habla, con tono medio, pausado y cuidando además los movimientos corporales bruscos.", "Tomarlo delicadamente de la mano y mirarlo a los ojos hablándole en voz alta.", "Ninguna es correcta."],
-          correctAnswrer:  "Contener a la persona a través del habla, con tono medio, pausado y cuidando además los movimientos corporales bruscos"
+          correctAnswer:  "Contener a la persona a través del habla, con tono medio, pausado y cuidando además los movimientos corporales bruscos"
         },
         {
           question: "Los pictogramas sirven para que las personas con autismo pueden expresarse, comunicar partes del cuerpo, sentimientos y objetos entre otras cosas, de forma rápida y precisa",
           options: ["Verdadero", "Falso"],
-          correctAnswrer:  "Verdadero"
+          correctAnswer:  "Verdadero"
         },
         {
           question: "Todas las personas con autismo deberían tramitar y obtener el C.U.D. (Certificado Único de Discapacidad)?",
           options: ["Verdadero", "Falso"],
-          correctAnswrer:  "Verdadero"
+          correctAnswer:  "Verdadero"
         },
         {
           question: "La sigla TEA significa:",
           options: ["Trastorno Específico de Autismo", "Trastorno del Espectro Autista"],
-          correctAnswrer:  "Trastorno del Espectro Autista"
+          correctAnswer:  "Trastorno del Espectro Autista"
         },
         {
           question: "El TEA contiene mucha variedad de rasgos y niveles de afectación, pero son muy fáciles de identificar ya que son observables en el razgo físico.",
           options: ["Verdadero", "Falso"],
-          correctAnswrer:  "Falso"
+          correctAnswer:  "Falso"
         },
         {
           question: "Todas las personas con TEA utilizan alguna cinta, pulsera o insignia de color azul para identificar su condición.",
           options: ["Verdadero", "Falso"],
-          correctAnswrer:  "Falso"
+          correctAnswer:  "Falso"
         },
         {
           question: "La mayoría de las personas con TEA, tienen un Certificado Único de Discapacidad (CUD), que puede llevarlo la persona adulta con discapacidad o el acompañante en caso de que sea niño, niña y/o adolescente.",
           options: ["Verdadero", "Falso"],
-          correctAnswrer:  "Verdadero"
+          correctAnswer:  "Verdadero"
         },
         {
           question: "Entre los comportamientos de una persona con TEA se pueden encontrar:",
           options: ["Movimientos repetitivos corporales, como por ejemplo aleteos.", "Conductas autolesivas y rabietas.", "Evitar la mirada del otro y tener lapsos atencionales muy breves.","Todas son correctas."],
-          correctAnswrer:  "Todas son correctas."
+          correctAnswer:  "Todas son correctas."
         },
         {
           question: "El POC tiene un app especialmente creada para comunicarse con las personas con Autismo.",
           options: ["Verdadero", "Falso"],
-          correctAnswrer:  "Verdadero"
+          correctAnswer:  "Verdadero"
         },
 ];
 let correctAnswersCount = 0;
