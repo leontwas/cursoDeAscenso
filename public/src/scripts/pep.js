@@ -1282,6 +1282,7 @@ function displayFailureMessage(correctAnswer) {
     quizContainer.innerHTML = `
         <h1 class="error-message">Incorrecto.</h1>
         <h2 class="error-message">La respuesta correcta es: ${correctAnswer}</h2>
+        <h2 class="error-message">Respuestas correctas: ${correctAnswersCount}</h2>
         <img src="../src/images/image1.png" alt="Imagen de error" class="img-fluid">
         <button id="retry-button" class="btn btn-danger mt-3">Reintentar</button>
     `;
