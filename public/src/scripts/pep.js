@@ -1058,6 +1058,58 @@ const questions = [
           options: ["10 segundos", "20 segundos", "30 segundos"],
           correctAnswrrer:  "10 segundos"
         },
+        {
+          question: "en las radios portatiles se selecciona el modo Direct Mode (Modo Directo) manteniendo apretado el número 0 durante un segundo",
+          options: ["Verdadero", "Falso"],
+          correctAnswrrer:  "Verdadero"
+        },
+        {
+          question: "El botón de emergencia se encuentra en la parte superior de la radio.",
+          options: ["Verdadero", "Falso"],
+          correctAnswrrer:  "Verdadero"
+        },
+        {
+          question: "Utilizando el patrullero como repetidor de alcance se garantiza la cobertura dentro de los edificios en el 100% de los casos.",
+          options: ["Verdadero", "Falso"],
+          correctAnswrrer:  "Falso"
+        },
+        {
+          question: "En caso de necesitar ampliar la señal en las cercanías del móvil se puede utilizar el equipo del patrullero como repetidor de alcance.",
+          options: ["Verdadero", "Falso"],
+          correctAnswrrer:  "Verdadero"
+        },
+        {
+          question: "En caso de necesitar que el HT no emita sonido ni iluminación de pantalla puede utilizar el modo cubierto, presionando la tecla:",
+          options: ["0", "*", "4"],
+          correctAnswrrer:  "4"
+        },
+        {
+          question: "El botón de emergencia cancela las comunicaciones en curso para dar prioridad en el uso del canal al personal que se encuentra en emergencia.",
+          options: ["Verdadero", "Falso"],
+          correctAnswrrer:  "Verdadero"
+        }, 
+        {
+          question: "En caso de necesitar que el HT no emita sonido ni iluminación de pantalla puede utilizar el modo cubierto, presionando la tecla:",
+          options: ["0", "*", "4"],
+          correctAnswrrer:  "4"
+        },
+        {
+          question: "Todas las radios tienen que estar en el mismo grupo de modulación.",
+          options: ["Verdadero", "Falso"],
+          correctAnswrrer:  "Verdadero"
+        },
+        {
+          question: "Para poder activar el botón de emergencia la radio debe estar encendida.",
+          options: ["Verdadero", "Falso"],
+          correctAnswrrer:  "Falso"
+        },
+        {
+          question: "Si no bajamos el volúmen del ht dentro del patrullero, se produce un ruido similar al que ocurre cuando colocamos un micrófono al lado de un parlante.",
+          options: ["Verdadero", "Falso"],
+          correctAnswrrer:  "Verdadero"
+        },
+        
+
 
 ];
 let correctAnswersCount = 0;
