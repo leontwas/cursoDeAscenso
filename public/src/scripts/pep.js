@@ -1278,19 +1278,23 @@ function displayNotification(message) {
 }
 
 function displayFailureMessage(correctAnswer) {
-    const quizContainer = document.getElementById('quiz-container');
-    quizContainer.innerHTML = `
-        <h1 class="error-message">Incorrecto.</h1>
-        <h2 class="error-message">La respuesta correcta es: ${correctAnswer}</h2>
-        <h2 class="error-message">Respuestas correctas: ${correctAnswersCount}</h2>
-        <h2 class="error-message">Ganaste la insignia: </h2>
-        <img src="../src/images/image1.png" alt="Imagen de error" class="img-fluid">
-        <button id="retry-button" class="btn btn-danger mt-3">Reintentar</button>
-    `;
+  const quizContainer = document.getElementById('quiz-container');
+  quizContainer.innerHTML = `
+      <h1 class="error-message">Incorrecto.</h1>
+      <h2 class="error-message">La respuesta correcta es: ${correctAnswer}</h2>
+      <h2 class="error-message">Respuestas correctas: ${correctAnswersCount}</h2>
+      <h2 class="error-message">Ganaste la insignia: </h2>
+  `;
 
-    document.getElementById('retry-button').onclick = () => {
-        window.location.href = './index.html';
-    };
+  // Llama a displayCompletionMessage() para mostrar la imagen correcta
+  displayCompletionMessage();
+
+  const retryButton = document.createElement('button');
+  retryButton.id = 'retry-button';
+  retryButton.classList.add('btn', 'btn-danger', 'mt-3');
+  retryButton.innerText = 'Reintentar';
+  retryButton.onclick = () => window.location.href = './index.html';
+  quizContainer.appendChild(retryButton);
 }
 
 function displayCompletionMessage() {
