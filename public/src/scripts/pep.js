@@ -1138,6 +1138,38 @@ const questions = [
           options: ["Verdadero", "Falso"],
           correctAnswrer:  "Verdadero"
         },
+        {
+          question: "Todas las personas que padecen TEA tienen el carnet de discapacidad?",
+          options: ["Verdadero", "Falso"],
+          correctAnswrer:  "Falso"
+        },
+        {
+          question: "Con qué color se identifica la personas que padecen TEA?",
+          options: ["Verde", "Azul", "Rojo"],
+          correctAnswrer:  "Azul"
+        },
+        {
+          question: "Al acercarse a un niño con autismo hay que hablarle en voz fuerte y clara.",
+          options: ["Verdadero", "Falso"],
+          correctAnswrer:  "Falso"
+        },
+        {
+          question: "Hiperactividad, impulsividad y/o agresividad moderada, son razgos que puede presentar una persona con autismo.",
+          options: ["Verdadero", "Falso"],
+          correctAnswrer:  "Verdadero"
+        },
+        {
+          question: "Al abordar a una persona con autismo se debe:",
+          options: ["Contener a la persona a través del habla, con tono medio, pausado y cuidando además los movimientos corporales bruscos.", "Tomarlo delicadamente de la mano y mirarlo a los ojos hablándole en voz alta.", "Ninguna es correcta."],
+          correctAnswrer:  "Contener a la persona a través del habla, con tono medio, pausado y cuidando además los movimientos corporales bruscos"
+        },
+        {
+          question: "Los pictogramas sirven para que las personas con autismo pueden expresarse, comunicar partes del cuerpo, sentimientos y objetos entre otras cosas, de forma rápida y precisa",
+          options: ["Verdadero", "Falso"],
+          correctAnswrer:  "Verdadero"
+        },
+        
+
 ];
 let correctAnswersCount = 0;
 let currentQuestionIndex;
