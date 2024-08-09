@@ -1298,13 +1298,13 @@ function displayCompletionMessage() {
     let imageSrc = '';
 
     if (correctAnswersCount < 5) {
-        imageSrc = '../src/images/image1.png';
+        imageSrc = '/public/src/images/image1.png';
     } else if (correctAnswersCount >= 6 && correctAnswersCount <= 10) {
-        imageSrc = '../src/images/image2.png';
+        imageSrc = '/public/src/images/image2.png';
     } else if (correctAnswersCount >= 11 && correctAnswersCount <= 20) {
-        imageSrc = '../src/images/image3.png';
+        imageSrc = '/public/src/images/image3.png';
     } else if (correctAnswersCount >= 21 && correctAnswersCount <= 30) {
-        imageSrc = '../src/images/image4.png';
+        imageSrc = '/public/src/images/image4.png';
     }
 
     // Crea una nueva Promesa para esperar a que la imagen se cargue
