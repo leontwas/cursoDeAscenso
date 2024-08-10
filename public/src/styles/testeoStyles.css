@@ -1,0 +1,18 @@
+main {
+    background: black;
+    color: white
+}
+
+section {
+    margin: 2rem 0
+}
+
+img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-bg-primary.btn.btn-custom.btn-2 {
+    width: 100%;
+    max-width: 300px; /* Ajusta este valor según sea necesario */
+}
