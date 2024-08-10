@@ -12,6 +12,12 @@ img {
     object-fit: cover;
 }
 
+.btn.btn-success {
+    width: 100%;
+    max-width: 900px; /* Ajusta este valor según sea necesario */
+    font-size: 1.2vw;
+}
+
 .text-bg-primary.btn.btn-custom.btn-1 {
     width: 100%;
     max-width: 900px; /* Ajusta este valor según sea necesario */

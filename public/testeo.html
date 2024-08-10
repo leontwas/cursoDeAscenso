@@ -24,13 +24,15 @@
 
 <body>
     <main>
+<!-- SECCION PEP --> 
         <section class="p-5 my-0">
             <h3>PEP:</h3>
-            <div id="products-container"></div>
+            <div class="col">
+                <button type="submit" class="btn btn-success" data-class="PEP" onclick="window.location.href='pep.html'">PEP *</button>
+              </div>
         </section>
 
-<!-- SECCION AGREGAR (POST)-->
-
+<!-- SECCION OF. A OF. 1º -->
 <section class="bg-white bg-opacity-75 text-black p-5">
     <h3>Curso de Oficial a Oficial Primero:</h3>
     <form action="/productos" method="POST" enctype="multipart/form-data">
@@ -49,15 +51,10 @@
         <div class="form-floating mb-3">
             <button class="text-bg-primary btn btn-custom btn-1" data-class="Derecho-Penal">Derecho Penal</button>
         </div>
-        <div class="form-floating mb-3">
-            <input name="stock" type="text" class="form-control" id="stock" placeholder="Pan" />
-            <label for="stock">Stock</label>
-        </div>
-        <button type="submit" class="btn btn-success">Agregar</button>
     </form>
 </section>
 
-<!-- SECCION MODIFICAR (PUT)-->
+<!-- SECCION OF. 1º A OF. MAYOR -->
 <section class="bg-white bg-opacity-50 text-black p-5">
     <h3>Curso de Oficial Primero a Oficial Mayor:</h3>
     <form id="update-form">
