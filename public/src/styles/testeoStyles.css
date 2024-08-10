@@ -1,5 +1,5 @@
 body, html {
-    background: black ;
+    background: black;
     height: 2800px;
     width: 100vw;
     margin: 0;
@@ -16,8 +16,7 @@ main {
 }
 
 section {
-    margin: 1rem 0; /* Añadir margen superior e inferior */
-    margin: 2rem 0
+    margin: 2rem 0; /* Añadir margen superior e inferior */
 }
 
 img {
@@ -25,30 +24,47 @@ img {
     object-fit: cover;
 }
 
-.btn.btn-success {
+.btn {
     width: 100%;
     max-width: 1200px; /* Ajusta este valor según sea necesario */
     font-size: 1.2vw;
+    height: 60px; /* Ajusta este valor según sea necesario */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.text-bg-primary.btn.btn-custom.btn-1 {
-    width: 100%;
-    max-width: 1200px; /* Ajusta este valor según sea necesario */
-    font-size: 1.2vw;
-}
-
-.btn.btn-warning {
-    width: 100%;
-    max-width: 1200px; /* Ajusta este valor según sea necesario */
-    font-size: 1.2vw;
-}
-
-.btn.btn-danger {
-    width: 100%;
-    max-width: 1200px; /* Ajusta este valor según sea necesario */
-    font-size: 1.2vw; 
-}
 .btn:hover {
     filter: brightness(80%); /* Oscurece el botón */
     transition: filter 0.3s ease; /* Suaviza la transición */
+}
+
+/* Media Queries para diferentes dispositivos */
+
+/* Tablets */
+@media (max-width: 992px) {
+    .btn {
+        font-size: 1.5vw;
+        height: 55px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+    .btn {
+        font-size: 3vw;
+        height: 50px;
+    }
+
+    main {
+        padding: 0 1rem; /* Añadir un poco de espacio alrededor */
+    }
+}
+
+/* Celulares pequeños */
+@media (max-width: 576px) {
+    .btn {
+        font-size: 4vw;
+        height: 45px;
+    }
 }
