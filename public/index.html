@@ -1,70 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Curso de ascenso</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../src/styles/styles2.css">
+    <meta charset="UTF-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chicle&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/styles/styles2.css">
+    <link rel="stylesheet" href="./src/styles/testeoStyles.css">
+    <title>Document</title>
 </head>
 <body>
-  <div class="container mt-5">
-    <h1 class="bungee-regularspice- text-center">Elige el cuestionario con el que quieras estudiar</h1>
-    <div class="row row-cols-1 row-cols-md-4 g-2">
-      <div class="col">
-        <button class="btn btn-custom btn-1" data-class="CPPN" onclick="window.location.href='cppn.html'">CPPN, CPPCABA y Procedimientos Policiales *</button>
-      </div>
-      <div class="col">
-        <button class="btn btn-custom btn-2" data-class="RegimenDisciplinario" onclick="window.location.href='regimenDisciplinario.html'">Régimen Disciplinario *</button>
-      </div>
-      <div class="col">
-        <button class="btn btn-custom btn-3" data-class="Ley5688">Ley 5688</button>
-      </div>
-      <div class="col">
-        <button class="btn btn-custom btn-4" data-class="CodigoConducta">Cód. de Cond. para Func. Enc. de Hacer Cumplir la Ley</button>
-      </div>
-      <div class="col">
-        <button class="btn btn-custom btn-5" data-class="Proposito1">Propósito 1</button>
-      </div>
-      <div class="col">
-        <button class="btn btn-custom btn-6" data-class="Proposito2">Propósito 2</button>
-      </div>
-      <div class="col">
-        <button class="btn btn-custom btn-7" data-class="Proposito3">Propósito 3</button>
-      </div>
-      <div class="col">
-        <button class="btn btn-custom btn-8" data-class="Proposito4">Propósito 4</button>
-      </div>
-      <div class="col">
-        <button class="btn btn-custom btn-9" data-class="ProtocolosActuacion" onclick="window.location.href='protocolos.html'">Protocolos de actuación</button>
-      </div>
-      <div class="col">
-        <button class="btn btn-custom btn-10" data-class="Criminalistica">Criminalística</button>
-      </div>
-      <div class="col">
-        <button class="btn btn-custom btn-11" data-class="Tecnologias" onclick="window.location.href='tecnologias.html'">Tecnologías aplicadas a la función policial *</button>
-      </div>
-      <div class="col">
-        <button class="btn btn-custom btn-12" data-class="MandoConduccion" onclick="window.location.href='mando.html'">Mando y Conducción *</button>
-      </div>
-      <div class="col">
-        <button class="btn btn-custom btn-13" data-class="JefeServicio" onclick="window.location.href='jefeServicio.html'">Jefe de Servicio *</button>
-      </div>
-      <div class="col">
-        <button class="btn btn-custom btn-14" data-class="JefeJudiciales">Jefe de Judiciales</button>
-      </div>
-      <div class="col">
-        <button class="btn btn-custom btn-15" data-class="Alcaidias">Alcaidías</button>
-      </div>
-      <div class="col">
-        <button class="btn btn-custom btn-16" data-class="PEP" onclick="window.location.href='pep.html'">PEP *</button>
-      </div>
-      </div>
-    <p id="result" class="text-center mt-3"></p>
-    <p id="hint" class="text-center mt-2"></p>
-  </div>
-  <script src="../src/scripts/script2.js"></script>
+    <main>
+<!-- SECCION PEP --> 
+        <section class="bg-white bg-opacity-50 text-black p-5">
+            <h3>Proceso de Ascenso para el Personal :</h3>
+            <div class="col">
+                <button type="submit" class="btn btn-success" data-class="PEP" onclick="window.location.href='pep.html'">PEP *</button>
+              </div>
+        </section>
+
+<!-- SECCION OF. A OF. 1º -->
+<section class="bg-white bg-opacity-50 text-black p-5">
+    <h3>Curso de Oficial a Oficial Primero:</h3>
+    <form>
+        <div class="form-floating mb-3">
+            <button class="text-bg-primary btn btn-custom btn-1" data-class="CPPN" onclick="window.location.href='cppn.html'">CPPN, CPPCABA y Procedimientos Policiales *</button>
+        </div>
+        <div class="form-floating mb-3">
+            <button class="text-bg-primary btn btn-custom btn-1" data-class="Ley5688">Ley 5688</button>
+        </div>
+        <div class="form-floating mb-3">
+            <button class="text-bg-primary btn btn-custom btn-1" data-class="Criminalistica">Criminalística</button>
+        </div>
+        <div class="form-floating mb-3">
+            <button class="text-bg-primary btn btn-custom btn-1" data-class="Legitima-Defensa">Legítima Defensa</button>
+        </div>
+        <div class="form-floating mb-3">
+            <button class="text-bg-primary btn btn-custom btn-1" data-class="Derecho-Penal">Derecho Penal</button>
+        </div>
+    </form>
+</section>
+
+<!-- SECCION OF. 1º A OF. MAYOR -->
+<section class="bg-white bg-opacity-50 text-black p-5">
+    <h3>Curso de Oficial Primero a Oficial Mayor:</h3>
+    <form id="update-form">
+        <div class="form-floating mb-3">
+            <button type="button" id="update-button" class="btn btn-warning" onclick="window.location.href='cppn.html'">Derecho Procesal Penal en la Función Policial</button>
+        </div>
+        <div class="form-floating mb-3">
+            <button type="button" id="update-button" class="btn btn-warning">Ley 5688</button>
+        </div>
+        <div class="form-floating mb-3">
+            <button type="button" id="update-button" class="btn btn-warning">Inimputabilidad</button>
+        </div>
+        <div class="form-floating mb-3">
+            <button type="button" id="update-button" class="btn btn-warning">Legítima Defensa</button>
+        </div>
+        <div class="form-floating mb-3">
+            <button type="button" id="update-button" class="btn btn-warning">Oficial de guardia</button>
+        </div>
+        <div class="form-floating mb-3">
+            <button type="button" id="update-button" class="btn btn-warning">Marco Legal de la Actuación Policial</button>
+        </div>
+        <div class="form-floating mb-3">
+            <button type="button" id="update-button" class="btn btn-warning">Competencias Judiciales</button>
+        </div>
+        <div class="form-floating mb-3">
+            <button type="button" id="update-button" class="btn btn-warning" onclick="window.location.href='regimenDisciplinario.html'">Régimen Disciplinario</button>
+        </div>
+        <div class="form-floating mb-3">
+            <button type="button" id="update-button" class="btn btn-warning" onclick="window.location.href='protocolos.html'">Protocolos de Actuación</button>
+        </div>
+    </form>
+</section>
+                    
+<!-- SECCION OF. OF. MAYOR A INSPECTOR -->
+<section class="bg-white bg-opacity-50 text-black p-5">
+    <h3>Curso de Oficial Mayor a Inspector:</h3>
+    <form id="delete-form">
+        <div class="form-floating mb-3">
+            <button type="button" id="delete-button" class="btn btn-danger" onclick="window.location.href='jefeServicio.html'">Jefe de Servicios</button>  
+        </div>
+        <div class="form-floating mb-3">
+            <button type="button" id="delete-button" class="btn btn-danger">Jefe de Judiciales</button>  
+        </div>
+        <div class="form-floating mb-3">
+            <button type="button" id="delete-button" class="btn btn-danger" onclick="window.location.href='tecnologias.html'">Sistemas Administrativos</button>  
+        </div>
+        <div class="form-floating mb-3">
+            <button type="button" id="delete-button" class="btn btn-danger">Guías de Actuación Policial</button>  
+        </div>
+        <div class="form-floating mb-3">
+            <button type="button" id="delete-button" class="btn btn-danger">Mando y Conducción</button>  
+        </div>
+    </form>
+</section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+ <p id="result" class="text-center mt-3"></p>
+ <p id="hint" class="text-center mt-2"></p>
+</div>
+<script src="../src/scripts/script2.js"></script>
 </body>
 </html>
-
