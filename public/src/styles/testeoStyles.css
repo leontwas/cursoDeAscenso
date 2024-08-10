@@ -23,3 +23,15 @@ img {
     max-width: 900px; /* Ajusta este valor según sea necesario */
     font-size: 1.2vw;
 }
+
+.btn.btn-warning {
+    width: 100%;
+    max-width: 900px; /* Ajusta este valor según sea necesario */
+    font-size: 1.2vw;
+}
+
+.btn.btn-danger {
+    width: 100%;
+    max-width: 900px; /* Ajusta este valor según sea necesario */
+    font-size: 1.2vw; 
+}
