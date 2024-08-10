@@ -12,7 +12,7 @@ img {
     object-fit: cover;
 }
 
-.text-bg-primary.btn.btn-custom.btn-2 {
+.text-bg-primary.btn.btn-custom.btn-1 {
     width: 100%;
     max-width: 300px; /* Ajusta este valor según sea necesario */
 }
