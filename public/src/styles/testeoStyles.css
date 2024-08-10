@@ -14,6 +14,6 @@ img {
 
 .text-bg-primary.btn.btn-custom.btn-1 {
     width: 100%;
-    max-width: 400px; /* Ajusta este valor según sea necesario */
-    font-size: 3vw;
+    max-width: 500px; /* Ajusta este valor según sea necesario */
+    font-size: 2vw;
 }
