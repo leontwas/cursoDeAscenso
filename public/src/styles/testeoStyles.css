@@ -1,9 +1,21 @@
+body, html {
+    height: 100vw;
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 main {
     background: black;
-    color: white
+    color: white;
+    width: 100%;
+    max-width: 1200px; /* Ajusta este valor según tus necesidades */
 }
 
 section {
+    margin: 1rem 0; /* Añadir margen superior e inferior */
     margin: 2rem 0
 }
 
@@ -14,24 +26,24 @@ img {
 
 .btn.btn-success {
     width: 100%;
-    max-width: 900px; /* Ajusta este valor según sea necesario */
+    max-width: 1200px; /* Ajusta este valor según sea necesario */
     font-size: 1.2vw;
 }
 
 .text-bg-primary.btn.btn-custom.btn-1 {
     width: 100%;
-    max-width: 900px; /* Ajusta este valor según sea necesario */
+    max-width: 1200px; /* Ajusta este valor según sea necesario */
     font-size: 1.2vw;
 }
 
 .btn.btn-warning {
     width: 100%;
-    max-width: 900px; /* Ajusta este valor según sea necesario */
+    max-width: 1200px; /* Ajusta este valor según sea necesario */
     font-size: 1.2vw;
 }
 
 .btn.btn-danger {
     width: 100%;
-    max-width: 900px; /* Ajusta este valor según sea necesario */
+    max-width: 1200px; /* Ajusta este valor según sea necesario */
     font-size: 1.2vw; 
 }
