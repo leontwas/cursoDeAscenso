@@ -27,7 +27,7 @@ img {
 .btn {
     width: 100%;
     max-width: 1200px; /* Ajusta este valor según sea necesario */
-    font-size: 1.2vw;
+    font-size: 1.5vw;
     height: 60px; /* Ajusta este valor según sea necesario */
     display: flex;
     align-items: center;
