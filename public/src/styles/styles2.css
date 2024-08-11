@@ -8,6 +8,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
@@ -20,23 +21,11 @@ header {
   z-index: 1000; /* Asegura que el header esté encima de otros elementos */
 }
 
-.btn-abandonar {
-  background-color: rgb(199, 6, 6);
-  border-radius: 8%;
-  color: white;
-  font-size: 1.5vw; /* Ajusta el tamaño del texto en pantallas grandes */
-  padding: 15px 20px; /* Aumenta el padding para un botón más grande */
-  position:relative; /* Fija el botón en la parte inferior */
-  bottom: 100px; /* Espacio desde el borde inferior */
-  left: 50%; /* Centra el botón horizontalmente */
-  justify-content: center;/* Ajusta el botón para estar centrado */
-  z-index: 1000; /* Asegúrate de que esté encima de otros elementos */
-}
-
 .container {
   width: 100%;
   max-width: 600px;
   text-align: center;
+  flex-grow: 1; /* Permite que el contenedor crezca y ocupe espacio disponible */
 }
 
 .bungee-regularspice- {
@@ -74,6 +63,7 @@ header {
   width: 80%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   margin-top: 20px; /* Añade margen superior para evitar superposición con el header */
+  flex-grow: 1; /* Permite que el contenedor crezca y ocupe espacio disponible */
 }
 
 #question-container {
@@ -95,6 +85,19 @@ header {
   transition: background-color 0.3s ease;
 }
 
+.btn-abandonar {
+  background-color: rgb(199, 6, 6);
+  border-radius: 8%;
+  color: white;
+  font-size: 1.5vw; /* Ajusta el tamaño del texto en pantallas grandes */
+  padding: 15px 20px; /* Aumenta el padding para un botón más grande */
+  position: relative;
+  margin-top: 20px; /* Añade espacio entre el cuestionario y el botón */
+  left: 50%;
+  transform: translateX(-50%); /* Centra el botón horizontalmente */
+  z-index: 1000; /* Asegúrate de que esté encima de otros elementos */
+}
+
 /*************************************** Notebooks ******************************************/
 @media only screen and (min-width: 851px) {
   .bungee-regularspice- {
@@ -112,9 +115,9 @@ header {
 /*************************************** Tablets ******************************************/
 @media only screen and (min-width: 651px) and (max-width: 850px) {
   body {
-      margin-top: 50px;
-      min-height: 100vh;
-      overflow-x: hidden;
+    margin-top: 50px;
+    min-height: 100vh;
+    overflow-x: hidden;
   }
   .bungee-regularspice- {
     font-size: 1.5rem; /* Ajusta el tamaño del texto del título para pantallas tablets*/
@@ -131,7 +134,7 @@ header {
 /*************************************** Celulares ******************************************/
 @media only screen and (max-width: 650px) {
   body {
-      margin-top: 20px;
+    margin-top: 20px;
   }
   .bungee-regularspice- {
     margin-top: 0px;
@@ -149,3 +152,4 @@ header {
     padding: 20px 40px; /* Aumenta el padding para un botón más grande */
   }
 }
+
