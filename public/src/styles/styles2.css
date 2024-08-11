@@ -12,6 +12,16 @@ body {
   overflow: auto; /* Permite el scroll si el contenido es mayor que la pantalla */
 }
 
+header {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Asegura que el header esté encima de otros elementos */
+}
+
 .btn-abandonar {
   background-color: rgb(199, 6, 6);
   border-radius: 8%;
@@ -23,16 +33,6 @@ body {
   left: 50%; /* Centra el botón horizontalmente */
   transform: translateX(-50%); /* Ajusta el botón para estar centrado */
   z-index: 1000; /* Asegúrate de que esté encima de otros elementos */
-}
-
-.notification {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #4CAF50; /* Color verde para la notificación */
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
 }
 
 .container {
@@ -68,24 +68,6 @@ body {
   transform: scale(1.05);
 }
 
-.btn-1 { background-color: #b644fc; }
-.btn-2 { background-color: #f07e0b; }
-.btn-3 { background-color: #08cfc8; }
-.btn-4 { background-color: #7fea14; }
-.btn-5 { background-color: #528f52; }
-.btn-6 { background-color: #fb2a2a; }
-.btn-7 { background-color: #0b6a6a; }
-.btn-8 { background-color: #e907c7; }
-.btn-9 { background-color: #a87ef6; }
-.btn-10 { background-color: #810af8; }
-.btn-11 { background-color: #f67293; }
-.btn-12 { background-color: #2c61cb; }
-.btn-13 { background-color: #f62840; }
-.btn-14 { background-color: #0ab237; }
-.btn-15 { background-color: #f1ae27; }
-.btn-16 { background-color: #9f6e24; }
-.btn-17 { background-color: #9f2424; } /*** test ***/
-
 #quiz-container {
   background: rgba(0, 0, 0, 0.7);
   padding: 20px;
@@ -93,6 +75,7 @@ body {
   max-width: 600px;
   width: 80%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-top: 20px; /* Añade margen superior para evitar superposición con el header */
 }
 
 #question-container {
@@ -125,25 +108,16 @@ body {
   }
   .option-button {
     font-size: 1.2vw; /* Ajusta el tamaño del texto de las opciones de respuestas */
-    }
+  }
 }
 
 /*************************************** Tablets ******************************************/
 @media only screen and (min-width: 651px) and (max-width: 850px) {
   body {
-      position: relative;
       margin-top: 50px;
-      display: flex;
-      flex-direction: column;
       min-height: 100vh;
       overflow-x: hidden;
-      background-size: cover;
   }
-  .row-cols-md-4>* {
-    flex: 0 0 auto;
-    width: 25%;
-    font-size: 1.4rem;
-}
   .bungee-regularspice- {
     font-size: 1.5rem; /* Ajusta el tamaño del texto del título para pantallas tablets*/
   }
@@ -153,13 +127,13 @@ body {
   }
   .option-button {
     font-size: 3vw; /* Ajusta el tamaño del texto de las opciones de respuestas */
-    }
+  }
 }
 
 /*************************************** Celulares ******************************************/
 @media only screen and (max-width: 650px) {
   body {
-      position: relative;
+      margin-top: 20px;
   }
   .bungee-regularspice- {
     margin-top: 0px;
@@ -170,12 +144,10 @@ body {
     height: 70px; /* Ajusta la altura de los botones para pantallas Celulares */
   }
   .option-button {
-  font-size: 5vw; /* Ajusta el tamaño del texto de las opciones de respuestas */
+    font-size: 5vw; /* Ajusta el tamaño del texto de las opciones de respuestas */
   }
   .btn-abandonar {
     font-size: 1.5rem; /* Aumenta el tamaño del texto en dispositivos móviles */
     padding: 20px 40px; /* Aumenta el padding para un botón más grande */
   }
-
 }
-
