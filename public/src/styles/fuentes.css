@@ -1,0 +1,33 @@
+
+.kalam-regular {
+    font-family: "Kalam", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .kalam-bold {
+    font-family: "Kalam", cursive;
+    font-weight: 700;
+    font-style: normal;
+  }  
+  
+  .chicle-regular {
+      font-family: "Chicle", serif;
+      font-weight: 400;
+      font-style: oblique;
+  }
+
+  .bungee-regularspice- {
+    margin-bottom: 5px;
+    font-family: "Bungee Spice", sans-serif;
+    font-weight: 400;
+    font-style:normal;
+  }  
+
+  .sedgwick-ave-display-regular {
+    font-family: "Sedgwick Ave Display", cursive;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+    color:gold;
+  }
