@@ -29,7 +29,7 @@ header {
   position:relative; /* Fija el botón en la parte inferior */
   bottom: 100px; /* Espacio desde el borde inferior */
   left: 50%; /* Centra el botón horizontalmente */
-  transform: translateX(-550%); /* Ajusta el botón para estar centrado */
+  justify-content: center;/* Ajusta el botón para estar centrado */
   z-index: 1000; /* Asegúrate de que esté encima de otros elementos */
 }
 
