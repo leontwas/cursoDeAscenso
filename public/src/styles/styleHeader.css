@@ -31,8 +31,7 @@ nav ul li {
         transition: color 0.3s, text-decoration 0.3s;
         font-style: oblique;
         margin-bottom: 7px;
-        font-size: small;
-        font-family:"Kalam", cursive;
+        font-size:medium;
     }
 
     nav ul li a:hover {
