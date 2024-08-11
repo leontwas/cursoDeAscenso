@@ -28,7 +28,7 @@ header {
   color: white;
   font-size: 1.7vw; /* Ajusta el tamaño del texto en pantallas grandes */
   padding: 15px 30px; /* Aumenta el padding para un botón más grande */
-  position: fixed; /* Fija el botón en la parte inferior */
+  position:sticky; /* Fija el botón en la parte inferior */
   bottom: 20px; /* Espacio desde el borde inferior */
   left: 50%; /* Centra el botón horizontalmente */
   transform: translateX(-50%); /* Ajusta el botón para estar centrado */
