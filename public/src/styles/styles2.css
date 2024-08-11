@@ -93,7 +93,9 @@ header {
   padding: 15px 20px; /* Aumenta el padding para un botón más grande */
   position: relative;
   margin-top: 30px; /* Añade espacio entre el cuestionario y el botón */
-  transform: translateX(-50%); /* Centra el botón horizontalmente */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   z-index: 1000; /* Asegúrate de que esté encima de otros elementos */
 }
 
