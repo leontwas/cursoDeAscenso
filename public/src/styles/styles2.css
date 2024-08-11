@@ -9,7 +9,6 @@ body {
   align-items: center;
   flex-direction: column;
   height: 100vh;
-  overflow: auto; /* Permite el scroll si el contenido es mayor que la pantalla */
 }
 
 header {
