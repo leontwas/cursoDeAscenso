@@ -41,11 +41,19 @@ img {
 
 /* Media Queries para diferentes dispositivos */
 
+/* Notebooks */
+@media (max-width: 1200px) {
+    .btn {
+        font-size: 1.2vw;
+        height: 55px;
+    }
+}
+
 /* Tablets */
 @media (max-width: 992px) {
     .btn {
         font-size: 1.5vw;
-        height: 55px;
+        height: 50px;
     }
 }
 
@@ -53,18 +61,10 @@ img {
 @media (max-width: 768px) {
     .btn {
         font-size: 3vw;
-        height: 50px;
+        height: 45px;
     }
 
     main {
         padding: 0 1rem; /* Añadir un poco de espacio alrededor */
-    }
-}
-
-/* Celulares pequeños */
-@media (max-width: 576px) {
-    .btn {
-        font-size: 4vw;
-        height: 45px;
     }
 }
