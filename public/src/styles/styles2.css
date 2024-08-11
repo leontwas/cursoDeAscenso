@@ -51,10 +51,6 @@ header {
   hyphens: auto;
 }
 
-.btn-custom:hover, .btn-warning:hover {
-  transform: scale(1.05);
-}
-
 #quiz-container {
   background: rgba(0, 0, 0, 0.7);
   padding: 20px;
