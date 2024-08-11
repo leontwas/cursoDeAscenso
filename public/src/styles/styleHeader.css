@@ -22,7 +22,7 @@ nav ul {
 nav ul li {
     display: inline;
     padding-right: 17px;
-    margin-top: 10px;
+    padding-top: 10px;
 }
 /********************************************** Celulares ********************************************************/
 @media only screen and (max-width: 650px) {
