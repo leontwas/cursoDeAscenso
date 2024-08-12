@@ -621,9 +621,45 @@ const questions = [
           question: "El incumplimiento de los protocolos de actuación cuando ello implique una infracción al uso proporcional de la fuerza directa. Es una falta del tipo:",
           options: ["Leve", "Moderada", "Grave"],
           correctAnswer: "Grave"
-      }
+      },
+     
+     /****************************** Proposito 1 **************************************/
+      {
+        question: "La aplicación de las sanciones para que toda conducta sea encuadrada con una falta leve debe tramitar de acuerdo al procedimiento disciplinario previsto por la resolución 907/17?",
+        options: ["Verdadero", "Falso"],
+        correctAnswer: "Verdadero"
+      },
+      {
+        question: "Es posible que el jefe de dependencia al momento de efectuar la fiscalización agrave la sanción impuesta dentro de los límites de sus facultades disciplinarias?",
+        options: ["Verdadero", "Falso"],
+        correctAnswer: "Verdadero"
+      },
+      {
+        question: "Porque la fiscalización es un procedimiento de doble conformidad?",
+        options: ["Porque deben estar conformes con la sanción aplicada tanto el sancionado como el superior que pidió la sanción.", "Porque se requiere que en dos instancias consecutivas exista coincidencias en la determinación de la sanción a imponer o la decisión de dejarla sin efecto.", "Todas son correctas"],
+        correctAnswer: "Porque se requiere que en dos instancias consecutivas exista coincidencias en la determinación de la sanción a imponer o la decisión de dejarla sin efecto."
+      },
+      {
+        question: "El procedimiento para la aplicación directa de sanciones por la comisión de faltas leves por el personal policial con estado policial se encuentra regulado por qué norma?",
+        options: ["Resolución del ministerio de justicia y seguridad número 907/17.", "Decreto N° 053/017"],
+        correctAnswer: "Resolución del ministerio de justicia y seguridad número 907/17."
+      },
+      {
+        question: "Cuántos propósitos tiene el procedimiento regulado por la resolución del ministerio de justicia y seguridad número 907/17?",
+        options: ["Tres (3)", "Cuatro (4)", "Cinco (5)"],
+        correctAnswer: "Cuatro (4)"
+      },
+      {
+        question: "El procedimiento regulado por la resolución del ministerio de justicia y seguridad número 907/17 puede aplicarse seguridad faltas moderadas?",
+        options: ["Si", "No"],
+        correctAnswer: "No"
+      },
+      {
+        question: "El procedimiento regulado por la resolución del ministerio de justicia y seguridad número 907/17 puede aplicarse seguridad faltas moderadas?",
+        options: ["Verdadero", "Falso"],
+        correctAnswer: "Falso"
+      },
   ];
-
 
   let correctAnswersCount = 0;
   let currentQuestionIndex;
