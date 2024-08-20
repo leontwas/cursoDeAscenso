@@ -573,8 +573,52 @@ const questions = [
     question: "¿Cuál es la principal diferencia entre evidencia y prueba en la investigación criminal?",
     options: ["La prueba permite establecer cómo se desarrolló el hecho delictivo", "La evidencia es subjetiva mientras que la prueba no lo es"],
     correctAnswer: "La prueba permite establecer cómo se desarrolló el hecho delictivo"
-    }
-
+    },
+    {
+      question: "¿Qué ciencia aplica conocimientos sobre el ser humano para auxiliar en la investigación judicial?",
+      options: ["Medicina Legal", "Criminología"],
+      correctAnswer: "Medicina Legal"
+      },
+      {
+        question: "¿Qué se entiende por 'testigos mudos' en Criminalística?",
+        options: ["Objetos o huellas en la escena del crimen", "Testigos que no quieren hablar"],
+        correctAnswer: "Objetos o huellas en la escena del crimen"
+        },
+        {
+          question: "¿Qué caracteriza a la evidencia testimonial?",
+          options: ["Es subjetiva", "Es objetiva"],
+          correctAnswer: "Es subjetiva"
+          },
+   {
+    question: "¿Cuál es el enfoque transdisciplinar en la investigación criminal?",
+    options: ["Colaboración entre múltiples disciplinas", "Uso exclusivo de métodos deductivos"],
+    correctAnswer: "Colaboración entre múltiples disciplinas"
+   },
+   {
+    question: "¿Qué papel juegan los peritos en la investigación criminal?",
+    options: ["Asisten al juez con conocimientos técnicos", "Establecen la culpabilidad del sospechoso"],
+    correctAnswer: "Asisten al juez con conocimientos técnicos"
+    },
+    {
+      question: "¿Qué se requiere para obtener un conocimiento válido en Criminalística?",
+      options: ["Uso de un método científico", "Aplicación de leyes penales"],
+      correctAnswer: "Uso de un método científico"
+      },  
+{
+  question: "¿Cuál es la finalidad de los métodos deductivo, inductivo y abductivo en la investigación criminal?",
+  options: ["Aportar distintos tipos de razonamiento", "Probar la culpabilidad del sospechoso"],
+  correctAnswer: "Aportar distintos tipos de razonamiento"
+        },
+{
+  question: "¿Qué se busca lograr con el diseño de experimentos en el método científico?",
+  options: ["Obtener evidencias fiables", "Crear nuevas leyes penales"],
+  correctAnswer: "Obtener evidencias fiables"
+  },
+{
+  question: "¿Qué diferencia existe entre una evidencia y un indicio en una investigación criminal?",
+  options: ["La evidencia está verificada en laboratorio", "El indicio es más fiable que la evidencia"],
+  correctAnswer: "La evidencia está verificada en laboratorio"
+  }
 ];
     
 let correctAnswersCount = 0;
