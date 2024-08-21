@@ -865,6 +865,107 @@ correctAnswer: "Verdadero"
     options: ["Verdadero", "Falso"],
     correctAnswer: "Falso"
   },
+  {
+    question: "¿Cuál es el procedimiento para el embalaje de armas corto punzantes?",
+    options: ["Colocarlas en bolsas de nylon.", "Manipularlas con las manos descubiertas.", "Colocarlas en cajas de cartón fijadas mediante hilos o precintos.", "Guardarlas en un recipiente de plástico sin sellar."],
+    correctAnswer: "Colocarlas en cajas de cartón fijadas mediante hilos o precintos."
+  },
+  {
+    question: "¿Qué debe hacerse con los teléfonos celulares recolectados en una escena del crimen?",
+    options: ["Encenderlos para verificar la información.", "Extraer la tarjeta SIM.", "Sacarles la batería y, si no es posible, aislarlos en envoltorios de papel metalizado.", "Manipularlos libremente para evitar dañar la evidencia."],
+    correctAnswer: "Sacarles la batería y, si no es posible, aislarlos en envoltorios de papel metalizado."
+  },
+  {
+    question: "¿Cómo deben ser tratadas las computadoras e impresoras durante la recolección de evidencia?",
+    options: ["Apagarlas utilizando el sistema operativo.", "Envolverlas o sellarlas con fajas de papel todo puerto y sector de alimentación eléctrica.", "Desenchufarlas directamente sin sellarlas.", "Manipularlas con las manos descubiertas para evitar daños."],
+    correctAnswer: "Envolverlas o sellarlas con fajas de papel todo puerto y sector de alimentación eléctrica."
+  },
+  {
+    question: "¿Qué debe contener el rótulo de un envoltorio de evidencia?",
+    options: ["Solo el número de causa.", "El lugar, fecha y hora de recolección, cantidad y tipo, técnica empleada, y firmas de los involucrados.", "Solo la firma de la persona que recolectó la evidencia.", "Solo el nombre del testigo."],
+    correctAnswer: "El lugar, fecha y hora de recolección, cantidad y tipo, técnica empleada, y firmas de los involucrados."
+  },
+  {
+    question: "¿Cuál es el objetivo principal de la cadena de custodia?",
+    options: ["Garantizar la rapidez en la entrega de la evidencia al laboratorio.", "Garantizar la integridad física y legal del indicio y la trazabilidad de la evidencia.", "Reducir el tiempo de análisis en el laboratorio.", "Evitar la contaminación de los indicios biológicos."],
+    correctAnswer: "Garantizar la integridad física y legal del indicio y la trazabilidad de la evidencia."
+  },
+  {
+    question: "¿Es necesario utilizar códigos de barras, QR o tecnología RFID para el rotulado de evidencia en algunas jurisdicciones?",
+    options: ["No, solo se requiere la firma del recolector.", "Sí, en algunas jurisdicciones que cuentan con la tecnología necesaria.", "Solo se requiere una etiqueta simple sin tecnología adicional.", "No, la tecnología avanzada no es permitida."],
+    correctAnswer: "Sí, en algunas jurisdicciones que cuentan con la tecnología necesaria."
+  },
+  {
+    question: "¿Qué debe hacerse si un indicio no está acompañado de su respectiva cadena de custodia?",
+    options: ["Se puede utilizar como prueba en un proceso judicial.", "Se debe desechar inmediatamente.", "No podrá ser utilizado como prueba en un futuro proceso judicial.", "Se debe revisar nuevamente el protocolo de embalaje."],
+    correctAnswer: "No podrá ser utilizado como prueba en un futuro proceso judicial."
+  },
+  {
+    question: "¿Qué información se debe registrar en la planilla de cadena de custodia?",
+    options: ["Solo el nombre del testigo.", "Solo el número de causa.", "Toda la información sobre la recolección y manipulación del indicio.", "Solo la firma del custodio."],
+    correctAnswer: "Toda la información sobre la recolección y manipulación del indicio."
+  },
+  {
+    question: "¿Qué tipo de envoltorio es adecuado para el embalaje de documentos y dinero?",
+    options: ["Bolsas de nylon.", "Sobres de papel preferentemente.", "Contenedores de plástico.", "Cajas de cartón sin rotular."],
+    correctAnswer: "Sobres de papel preferentemente."
+  },
+  
+  {
+    question: "¿Cuál es una de las consideraciones finales para una investigación criminal exitosa?",
+    options: ["Mantener el diálogo fluido entre interventores y forenses.", "Minimizar el uso de tecnología avanzada en la recolección.", "Permitir el acceso libre a la escena del crimen para todos los involucrados.", "Manipular la evidencia sin seguir el protocolo."],
+    correctAnswer: "Mantener el diálogo fluido entre interventores y forenses."
+  },
+  {
+    question: "Es necesario encender los teléfonos celulares recolectados para verificar su contenido.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso"
+  },
+  {
+    question: "Las computadoras e impresoras deben ser apagadas utilizando el sistema operativo antes de ser desenchufadas.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso"
+  },
+  {
+    question: "El rótulo en un envoltorio de evidencia debe incluir el número de causa, lugar, fecha y hora de recolección, cantidad y tipo de evidencia, técnica empleada, y las firmas de quienes realizaron la recolección.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "El embalaje adecuado para documentos y dinero es el uso de bolsas de nylon.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso"
+  },
+  {
+    question: "La cadena de custodia asegura que la evidencia se mantenga en condiciones de preservación y seguridad desde la recolección hasta su valoración en juicio.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "No es necesario rotular cada envoltorio de evidencia si se utiliza tecnología avanzada como códigos de barras o QR.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso"
+  },
+  {
+    question: "El personal que encuentra, recibe, recopila, embala, transporta, conserva, genera o analiza muestras forma parte de la cadena de custodia.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "La planilla de cadena de custodia no es obligatoria para el envío de material a peritar si se encuentra en el formato autorizado.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso"
+  },
+  {
+    question: "La cadena de custodia busca evitar la alteración ilegítima de los indicios o pruebas.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "El embalaje de armas corto punzantes debe hacerse en recipientes de plástico no sellados.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso"
+  },
 
 ];
 
