@@ -154,97 +154,96 @@ const questions = [
         options: ["Principio de culpabilidad", "Principio de legalidad", "Principio de irretroactividad", "Principio de oportunidad"],
         correctAnswer: "Principio de culpabilidad"
       }
-];
+    ];
 
-
-let correctAnswersCount = 0;
-let currentQuestionIndex;
-
-document.addEventListener('DOMContentLoaded', () => {
-    displayRandomQuestion();
-});
-
-function displayRandomQuestion() {
-    if (questions.length === 0) {
-        // Se elimina la invocación a displayCompletionMessage()
-        return;
-    }
-
-    currentQuestionIndex = Math.floor(Math.random() * questions.length);
-    const question = questions[currentQuestionIndex];
-
-    document.getElementById('question-container').innerHTML = `<h2>${question.question}</h2>`;
-    const optionsContainer = document.getElementById('options-container');
-    optionsContainer.innerHTML = '';
-
-    question.options.forEach(option => {
-        const button = document.createElement('button');
-        button.classList.add('btn', 'btn-primary', 'option-button', 'm-2');
-        button.innerText = option;
-        button.onclick = () => checkAnswer(option);
-        optionsContainer.appendChild(button);
-    });
-
-    showAbandonButton();
-}
-
-function showAbandonButton() {
-    let abandonButton = document.getElementById('abandon-button');
-    if (!abandonButton) {
-        abandonButton = document.createElement('button');
-        abandonButton.id = 'abandon-button';
-        abandonButton.classList.add('btn', 'btn-abandonar');
-        abandonButton.innerText = 'Regresar';
-        abandonButton.onclick = () => window.location.href = './index.html';
-        document.body.appendChild(abandonButton);
-    } else {
-        abandonButton.style.display = 'block';
-    }
-}
-
-function hideAbandonButton() {
-    const abandonButton = document.getElementById('abandon-button');
-    if (abandonButton) {
-        abandonButton.style.display = 'none';
-    }
-}
-
-function checkAnswer(selectedAnswer) {
-    const correctAnswer = questions[currentQuestionIndex].correctAnswer;
-
-    if (selectedAnswer === correctAnswer) {
-        correctAnswersCount++;
-        questions.splice(currentQuestionIndex, 1);
+    let correctAnswersCount = 0;
+    let currentQuestionIndex;
+    
+    document.addEventListener('DOMContentLoaded', () => {
         displayRandomQuestion();
-        displayNotification("Correcto!");
-    } else {
-        displayFailureMessage(correctAnswer);
-        hideAbandonButton();
+    });
+    
+    function displayRandomQuestion() {
+        if (questions.length === 0) {
+            // Se elimina la invocación a displayCompletionMessage()
+            return;
+        }
+    
+        currentQuestionIndex = Math.floor(Math.random() * questions.length);
+        const question = questions[currentQuestionIndex];
+    
+        document.getElementById('question-container').innerHTML = `<h2>${question.question}</h2>`;
+        const optionsContainer = document.getElementById('options-container');
+        optionsContainer.innerHTML = '';
+    
+        question.options.forEach(option => {
+            const button = document.createElement('button');
+            button.classList.add('btn', 'btn-primary', 'option-button', 'm-2');
+            button.innerText = option;
+            button.onclick = () => checkAnswer(option);
+            optionsContainer.appendChild(button);
+        });
+    
+        showAbandonButton();
     }
-}
-
-function displayNotification(message) {
-    const notification = document.createElement('div');
-    notification.classList.add('notification');
-    notification.innerText = message;
-    document.body.appendChild(notification);
-
-    setTimeout(() => {
-        document.body.removeChild(notification);
-    }, 2000);
-}
-
-function displayFailureMessage(correctAnswer) {
-    const quizContainer = document.getElementById('quiz-container');
-    quizContainer.innerHTML = `
-        <h1 class="error-message">Incorrecto.</h1>
-        <h2 class="error-message">La respuesta correcta es: ${correctAnswer}</h2>
-        <h2 class="error-message">Respuestas correctas: ${correctAnswersCount}</h2>
-        <img src="../src/images/image1.png" alt="Imagen de error" class="img-fluid">
-        <button id="retry-button" class="btn btn-danger mt-3">Reintentar</button>
-    `;
-
-    document.getElementById('retry-button').onclick = () => {
-        window.location.href = './index.html';
-    };
-}
+    
+    function showAbandonButton() {
+        let abandonButton = document.getElementById('abandon-button');
+        if (!abandonButton) {
+            abandonButton = document.createElement('button');
+            abandonButton.id = 'abandon-button';
+            abandonButton.classList.add('btn', 'btn-abandonar');
+            abandonButton.innerText = 'Regresar';
+            abandonButton.onclick = () => window.location.href = './index.html';
+            document.body.appendChild(abandonButton);
+        } else {
+            abandonButton.style.display = 'block';
+        }
+    }
+    
+    function hideAbandonButton() {
+        const abandonButton = document.getElementById('abandon-button');
+        if (abandonButton) {
+            abandonButton.style.display = 'none';
+        }
+    }
+    
+    function checkAnswer(selectedAnswer) {
+        const correctAnswer = questions[currentQuestionIndex].correctAnswer;
+    
+        if (selectedAnswer === correctAnswer) {
+            correctAnswersCount++;
+            questions.splice(currentQuestionIndex, 1);
+            displayRandomQuestion();
+            displayNotification("Correcto!");
+        } else {
+            displayFailureMessage(correctAnswer);
+            hideAbandonButton();
+        }
+    }
+    
+    function displayNotification(message) {
+        const notification = document.createElement('div');
+        notification.classList.add('notification');
+        notification.innerText = message;
+        document.body.appendChild(notification);
+    
+        setTimeout(() => {
+            document.body.removeChild(notification);
+        }, 2000);
+    }
+    
+    function displayFailureMessage(correctAnswer) {
+        const quizContainer = document.getElementById('quiz-container');
+        quizContainer.innerHTML = `
+            <h1 class="error-message">Incorrecto.</h1>
+            <h2 class="error-message">La respuesta correcta es: ${correctAnswer}</h2>
+            <h2 class="error-message">Respuestas correctas: ${correctAnswersCount}</h2>
+            <img src="../src/images/image1.png" alt="Imagen de error" class="img-fluid">
+            <button id="retry-button" class="btn btn-danger mt-3">Reintentar</button>
+        `;
+    
+        document.getElementById('retry-button').onclick = () => {
+            window.location.href = './index.html';
+        };
+    }
