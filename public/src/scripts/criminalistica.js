@@ -966,7 +966,158 @@ correctAnswer: "Verdadero"
     options: ["Verdadero", "Falso"],
     correctAnswer: "Falso"
   },
-
+  {
+    question: "¿Cuál es la definición de balística forense?",
+    options: ["La ciencia que estudia las armas blancas y su impacto en el cuerpo humano.", "La ciencia que estudia las armas de fuego, los componentes que utilizan y los fenómenos fisicoquímicos del disparo.", "La ciencia que se ocupa de los efectos del disparo en el medio ambiente.", "La ciencia que analiza los residuos de disparo en las prendas de vestir."],
+    correctAnswer: "La ciencia que estudia las armas de fuego, los componentes que utilizan y los fenómenos fisicoquímicos del disparo."
+  },
+  {
+    question: "¿Qué estudia la balística interior?",
+    options: ["Los efectos del proyectil en el blanco.", "La trayectoria balística espacial del proyectil.", "Los mecanismos y fenómenos en el interior del arma hasta que el proyectil abandona el cañón.", "La identificación pericial mediante el cotejo de proyectiles."],
+    correctAnswer: "Los mecanismos y fenómenos en el interior del arma hasta que el proyectil abandona el cañón."
+  },
+  {
+    question: "¿Qué es la balística comparativa?",
+    options: ["El estudio de los efectos del proyectil en el blanco.", "La identificación pericial mediante el cotejo de proyectiles y vainas con un arma de fuego.", "La investigación de la trayectoria del proyectil desde la boca del cañón hasta el impacto.", "La observación de los elementos que salen por la boca del cañón."],
+    correctAnswer: "La identificación pericial mediante el cotejo de proyectiles y vainas con un arma de fuego."
+  },
+  {
+    question: "¿Qué partículas se consideran características de un disparo?",
+    options: ["Plomo, Cobre y Zinc.", "Antimonio, Galio y Titanio.", "Plomo, Antimonio y Bario.", "Gadolinio, Cobre y Estaño."],
+    correctAnswer: "Plomo, Antimonio y Bario."
+  },
+  {
+    question: "¿Qué técnica se utiliza para detectar partículas características de un disparo?",
+    options: ["Microscopía óptica clásica.", "Microscopía de barrido electrónico.", "Espectrometría de masas.", "Cromatografía de gases."],
+    correctAnswer: "Microscopía de barrido electrónico."
+  },
+  {
+    question: "¿Qué se debe hacer con los teléfonos celulares antes de enviarlos al laboratorio?",
+    options: ["Encenderlos para verificar su funcionamiento.", "Extraer la tarjeta SIM.", "Sacarles la batería o envolverlos en papel metalizado si no es posible sacar la batería.", "Limpiar la superficie con alcohol."],
+    correctAnswer: "Sacarles la batería o envolverlos en papel metalizado si no es posible sacar la batería."
+  },
+  {
+    question: "¿Cuál de los siguientes elementos no se considera una característica de un disparo?",
+    options: ["Plomo", "Gadolinio", "Antimonio", "Bario"],
+    correctAnswer: "Gadolinio"
+  },
+  {
+    question: "¿Qué procedimiento se debe seguir para la recolección de muestras de residuos de arma de fuego en un caso de herido con internación hospitalaria?",
+    options: ["Recolectar las muestras inmediatamente después del hecho, sin importar el tiempo transcurrido.", "Solicitar la realización de muestreo lo más urgente posible, recomendando no superar las 6 horas del hecho.", "Lavar las manos del sujeto antes de la recolección para evitar contaminación.", "Esperar hasta que el sujeto esté completamente recuperado antes de tomar las muestras."],
+    correctAnswer: "Solicitar la realización de muestreo lo más urgente posible, recomendando no superar las 6 horas del hecho."
+  },
+  {
+    question: "¿Qué debe incluir un rótulo en un envoltorio de evidencia?",
+    options: ["Número de causa, lugar, fecha y hora de recolección, firma del perito.", "Nombre del sospechoso y descripción del delito.", "Número de causa, lugar, fecha y hora de recolección, cantidad y tipo, técnica empleada, firmas de quienes realizaron la recolección.", "Solo el número de causa y la fecha de recolección."],
+    correctAnswer: "Número de causa, lugar, fecha y hora de recolección, cantidad y tipo, técnica empleada, firmas de quienes realizaron la recolección."
+  },
+  {
+    question: "¿Qué procedimiento debe seguir el personal policial cuando no hay intervención de personal científico especializado en la recolección de evidencias?",
+    options: ["Preservar las evidencias de acuerdo a lo indicado en el Módulo anterior y llevarlas a la dependencia policial para luego remitirlas al Laboratorio correspondiente.", "Realizar la investigación sin recolectar evidencias.", "Contactar inmediatamente a un perito balístico para que se encargue de la recolección.", "Dejar las evidencias en el lugar del hecho hasta que llegue el personal especializado."],
+    correctAnswer: "Preservar las evidencias de acuerdo a lo indicado en el Módulo anterior y llevarlas a la dependencia policial para luego remitirlas al Laboratorio correspondiente."
+  },
+  {
+    question: "La balística forense incluye el estudio de las armas de fuego y sus componentes.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+  
+  {
+    question: "La balística interior se ocupa de los efectos del proyectil en el blanco.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso"
+  },
+  {
+    question: "El microscopio de barrido electrónico puede ampliar una muestra hasta 180 mil veces.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "La balística comparativa considera el principio de correspondencia y transferencia de características identificatorias.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "La balística exterior estudia los fenómenos que ocurren en el interior del arma de fuego.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso"
+  },
+  {
+    question: "Las partículas características de un disparo incluyen Plomo, Antimonio y Bario.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "El análisis de residuos de disparo solo puede realizarse con microscopía óptica.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso"
+  },
+  {
+    question: "Para considerar un análisis como positivo, se debe encontrar al menos una partícula característica de un disparo.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "La balística terminal estudia los mecanismos y fenómenos que ocurren en el interior del arma de fuego.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso"
+  },
+  {
+    question: "El embalaje y etiquetado de evidencias debe incluir la firma de dos testigos.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "La balística forense se encarga del estudio de los efectos de los proyectiles en el blanco.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero",
+  },
+  {
+    question: "El microscopio de barrido electrónico utiliza un haz de luz para examinar las muestras.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso",
+  },
+  {
+    question: "Las partículas características de un disparo incluyen Plomo, Antimonio y Bario.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero",
+  },
+  {
+    question: "La balística interior estudia la trayectoria balística desde el punto de impacto hasta el blanco.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso",
+  },
+  {
+    question: "El análisis de residuos de disparo puede realizarse con microscopía electrónica de barrido.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero",
+  },
+  {
+    question: "El balístico comparativa es una rama independiente de la balística forense.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso",
+  },
+  {
+    question: "La balística exterior se ocupa del estudio de los mecanismos internos del arma de fuego.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso",
+  },
+  {
+    question: "El embalaje de las evidencias debe evitar la alteración y destrucción de las mismas.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero",
+  },
+  {
+    question: "La balística terminal examina los fenómenos que ocurren dentro del arma de fuego.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso",
+  },
+  {
+    question: "Para considerar un análisis de residuos de disparo como positivo, se debe encontrar al menos una partícula característica.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero",
+  }
+  
 ];
 
 let correctAnswersCount = 0;
