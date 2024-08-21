@@ -1116,8 +1116,398 @@ correctAnswer: "Verdadero"
     question: "Para considerar un análisis de residuos de disparo como positivo, se debe encontrar al menos una partícula característica.",
     options: ["Verdadero", "Falso"],
     correctAnswer: "Verdadero",
+  },
+    {
+      question: "¿Qué pilar de la papiloscopía establece que las crestas papilares persisten a lo largo de toda la vida?",
+      options: ["PERENNIDAD", "INMUTABILIDAD", "VARIEDAD", "DACTILOSCOPÍA"],
+      correctAnswer: "PERENNIDAD",
+    },
+    {
+      question: "La dactiloscopía estudia los diseños papilares en la epidermis de las plantas de los pies.",
+      options: ["Verdadero", "Falso"],
+      correctAnswer: "Falso",
+    },
+    {
+      question: "La poroscopía se ocupa de estudiar la cantidad y forma de los poros en las crestas papilares.",
+      options: ["Verdadero", "Falso"],
+      correctAnswer: "Verdadero",
+    },
+    {
+      question: "El sistema AFIS permite comparar huellas dactilares manualmente.",
+      options: ["Verdadero", "Falso"],
+      correctAnswer: "Falso",
+    },
+    {
+      question: "La pelmatoscopía estudia los diseños papilares en la epidermis de la cara interna de las manos.",
+      options: ["Verdadero", "Falso"],
+      correctAnswer: "Falso",
+    },
+    {
+      question: "El vapor de yodo es útil para revelar huellas en superficies no metálicas.",
+      options: ["Verdadero", "Falso"],
+      correctAnswer: "Verdadero",
+    },
+    {
+      question: "La ninhidrina reacciona con los aminoácidos produciendo una reacción marrón clara.",
+      options: ["Verdadero", "Falso"],
+      correctAnswer: "Falso",
+    },
+    {
+      question: "El cianoacrilato reacciona con agua formando un depósito blanco sólido.",
+      options: ["Verdadero", "Falso"],
+      correctAnswer: "Verdadero",
+    },
+    {
+      question: "La balística comparativa es una rama de la balística exterior.",
+      options: ["Verdadero", "Falso"],
+      correctAnswer: "Falso",
+    },
+    {
+      question: "Los reactivos químicos para revelar huellas latentes suelen requerir fotografía inmediata debido a su falta de estabilidad.",
+      options: ["Verdadero", "Falso"],
+      correctAnswer: "Verdadero",
+    },
+    {
+      question: "¿Cuál es el propósito de la balística interior?",
+      options: ["Estudiar la trayectoria del proyectil desde el cañón hasta el punto de impacto.", "Estudiar los mecanismos y fenómenos internos del arma hasta que el proyectil abandona el cañón.", "Estudiar los efectos del proyectil en el blanco.", "Establecer la identificación pericial mediante el cotejo de proyectiles."],
+      correctAnswer: "Estudiar los mecanismos y fenómenos internos del arma hasta que el proyectil abandona el cañón.",
+    },
+    {
+      question: "La balística comparativa se basa en el principio de correspondencia y transferencia de características identificatorias.",
+      options: ["Verdadero", "Falso"],
+      correctAnswer: "Verdadero",
+    },
+    {
+      question: "¿Qué componentes forman las partículas características de un disparo?",
+      options: ["Plomo, Cobre y Zinc", "Antimonio, Bario y Plomo", "Titanio, Galio y Cobre", "Plomo, Zinc y Titanio"],
+      correctAnswer: "Antimonio, Bario y Plomo",
+    },
+    {
+      question: "¿Qué técnica de revelado de huellas latentes es útil en superficies mojadas?",
+      options: ["Cianoacrilato", "Ninhidrina", "Acuaprint", "Vapor de yodo"],
+      correctAnswer: "Acuaprint",
+    },
+    {
+      question: "La microscopía electrónica de barrido utiliza un haz de luz para examinar muestras.",
+      options: ["Verdadero", "Falso"],
+      correctAnswer: "Falso",
+    },
+    {
+      question: "¿Cuál es el grupo básico del sistema Dactiloscópico Argentino que presenta dos o más deltas opuestos?",
+      options: ["Arco", "Presilla Interna", "Presilla Externa", "Verticilo"],
+      correctAnswer: "Verticilo",
+    },
+    {
+      question: "¿Qué se recomienda hacer con las huellas reveladas utilizando el vapor de yodo?",
+      options: ["Fotografiarlas inmediatamente", "Aplicar calor para acelerar el proceso", "Cubrirlas con polvo magnético", "Tratar con cianoacrilato"],
+      correctAnswer: "Fotografiarlas inmediatamente",
+    },
+    {
+      question: "¿Qué tipo de reactivo es la ninhidrina?",
+      options: ["Reactivo físico", "Reactivo químico", "Reactivo magnético", "Reactivo fluorescente"],
+      correctAnswer: "Reactivo químico",
+    },
+    {
+      question: "¿Qué debe hacerse antes de aplicar cualquier medio de levantamiento sobre huellas papilares ya reveladas?",
+      options: ["Realizar una fotografía métrica", "Aplicar un reactivo químico", "Usar una cinta adhesiva", "Cubrir con polvo magnético"],
+      correctAnswer: "Realizar una fotografía métrica",
+    },
+    {
+      question: "¿Qué aspecto de las huellas papilares no cambia después de la muerte?",
+      options: ["La forma de los poros", "La cantidad de residuos", "Las crestas papilares", "El color del depósito"],
+      correctAnswer: "Las crestas papilares",
+    },
+    {
+      question: "¿Cuál es el propósito de la balística interior?",
+      options: ["Estudiar la trayectoria del proyectil desde el cañón hasta el punto de impacto.", "Estudiar los mecanismos y fenómenos internos del arma hasta que el proyectil abandona el cañón.", "Estudiar los efectos del proyectil en el blanco.", "Establecer la identificación pericial mediante el cotejo de proyectiles."],
+      correctAnswer: "Estudiar los mecanismos y fenómenos internos del arma hasta que el proyectil abandona el cañón.",
+    },
+    {
+      question: "La balística comparativa se basa en el principio de correspondencia y transferencia de características identificatorias.",
+      options: ["Verdadero", "Falso"],
+      correctAnswer: "Verdadero",
+    },
+    {
+      question: "¿Qué componentes forman las partículas características de un disparo?",
+      options: ["Plomo, Cobre y Zinc", "Antimonio, Bario y Plomo", "Titanio, Galio y Cobre", "Plomo, Zinc y Titanio"],
+      correctAnswer: "Antimonio, Bario y Plomo",
+    },
+    {
+      question: "La microscopía electrónica de barrido utiliza un haz de luz para examinar muestras.",
+      options: ["Verdadero", "Falso"],
+      correctAnswer: "Falso",
+    },
+    {
+      question: "¿Cuál es el grupo básico del sistema Dactiloscópico Argentino que presenta dos o más deltas opuestos?",
+      options: ["Arco", "Presilla Interna", "Presilla Externa", "Verticilo"],
+      correctAnswer: "Verticilo",
+    },
+    {
+      question: "¿Qué se recomienda hacer con las huellas reveladas utilizando el vapor de yodo?",
+      options: ["Fotografiarlas inmediatamente", "Aplicar calor para acelerar el proceso", "Cubrirlas con polvo magnético", "Tratar con cianoacrilato"],
+      correctAnswer: "Fotografiarlas inmediatamente",
+    },
+    {
+      question: "¿Qué tipo de reactivo es la ninhidrina?",
+      options: ["Reactivo físico", "Reactivo químico", "Reactivo magnético", "Reactivo fluorescente"],
+      correctAnswer: "Reactivo químico",
+    },
+    {
+      question: "¿Qué debe hacerse antes de aplicar cualquier medio de levantamiento sobre huellas papilares ya reveladas?",
+      options: ["Realizar una fotografía métrica", "Aplicar un reactivo químico", "Usar una cinta adhesiva", "Cubrir con polvo magnético"],
+      correctAnswer: "Realizar una fotografía métrica",
+    },
+    {
+      question: "¿Qué aspecto de las huellas papilares no cambia después de la muerte?",
+      options: ["La forma de los poros", "La cantidad de residuos", "Las crestas papilares", "El color del depósito"],
+      correctAnswer: "Las crestas papilares",
+    },
+    {
+      question: "Las huellas papilares se estructuran definitivamente entre el primer y el segundo mes de vida intrauterina.",
+      options: ["Verdadero", "Falso"],
+      correctAnswer: "Falso",
+    },
+    {
+      question: "La poroscopía estudia la cantidad y forma de los poros de la piel en las crestas papilares.",
+      options: ["Verdadero", "Falso"],
+      correctAnswer: "Verdadero",
+    },
+    {
+      question: "¿Qué reactivo químico produce una reacción púrpura en las huellas papilares?",
+      options: ["Acuaprint", "Ninhidrina", "Vapor de yodo", "Cianoacrilato"],
+      correctAnswer: "Ninhidrina",
+    },
+    {
+      question: "Las huellas digitales reveladas con vapor de yodo deben ser fotografiadas inmediatamente debido a su rápida desaparición.",
+      options: ["Verdadero", "Falso"],
+      correctAnswer: "Verdadero",
+    },
+    {
+      question: "El Sistema Dactiloscópico Argentino clasifica las huellas digitales en Arco, Presilla Interna, Presilla Externa y Verticilo.",
+      options: ["Verdadero", "Falso"],
+      correctAnswer: "Verdadero",
+    },
+    {
+      question: "El vapor de cianoacrilato es útil para revelar huellas en superficies mojadas.",
+      options: ["Verdadero", "Falso"],
+      correctAnswer: "Falso",
+    },
+    {
+      question: "Las partículas características de un disparo incluyen plomo, antimonio y bario.",
+      options: ["Verdadero", "Falso"],
+      correctAnswer: "Verdadero",
+    },
+    {
+      question: "La dactiloscopía se ocupa de estudiar los diseños papilares en la epidermis de la cara interna de los pies.",
+      options: ["Verdadero", "Falso"],
+      correctAnswer: "Falso",
+    },
+    {
+      question: "La pelmatoscopía estudia los diseños papilares en la epidermis de los pies.",
+      options: ["Verdadero", "Falso"],
+      correctAnswer: "Verdadero",
+    },
+    {
+      question: "El levantamiento de huellas papilares con gel es útil en superficies rugosas o con irregularidades.",
+      options: ["Verdadero", "Falso"],
+      correctAnswer: "Verdadero",
+    },
+    {
+      question: "¿Cuál es la finalidad principal de la Medicina Forense?", 
+      options: ["Determinar el estado de salud de los testigos.", "Asesorar sobre cuestiones médicas en casos legales.", "Recabar pruebas biológicas para estudios científicos.", "Realizar autopsias en cuerpos sin determinar la causa de muerte."],
+      correctAnswer: "Asesorar sobre cuestiones médicas en casos legales."
+    },
+    {
+      question: "¿Por qué es importante conocer la hora de la muerte en una investigación criminal?", 
+      options: ["Para establecer el perfil psicológico del sospechoso.", "Para determinar la identidad de la víctima.", "Para centrar las investigaciones y confirmar coartadas.", "Para analizar el origen de las lesiones sufridas por la víctima."],
+      correctAnswer: "Para centrar las investigaciones y confirmar coartadas."
+    },
+    {
+      question: "¿Qué datos son útiles para establecer la hora de la muerte?", 
+      options: ["El último contacto telefónico y la rutina diaria de la víctima.", "El número de testigos presentes en la escena.", "La información sobre el historial médico de la víctima.", "Los pasajes de transporte no utilizados por la víctima."],
+      correctAnswer: "El último contacto telefónico y la rutina diaria de la víctima."
+    },
+    {
+      question: "En el caso de Lucila Frend, ¿qué impidió asociarla al hecho?", 
+      options: ["La falta de testimonios que la vincularan con el crimen.", "La ausencia de pruebas documentales sobre su ubicación.", "La falta de determinación precisa de la hora de la muerte.", "La falta de evidencia física en la escena del crimen."],
+      correctAnswer: "La falta de determinación precisa de la hora de la muerte."
+    },
+    {
+      question: "¿Qué es el Cronotanatodiagnóstico?", 
+      options: ["Un proceso para determinar el tiempo transcurrido desde la muerte hasta la intervención médica.", "Un método para identificar la causa de la muerte mediante autopsia.", "Un análisis de las condiciones ambientales en la escena del crimen.", "Un estudio de los signos vitales del cadáver en el momento de la muerte."],
+      correctAnswer: "Un proceso para determinar el tiempo transcurrido desde la muerte hasta la intervención médica."
+    },
+    {
+      question: "¿Cuál de los siguientes fenómenos inmediatos ocurre después de la muerte?", 
+      options: ["La aparición de livideces.", "La deshidratación del cuerpo.", "El inicio de la putrefacción.", "La rigidez cadavérica."],
+      correctAnswer: "La deshidratación del cuerpo."
+    },
+    {
+      question: "¿Qué factor afecta la rapidez del enfriamiento del cadáver?", 
+      options: ["La cantidad de sangre en el cuerpo.", "El tipo de ropa que llevaba el fallecido.", "La temperatura ambiente y la presencia de humedad.", "La causa de la muerte."],
+      correctAnswer: "La temperatura ambiente y la presencia de humedad."
+    },
+    {
+      question: "¿Qué indica la presencia de livideces en un cadáver?", 
+      options: ["La hora precisa de la muerte.", "La posición en la que se encontró el cuerpo.", "El tiempo transcurrido desde el último contacto con la víctima.", "La causa de la muerte."],
+      correctAnswer: "La posición en la que se encontró el cuerpo."
+    },
+    {
+      question: "¿Cómo afecta la ropa de lana a la rigidez cadavérica?", 
+      options: ["La acelera.", "La retarda.", "No tiene efecto.", "La prolonga."],
+      correctAnswer: "La retarda."
+    },
+    {
+      question: "¿Qué determina el tiempo de putrefacción en un cadáver expuesto a climas cálidos?", 
+      options: ["La presencia de insectos en el cuerpo.", "La temperatura del entorno.", "El estado del cuerpo en el momento de la muerte.", "El tipo de superficies con las que el cuerpo ha estado en contacto."],
+      correctAnswer: "La temperatura del entorno."
+    },
+    {
+      question: "¿Qué función cumple el médico forense en la resolución de casos legales?", 
+      options: ["Realiza investigaciones policiales.", "Asesora en cuestiones médicas y biológicas.", "Redacta informes para el juez.", "Coordina el trabajo de los investigadores privados."],
+      correctAnswer: "Asesora en cuestiones médicas y biológicas."
+    },
+    {
+      question: "¿Cuál es el objetivo principal de la tanatología forense?", 
+      options: ["Estudiar los fenómenos cadavéricos y la muerte.", "Investigar los delitos relacionados con armas de fuego.", "Analizar las pruebas biológicas recolectadas en la escena del crimen.", "Realizar autopsias para determinar el origen de las lesiones."],
+      correctAnswer: "Estudiar los fenómenos cadavéricos y la muerte."
+    },
+    {
+      question: "¿Qué indica la deshidratación en un cadáver?", 
+      options: ["La hora exacta de la muerte.", "El tiempo transcurrido desde la muerte.", "La temperatura ambiente en el momento de la muerte.", "La causa de la muerte."],
+      correctAnswer: "El tiempo transcurrido desde la muerte."
+    },
+    {
+      question: "¿Qué fenómeno cadavérico se relaciona con el enfriamiento del cuerpo?", 
+      options: ["Livideces.", "Rigidez cadavérica.", "Putrefacción.", "Deshidratación."],
+      correctAnswer: "Deshidratación."
+    },
+    {
+      question: "¿Qué puede indicar la ausencia de livideces en ciertas áreas del cadáver?", 
+      options: ["El cuerpo fue movido después de la muerte.", "La muerte ocurrió en un lugar muy frío.", "El cadáver estaba en contacto con una superficie dura.", "El fallecido estaba en un estado de deshidratación avanzada."],
+      correctAnswer: "El cadáver estaba en contacto con una superficie dura."
+    },
+    {
+      question: "¿Qué efecto tiene la rigidez cadavérica en el cuerpo a las 36 horas después de la muerte?", 
+      options: ["Aparece en su máxima intensidad.", "Comienza a desaparecer.", "Se mantiene constante.", "No se presenta en cuerpos expuestos a climas fríos."],
+      correctAnswer: "Comienza a desaparecer."
+    },
+    {
+      question: "¿Cómo afecta el clima frío a la rigidez cadavérica?", 
+      options: ["La acelera.", "La retarda.", "No tiene efecto.", "La prolonga."],
+      correctAnswer: "La prolonga."
+    },
+    {
+      question: "¿Qué papel juega la entomología forense en la determinación del tiempo de muerte?", 
+      options: ["Analiza los insectos presentes en el cuerpo.", "Estudia las manchas de sangre en el cadáver.", "Determina la causa de la muerte mediante autopsia.", "Evalúa los cambios de temperatura en el cuerpo."],
+      correctAnswer: "Analiza los insectos presentes en el cuerpo."
+    },
+    {
+      question: "¿En qué condiciones climáticas comienza la putrefacción del cuerpo en un plazo de 14 horas?", 
+      options: ["En climas cálidos.", "En climas fríos.", "En temperaturas medias.", "En el agua."],
+      correctAnswer: "En climas cálidos."
+    },
+
+      {
+    question: "¿Cuál es la importancia de establecer la data de la muerte en una investigación criminal?", 
+    options: ["Determinar la causa del crimen.", "Saber si hubo abandono de la persona y corroborar coartadas.", "Determinar el tipo de arma utilizada.", "Establecer la relación entre la víctima y el sospechoso."],
+    correctAnswer: "Saber si hubo abandono de la persona y corroborar coartadas."
+  },
+  {
+    question: "¿Qué información puede ayudar a establecer la hora de la muerte además de la autopsia?", 
+    options: ["Constancia del último llamado y uso del PC.", "Declaraciones de testigos y vídeos de seguridad.", "Historial médico del fallecido y resultados de laboratorio.", "Registro de llamadas y actividad en redes sociales."],
+    correctAnswer: "Constancia del último llamado y uso del PC."
+  },
+  {
+    question: "¿Qué fenómeno cadavérico puede ocurrir si el cuerpo es trasladado después de 15 horas de muerte?", 
+    options: ["Formación de nuevas livideces en diferentes zonas.", "Desaparición de livideces existentes.", "Aumento en la temperatura del cuerpo.", "Proliferación de insectos en el cadáver."],
+    correctAnswer: "Formación de nuevas livideces en diferentes zonas."
+  },
+  {
+    question: "¿Qué característica tiene el espasmo cadavérico en comparación con la rigidez cadavérica?", 
+    options: ["Ocurre instantáneamente en el momento de la muerte.", "Aparece progresivamente durante varias horas.", "Es visible solo en climas cálidos.", "Se manifiesta solo en casos de muerte por enfermedad crónica."],
+    correctAnswer: "Ocurre instantáneamente en el momento de la muerte."
+  },
+  {
+    question: "¿Qué condiciones pueden acelerar la aparición de la rigidez cadavérica?", 
+    options: ["Clima frío y muerte violenta.", "Clima cálido y muerte lenta.", "Clima templado y exposición al agua caliente.", "Ropa de lana y muerte por enfermedad."],
+    correctAnswer: "Clima frío y muerte violenta."
+  },
+  {
+    question: "¿Cómo afecta la putrefacción en un cadáver sumergido en agua fría?", 
+    options: ["Se puede mantener hasta una semana.", "Comienza más rápidamente que en el aire.", "No se produce hasta que el cadáver sale del agua.", "Es menos pronunciada que en cadáveres en el aire."],
+    correctAnswer: "Se puede mantener hasta una semana."
+  },
+  {
+    question: "¿Qué tipo de insectos aparece en un cadáver en climas cálidos durante la putrefacción?", 
+    options: ["Moscas verdes y larvas.", "Moscas azules.", "Escarabajos y hormigas.", "Avispas y polillas."],
+    correctAnswer: "Moscas verdes y larvas."
+  },
+  {
+    question: "¿Cuál es el efecto de la ropa de lana en la rigidez cadavérica?", 
+    options: ["Retrasa su aparición.", "La acelera.", "No tiene efecto.", "Causa que desaparezca rápidamente."],
+    correctAnswer: "Retrasa su aparición."
+  },
+  {
+    question: "¿Qué indica la aparición de manchas rojas vinosas en la piel del cadáver?", 
+    options: ["Presencia de livideces.", "Inicio de la putrefacción.", "Rigidez cadavérica.", "Deshidratación."],
+    correctAnswer: "Presencia de livideces."
+  },
+  {
+    question: "¿Cómo afecta el clima frío al tiempo en que comienza la putrefacción del cuerpo?", 
+    options: ["Retrasa el inicio de la putrefacción.", "Acelera el inicio de la putrefacción.", "No tiene efecto sobre el inicio de la putrefacción.", "El tiempo de inicio es igual que en climas cálidos."],
+    correctAnswer: "Retrasa el inicio de la putrefacción."
+  },
+  {
+    question: "El espasmo cadavérico ocurre generalmente varias horas después de la muerte.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso"
+  },
+  {
+    question: "La deshidratación en un cadáver ocurre debido a la evaporación de los líquidos del cuerpo.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "La rigidez cadavérica se establece más rápidamente en climas cálidos que en climas fríos.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso"
+  },
+  {
+    question: "Las livideces pueden cambiar de lugar hasta 24 horas después de la muerte.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso"
+  },
+  {
+    question: "En el proceso de putrefacción, las moscas azules aparecen en climas cálidos.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso"
+  },
+  {
+    question: "El Cronotanatodiagnóstico ayuda a determinar el tiempo transcurrido desde la muerte.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "El enfriamiento cadavérico es uniforme sin importar si el cadáver está en un lugar abierto o cerrado.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Falso"
+  },
+  {
+    question: "La putrefacción en un cadáver puede comenzar más rápidamente en el agua que en el aire.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "Las livideces se forman debido a la acción de la gravedad sobre la sangre después de la muerte.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+  },
+  {
+    question: "El rigidez cadavérica se instaura generalmente en el músculo masetero primero antes de extenderse a otros músculos.",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
   }
-  
 ];
 
 let correctAnswersCount = 0;
