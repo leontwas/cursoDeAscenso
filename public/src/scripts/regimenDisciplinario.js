@@ -130,8 +130,8 @@ const questions = [
 },
 {
     question: "Las medidas preventivas son medios precautorios tendientes a proteger el curso de la investigación administrativa, además de evitar eventuales daños al servicio policial. Este tipo de medidas se adopta de acuerdo a la gravedad de la falta. El Decreto 53/17 establece distintas medidas preventivas que se pueden adoptar durante la sustanciación de un sumario administrativo. Indique los distintos tipos de medidas preventivas que podrían adoptarse:",
-    options: ["Cambio de situación de revista, ordenando el pase de servicio efectivo, ya sea a disponibilidad o servicio pasivo.", "El desarme preventivo del agente.", "Todas las ociones son correctas."],
-    correctAnswer: "Todas las opciones son correctas"
+    options: ["Cambio de situación de revista, ordenando el pase de servicio efectivo, ya sea a disponibilidad o servicio pasivo.", "El desarme preventivo del agente.", "Todas las opciones son correctas."],
+    correctAnswer: "Todas las opciones son correctas."
 },
 {
     question: "Las sanciones directas solo pueden aplicarse ante faltas del tipo leve, ya que resulta obligatorio ante inconductas de tipo moderadas o graves sustanciar un sumario administrativo.",
