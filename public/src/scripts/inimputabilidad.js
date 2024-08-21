@@ -156,6 +156,7 @@ const questions = [
       }
 ];
 
+
 let correctAnswersCount = 0;
 let currentQuestionIndex;
 
