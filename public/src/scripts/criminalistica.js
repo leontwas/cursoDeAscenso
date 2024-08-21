@@ -618,7 +618,43 @@ const questions = [
   question: "¿Qué diferencia existe entre una evidencia y un indicio en una investigación criminal?",
   options: ["La evidencia está verificada en laboratorio", "El indicio es más fiable que la evidencia"],
   correctAnswer: "La evidencia está verificada en laboratorio"
-  }
+  },
+  {
+    question: "¿Una mancha de transferencia se produce cuando un objeto con sangre entra en contacto con otro que no tiene sangre?",
+    options: ["Verdadero", "Falso"],
+    correctAnswer: "Verdadero"
+    },
+    {
+      question: "¿Una mancha pasiva se crea por goteo o flujo de sangre?",
+      options: ["Verdadero", "Falso"],
+      correctAnswer: "Verdadero"
+      },
+      {
+        question: "¿Una mancha pasiva se crea cuando un objeto con sangre entra en contacto con otro que no tiene sangre?",
+        options: ["Verdadero", "Falso"],
+        correctAnswer: "Falso"
+        },
+        {
+          question: "¿El tipo de superficie determina la figura y tamaño de una mancha proyectada?",
+          options: ["Verdadero", "Falso"],
+          correctAnswer: "Falso"
+          },
+          {
+            question: "¿La minimización de la influencia de la subjetividad contribuye a la obtención de certezas en la investigación criminal?",
+            options: ["Verdadero", "Falso"],
+            correctAnswer: "Verdadero"
+            },
+            {
+              question: "¿El método científico en una investigación busca minimizar la influencia de la subjetividad?",
+              options: ["Verdadero", "Falso"],
+              correctAnswer: "Verdadero"
+              },
+              {
+                question: "¿Una mancha pasiva está relacionada con la fuerza aplicada por un objeto?",
+                options: ["Verdadero", "Falso"],
+                correctAnswer: "Falso"
+                },
+                                 
 ];
     
 let correctAnswersCount = 0;
