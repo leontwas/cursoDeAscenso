@@ -1498,12 +1498,7 @@ correctAnswer: "Verdadero"
     options: ["Verdadero", "Falso"],
     correctAnswer: "Verdadero"
   },
-  {
-    question: "El rigidez cadavérica se instaura generalmente en el músculo masetero primero antes de extenderse a otros músculos.",
-    options: ["Verdadero", "Falso"],
-    correctAnswer: "Verdadero"
-  }
-];
+ ];
 
 let correctAnswersCount = 0;
 let currentQuestionIndex;
