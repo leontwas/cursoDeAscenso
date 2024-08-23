@@ -1494,11 +1494,6 @@ correctAnswer: "Verdadero"
     correctAnswer: "Falso"
   },
   {
-    question: "La putrefacción en un cadáver puede comenzar más rápidamente en el agua que en el aire.",
-    options: ["Verdadero", "Falso"],
-    correctAnswer: "Verdadero"
-  },
-  {
     question: "Las livideces se forman debido a la acción de la gravedad sobre la sangre después de la muerte.",
     options: ["Verdadero", "Falso"],
     correctAnswer: "Verdadero"
