@@ -6,7 +6,8 @@
 /* Header moderno y fijo - DESHABILITADO, usando header.css personalizado */
 @import './styles/styleFooter.css';
 @import './styles/fuentes.css';
-@import './styles/testeoStyles.css';
+/* @import './styles/testeoStyles.css'; */
+/* Deshabilitado: Reglas conflictivas de body height/flex */
 @import './styles/trofeos.css';
 /* Estilos para trofeos y estrellas */
 /* Estilos responsive mejorados - debe ir al final para sobrescribir */
@@ -42,9 +43,9 @@
 }
 
 /* Reducir espacio superior en main */
+/* Main content limpio */
 .main-content {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
+  /* Padding manejado en su propio componente */
 }
 
 .notification {
