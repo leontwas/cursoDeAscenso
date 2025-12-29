@@ -52,8 +52,18 @@ const Header = () => {
               </Link>
             </li>
             <li>
+              <Link to="/trofeos" className={location.pathname === '/trofeos' ? 'active' : ''} onClick={closeMenu}>
+                Trofeos
+              </Link>
+            </li>
+            <li>
               <a href="https://drive.google.com/drive/folders/1_un6GDtup9WG25F0vbPhtPgIy9sgozWx?usp=drive_link" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
                 Cartillas de Ascenso
+              </a>
+            </li>
+            <li>
+              <a href="https://drive.google.com/drive/folders/1vc8WJwWjhBtW6QcSOFQ4DpRQZsJFLXdk?usp=drive_link" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
+                Notas
               </a>
             </li>
             <li>
@@ -69,6 +79,11 @@ const Header = () => {
             <li>
               <a href="https://drive.google.com/drive/folders/1K8NO3R-RP-Lgj9p7jAE9lOf3czCdgzKo?usp=drive_link" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
                 Turnos Judiciales
+              </a>
+            </li>
+            <li>
+              <a href="https://drive.google.com/drive/folders/1tt-mpj7RCWij_o97jNAMgcmaC5oC7ll3?usp=sharing" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
+                Protocolos
               </a>
             </li>
           </ul>

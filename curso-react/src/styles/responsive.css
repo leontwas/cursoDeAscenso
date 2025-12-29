@@ -393,6 +393,10 @@ section h3 {
    TABLETS GRANDES Y LAPTOPS (1025px - 1366px)
    ============================================ */
 @media only screen and (min-width: 1025px) and (max-width: 1366px) {
+  .quiz-page {
+    padding-top: 120px !important;
+  }
+
   header h1 {
     font-size: 2.2rem;
   }
@@ -424,15 +428,36 @@ section h3 {
 
   #quiz-container {
     width: 75% !important;
+    max-width: 900px !important;
+    padding: 30px 40px !important;
+    margin: 30px auto !important;
+  }
+
+  #question-container {
+    margin-bottom: 25px !important;
+    padding: 15px !important;
   }
 
   #question-container h2 {
     font-size: 1.4rem;
+    line-height: 1.6;
   }
 
   .option-button {
     font-size: 1.2rem !important;
     min-height: 70px !important;
+    padding: 15px 20px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .stars-counter {
+    font-size: 1.3rem !important;
+    margin-bottom: 25px !important;
+  }
+
+  .btn-abandonar {
+    font-size: 1.1rem !important;
+    padding: 12px 30px !important;
   }
 }
 
@@ -440,6 +465,10 @@ section h3 {
    PANTALLAS GRANDES (1367px+)
    ============================================ */
 @media only screen and (min-width: 1367px) {
+  .quiz-page {
+    padding-top: 120px !important;
+  }
+
   header h1 {
     font-size: 2.5rem;
   }
@@ -472,17 +501,37 @@ section h3 {
   }
 
   #quiz-container {
-    width: 60% !important;
-    max-width: 800px;
+    width: 65% !important;
+    max-width: 950px !important;
+    padding: 35px 45px !important;
+    margin: 35px auto !important;
+  }
+
+  #question-container {
+    margin-bottom: 30px !important;
+    padding: 20px !important;
   }
 
   #question-container h2 {
     font-size: 1.5rem;
+    line-height: 1.6;
   }
 
   .option-button {
     font-size: 1.3rem !important;
     min-height: 75px !important;
+    padding: 18px 25px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .stars-counter {
+    font-size: 1.4rem !important;
+    margin-bottom: 30px !important;
+  }
+
+  .btn-abandonar {
+    font-size: 1.2rem !important;
+    padding: 14px 35px !important;
   }
 }
 
