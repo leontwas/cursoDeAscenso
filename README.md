@@ -1,2 +1,0 @@
-"# quizzOfMayor" 
-"# cursoDeAscenso" 
