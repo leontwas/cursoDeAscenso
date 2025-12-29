@@ -1,0 +1,292 @@
+/* ===== HEADER PRINCIPAL ===== */
+.main-header {
+    width: 100%;
+    background: linear-gradient(135deg, #87CEEB 0%, #B0E0E6 100%);
+    position: fixed;
+    /* Cambiado a fixed para máxima fiabilidad */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    /* Z-index muy alto para estar sobre todo */
+    border-bottom: 2px solid #4682B4;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    margin: 0;
+    padding: 0;
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto !important;
+    padding: 1rem 2rem !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.main-header h1 {
+    font-size: 1.8rem;
+    /* Aumentado de 1.5rem */
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 0 !important;
+    padding: 0 !important;
+    letter-spacing: -0.5px;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
+    text-align: center;
+    width: 100%;
+}
+
+/* ===== NAVEGACIÓN ===== */
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0.8rem;
+    /* Aumentado ligeramente el gap */
+    align-items: center;
+}
+
+.main-nav li {
+    margin: 0;
+}
+
+.main-nav a,
+.main-nav Link {
+    display: block;
+    padding: 0.8rem 1.4rem;
+    /* Padding aumentado */
+    color: #1a1a2e;
+    text-decoration: none;
+    font-size: 1.1rem;
+    /* Aumentado de 0.95rem */
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+}
+
+.main-nav a:hover,
+.main-nav Link:hover {
+    background: rgba(255, 255, 255, 0.4);
+    color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.main-nav a.active {
+    color: #0056b3;
+    border-bottom: 3px solid #0056b3;
+    font-weight: 700;
+}
+
+/* ===== BOTÓN HAMBURGUESA ===== */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+    transition: all 0.3s ease;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 3px;
+    background: #1a1a2e;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.hamburger:hover span {
+    background: #007bff;
+}
+
+/* Animación del botón hamburguesa cuando está activo */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ===== RESPONSIVE - PANTALLAS GRANDES ===== */
+@media (max-width: 1400px) {
+    .main-nav ul {
+        gap: 0.2rem;
+    }
+
+    .main-nav a,
+    .main-nav Link {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.9rem;
+        /* Aumentado ligeramente */
+    }
+}
+
+/* ===== RESPONSIVE - TABLETS Y NOTEBOOKS ===== */
+@media (max-width: 1024px) {
+    .header-container {
+        padding: 1rem 0.5rem !important;
+    }
+
+    .main-header h1 {
+        font-size: 1.4rem;
+        /* Aumentado de 1.1rem */
+    }
+
+    .main-nav ul {
+        gap: 0.1rem;
+        flex-wrap: nowrap;
+    }
+
+    .main-nav a,
+    .main-nav Link {
+        padding: 0.5rem 0.6rem;
+        font-size: 0.8rem;
+        /* Aumentado de 0.7rem */
+    }
+}
+
+/* ===== RESPONSIVE - MÓVIL Y TABLET ===== */
+@media (max-width: 850px) {
+    .header-container {
+        padding: 1rem;
+        position: relative;
+    }
+
+    .main-header h1 {
+        font-size: 1.2rem;
+        flex: 1;
+    }
+
+    /* Mostrar botón hamburguesa */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Menú móvil */
+    .main-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: #ffffff;
+        /* Fondo blanco sólido puro */
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow-y: auto;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+        border-left: 1px solid #e0e0e0;
+    }
+
+    .main-nav.active {
+        right: 0;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 80px 0 20px 0;
+        align-items: stretch;
+    }
+
+    .main-nav li {
+        width: 100%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        /* Separador sutil */
+    }
+
+    .main-nav a,
+    .main-nav Link {
+        padding: 1.2rem 1.5rem;
+        font-size: 1rem;
+        color: #1a1a2e;
+        /* Texto oscuro */
+        border-radius: 0;
+        white-space: normal;
+        font-weight: 600;
+    }
+
+    .main-nav a:hover,
+    .main-nav Link:hover {
+        background: rgba(0, 123, 255, 0.1);
+        /* Hover suave azul */
+        transform: translateX(5px);
+        color: #0056b3;
+    }
+
+    .main-nav a.active {
+        background: rgba(0, 123, 255, 0.15);
+        border-left: 4px solid #0056b3;
+        color: #0056b3;
+    }
+
+    /* Overlay cuando el menú está abierto */
+    .main-nav.active::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: calc(100vw - 280px);
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+    }
+}
+
+/* ===== RESPONSIVE - MÓVIL PEQUEÑO ===== */
+@media (max-width: 480px) {
+    .header-container {
+        padding: 0.8rem;
+    }
+
+    .main-header h1 {
+        font-size: 1rem;
+    }
+
+    .main-nav {
+        width: 250px;
+    }
+
+    .main-nav.active::before {
+        width: calc(100vw - 250px);
+    }
+
+    .main-nav a,
+    .main-nav Link {
+        padding: 1rem 1.2rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* ===== ACCESIBILIDAD ===== */
+@media (prefers-reduced-motion: reduce) {
+
+    .hamburger,
+    .hamburger span,
+    .main-nav,
+    .main-nav a,
+    .main-nav Link {
+        transition: none;
+    }
+}
+
+/* Evitar scroll del body cuando el menú está abierto */
+body.menu-open {
+    overflow: hidden;
+}

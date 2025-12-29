@@ -1,0 +1,526 @@
+/* ============================================
+   RESPONSIVE DESIGN - MOBILE FIRST APPROACH
+   ============================================ */
+
+/* Reset básico para el root */
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Estilos base (Mobile First - desde 320px) */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+  /* El padding-top se define en modernHeader.css */
+}
+
+main {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Header responsive - Ahora manejado por modernHeader.css */
+/* Los estilos del header están en modernHeader.css para mejor organización */
+
+/* Secciones */
+section {
+  margin: 8px 0;
+  padding: 15px !important;
+  border-radius: 8px;
+}
+
+section:first-of-type {
+  margin-top: 0; /* Primera sección pegada al header */
+}
+
+section h3 {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  word-wrap: break-word;
+}
+
+/* Botones responsive */
+.btn,
+.btn-custom,
+.btn-warning,
+.btn-danger,
+.btn-success,
+.btn-primary {
+  width: 100% !important;
+  min-height: 50px !important;
+  height: auto !important;
+  font-size: 0.9rem !important;
+  padding: 12px 15px !important;
+  margin: 8px 0 !important;
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  line-height: 1.3 !important;
+  text-align: center !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Quiz container */
+#quiz-container {
+  width: 95% !important;
+  max-width: 600px;
+  margin: 0 auto; /* Sin margen superior para estar pegado al contenido */
+  padding: 15px !important;
+  box-sizing: border-box;
+}
+
+#question-container {
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+#question-container h2 {
+  font-size: 1rem;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+#options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.option-button {
+  width: 100% !important;
+  min-height: 60px !important;
+  font-size: 0.9rem !important;
+  padding: 12px !important;
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  line-height: 1.3 !important;
+  margin: 0 !important;
+}
+
+.btn-abandonar {
+  width: 80% !important;
+  max-width: 200px;
+  margin: 20px auto !important;
+  display: block !important;
+  font-size: 1rem !important;
+  padding: 12px 20px !important;
+}
+
+/* Form floating */
+.form-floating {
+  width: 100%;
+  margin-bottom: 10px !important;
+}
+
+/* Imagen de error */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ============================================
+   MÓVILES PEQUEÑOS (320px - 480px)
+   ============================================ */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  header nav ul li a {
+    font-size: 0.8rem;
+  }
+
+  section h3 {
+    font-size: 1rem;
+  }
+
+  .btn,
+  .btn-custom,
+  .btn-warning,
+  .btn-danger,
+  .btn-success {
+    font-size: 0.85rem !important;
+    min-height: 55px !important;
+    padding: 10px !important;
+  }
+
+  #question-container h2 {
+    font-size: 0.95rem;
+  }
+
+  .option-button {
+    font-size: 0.85rem !important;
+    min-height: 65px !important;
+  }
+}
+
+/* ============================================
+   MÓVILES MEDIANOS VERTICAL (481px - 767px)
+   ============================================ */
+@media only screen and (min-width: 481px) and (max-width: 767px) and (orientation: portrait) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header nav ul li a {
+    font-size: 0.9rem;
+  }
+
+  section {
+    padding: 20px !important;
+  }
+
+  section h3 {
+    font-size: 1.2rem;
+  }
+
+  .btn,
+  .btn-custom,
+  .btn-warning,
+  .btn-danger,
+  .btn-success {
+    font-size: 1rem !important;
+    min-height: 60px !important;
+  }
+
+  #question-container h2 {
+    font-size: 1.1rem;
+  }
+
+  .option-button {
+    font-size: 1rem !important;
+    min-height: 70px !important;
+  }
+
+  #quiz-container {
+    width: 90% !important;
+    padding: 20px !important;
+  }
+}
+
+/* ============================================
+   MÓVILES HORIZONTAL (481px - 896px)
+   ============================================ */
+@media only screen and (min-width: 481px) and (max-width: 896px) and (orientation: landscape) {
+  body {
+    min-height: auto;
+  }
+
+  header {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 1.3rem;
+    margin: 5px 0;
+  }
+
+  header nav ul {
+    gap: 5px;
+    margin: 5px 0;
+  }
+
+  header nav ul li a {
+    font-size: 0.75rem;
+    padding: 4px 6px;
+  }
+
+  main {
+    padding: 10px 20px;
+  }
+
+  section {
+    padding: 15px !important;
+    margin: 10px 0;
+  }
+
+  section h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .btn,
+  .btn-custom,
+  .btn-warning,
+  .btn-danger,
+  .btn-success {
+    font-size: 0.85rem !important;
+    min-height: 45px !important;
+    padding: 8px 12px !important;
+    margin: 5px 0 !important;
+  }
+
+  #quiz-container {
+    width: 85% !important;
+    padding: 15px !important;
+    margin: 15px auto;
+  }
+
+  #question-container h2 {
+    font-size: 0.95rem;
+  }
+
+  .option-button {
+    font-size: 0.9rem !important;
+    min-height: 50px !important;
+    padding: 10px !important;
+  }
+
+  .btn-abandonar {
+    font-size: 0.9rem !important;
+    padding: 10px 15px !important;
+    margin: 15px auto !important;
+  }
+}
+
+/* ============================================
+   TABLETS VERTICAL (768px - 1024px)
+   ============================================ */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header nav ul li a {
+    font-size: 1rem;
+  }
+
+  main {
+    padding: 20px 30px;
+  }
+
+  section {
+    padding: 25px !important;
+  }
+
+  section h3 {
+    font-size: 1.5rem;
+  }
+
+  .btn,
+  .btn-custom,
+  .btn-warning,
+  .btn-danger,
+  .btn-success {
+    font-size: 1.1rem !important;
+    min-height: 70px !important;
+    padding: 15px !important;
+  }
+
+  #quiz-container {
+    width: 85% !important;
+    padding: 25px !important;
+  }
+
+  #question-container h2 {
+    font-size: 1.3rem;
+  }
+
+  .option-button {
+    font-size: 1.1rem !important;
+    min-height: 75px !important;
+    padding: 15px !important;
+  }
+
+  .btn-abandonar {
+    font-size: 1.2rem !important;
+    padding: 15px 25px !important;
+  }
+}
+
+/* ============================================
+   TABLETS HORIZONTAL (768px - 1024px)
+   ============================================ */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  header nav ul li a {
+    font-size: 0.95rem;
+  }
+
+  main {
+    padding: 15px 40px;
+  }
+
+  section {
+    padding: 20px !important;
+  }
+
+  section h3 {
+    font-size: 1.3rem;
+  }
+
+  .btn,
+  .btn-custom,
+  .btn-warning,
+  .btn-danger,
+  .btn-success {
+    font-size: 1rem !important;
+    min-height: 60px !important;
+    padding: 12px !important;
+  }
+
+  #quiz-container {
+    width: 80% !important;
+    padding: 20px !important;
+  }
+
+  #question-container h2 {
+    font-size: 1.2rem;
+  }
+
+  .option-button {
+    font-size: 1rem !important;
+    min-height: 65px !important;
+  }
+
+  .btn-abandonar {
+    font-size: 1.1rem !important;
+  }
+}
+
+/* ============================================
+   TABLETS GRANDES Y LAPTOPS (1025px - 1366px)
+   ============================================ */
+@media only screen and (min-width: 1025px) and (max-width: 1366px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  header nav ul li a {
+    font-size: 1.1rem;
+  }
+
+  main {
+    padding: 20px 50px;
+  }
+
+  section {
+    padding: 30px !important;
+  }
+
+  section h3 {
+    font-size: 1.6rem;
+  }
+
+  .btn,
+  .btn-custom,
+  .btn-warning,
+  .btn-danger,
+  .btn-success {
+    font-size: 1.2rem !important;
+    min-height: 80px !important;
+  }
+
+  #quiz-container {
+    width: 75% !important;
+  }
+
+  #question-container h2 {
+    font-size: 1.4rem;
+  }
+
+  .option-button {
+    font-size: 1.2rem !important;
+    min-height: 70px !important;
+  }
+}
+
+/* ============================================
+   PANTALLAS GRANDES (1367px+)
+   ============================================ */
+@media only screen and (min-width: 1367px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  header nav ul li a {
+    font-size: 1.2rem;
+  }
+
+  main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+
+  section {
+    padding: 35px !important;
+  }
+
+  section h3 {
+    font-size: 1.8rem;
+  }
+
+  .btn,
+  .btn-custom,
+  .btn-warning,
+  .btn-danger,
+  .btn-success {
+    font-size: 1.3rem !important;
+    min-height: 90px !important;
+  }
+
+  #quiz-container {
+    width: 60% !important;
+    max-width: 800px;
+  }
+
+  #question-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .option-button {
+    font-size: 1.3rem !important;
+    min-height: 75px !important;
+  }
+}
+
+/* ============================================
+   UTILIDADES GENERALES
+   ============================================ */
+
+/* Evitar scroll horizontal */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Mejorar legibilidad en todas las pantallas */
+* {
+  box-sizing: border-box;
+}
+
+/* Texto más legible */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a,
+button {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Imágenes responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

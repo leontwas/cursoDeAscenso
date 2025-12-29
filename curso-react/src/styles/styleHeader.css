@@ -1,0 +1,168 @@
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    background-size: cover;
+    background-color: rgba(97, 3, 42);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+header h1 {
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    padding-right: 17px;
+}
+
+nav ul li a {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: white;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav ul li a.active::after {
+    width: 100%;
+    left: 0;
+}
+
+nav ul:hover li a.active::after {
+    width: 0;
+    left: 50%;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+/********************************************** Celulares ********************************************************/
+@media only screen and (max-width: 650px) {
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-style: oblique;
+        margin-bottom: 7px;
+        font-size:medium;
+    }
+
+    nav ul li a:hover {
+        color: white;
+        text-decoration: none;
+    }
+
+    .fa-facebook-square {
+        color: white;
+    }
+    
+    .fa-facebook-square:hover {
+        color: blue;
+        text-decoration: none;
+    }
+
+    .fa-instagram {
+        color: white;
+    }
+
+    .fa-instagram:hover {
+        color: blue;
+        text-decoration: none;
+    }
+
+    .bungee-regularspice- {
+        font-size: 5vw; 
+    }
+}
+/************************************************ Tablets *********************************************************/
+@media only screen and (min-width: 651px) and (max-width: 850px)  {
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 2vw;
+        font-family:"Kalam", cursive;
+    }
+
+    nav ul li a:hover {
+        color: white;
+        text-decoration: none;
+    }
+    
+    .fa-facebook-square {
+        font-size: 2vw; 
+        color: white;
+      }
+    
+      .fa-facebook-square:hover {
+        color: blue;
+        text-decoration: none;
+      }
+    
+    .fa-instagram{
+        font-size: 2vw; 
+        color: white;
+    }
+    
+    .fa-instagram:hover {
+        color: blue;
+        text-decoration: none;
+      } 
+        
+    .bungee-regularspice- {
+        margin-bottom: 5px;
+        font-size: 5.2vw; 
+    }
+
+}
+/************************************************** Notebooks ****************************************************/
+@media only screen and (min-width: 851px)  {
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.5vw;
+        font-family:"Kalam", cursive;
+    }
+
+    nav ul li a:hover {
+        color: white;
+        text-decoration: none;
+    }
+    
+    .fa-facebook-square {
+        font-size: 2vw; 
+        color: white;
+      }
+    
+      .fa-facebook-square:hover {
+        color: blue;
+        text-decoration: none;
+      }
+    
+    .fa-instagram{
+        font-size: 2vw; 
+        color: white;
+    }
+    
+    .fa-instagram:hover {
+        color: blue;
+        text-decoration: none;
+      }
+}

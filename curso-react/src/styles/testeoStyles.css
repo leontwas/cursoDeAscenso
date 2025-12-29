@@ -1,0 +1,70 @@
+body, html {
+    background: #1a1a2e;
+    height: 2300px;
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background: transparent;
+    color: #333;
+    width: 100%;
+    max-width: 1200px; /* Ajusta este valor según tus necesidades */
+}
+
+section {
+    margin: 2rem 0; /* Añadir margen superior e inferior */
+}
+
+img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn {
+    width: 100%;
+    max-width: 1200px; /* Ajusta este valor según sea necesario */
+    font-size: 1.5vw;
+    height: 60px; /* Ajusta este valor según sea necesario */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:hover {
+    filter: brightness(70%); /* Oscurece el botón */
+    transition: filter 0.3s ease; /* Suaviza la transición */
+}
+
+/* Media Queries para diferentes dispositivos */
+
+/* Notebooks */
+@media (max-width: 1200px) {
+    .btn {
+        font-size: 1.2vw;
+        height: 55px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+    .btn {
+        font-size: 1.5vw;
+        height: 50px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+    .btn {
+        font-size: 3vw;
+        height: 45px;
+    }
+
+    main {
+        padding: 0 1rem; /* Añadir un poco de espacio alrededor */
+    }
+}

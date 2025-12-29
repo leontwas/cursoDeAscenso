@@ -1,0 +1,354 @@
+/* ============================================
+   HEADER MODERNO - FIXED TOP
+   ============================================ */
+
+/* Header fijo en la parte superior */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+
+  /* Color celeste muy claro */
+  background: #e3f2fd;
+
+  /* Sombra moderna */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+
+  /* Backdrop blur para efecto glassmorphism */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  padding: 0.75rem 2rem;
+  text-align: center;
+
+  /* Transición suave */
+  transition: all 0.3s ease;
+}
+
+/* Efecto al hacer scroll (opcional - se puede agregar con JS) */
+header.scrolled {
+  padding: 0.5rem 2rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Título del header - Tipografía moderna */
+header h1 {
+  margin: 0;
+  padding: 0;
+  color: #2c3e50;
+
+  /* Tipografía moderna y legible */
+  font-family: 'Poppins', 'Helvetica Neue', -apple-system, sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+
+  /* Animación suave */
+  transition: all 0.3s ease;
+}
+
+header h1:hover {
+  color: #34495e;
+}
+
+/* Navegación moderna */
+nav {
+  margin-top: 0.5rem;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  /* Tipografía moderna */
+  font-family: 'Poppins', 'Helvetica Neue', -apple-system, sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+
+  color: #5a6c7d;
+  text-decoration: none;
+
+  /* Links con position relative para el pseudo-elemento */
+  padding: 0.25rem 0;
+  padding-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+/* Pseudo-elemento para la línea animada */
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #3498db;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+/* Link activo muestra la línea */
+nav ul li a.active::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Al hacer hover en el nav, ocultar la línea del activo */
+nav ul:hover li a.active::after {
+  width: 0;
+  left: 50%;
+}
+
+/* Al hacer hover sobre un link, mostrar su línea */
+nav ul li a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+nav ul li a:hover {
+  color: #2c3e50;
+}
+
+nav ul li a:active {
+  color: #34495e;
+}
+
+/* Estilo para link activo */
+nav ul li a.active {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* Iconos de redes sociales */
+.fa-facebook-square,
+.fa-instagram {
+  color: #5a6c7d;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.fa-facebook-square:hover {
+  color: #1877f2;
+  transform: scale(1.1);
+}
+
+.fa-instagram:hover {
+  color: #e4405f;
+  transform: scale(1.1);
+}
+
+/* Compensar el espacio del header fijo en el body */
+body {
+  padding-top: 0 !important;
+  /* Sin espacio - el header no es fixed */
+}
+
+/* ============================================
+   RESPONSIVE - MÓVILES
+   ============================================ */
+
+@media only screen and (max-width: 650px) {
+  header {
+    padding: 0.6rem 1rem;
+  }
+
+  header h1 {
+    font-size: 1.1rem;
+    letter-spacing: -0.02em;
+  }
+
+  nav {
+    margin-top: 0.4rem;
+  }
+
+  nav ul {
+    gap: 0.8rem;
+  }
+
+  nav ul li a {
+    font-size: 0.75rem;
+    padding: 0.2rem 0;
+  }
+
+  .fa-facebook-square,
+  .fa-instagram {
+    font-size: 1.1rem;
+  }
+
+  body {
+    padding-top: 0 !important;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - TABLETS
+   ============================================ */
+
+@media only screen and (min-width: 651px) and (max-width: 850px) {
+  header {
+    padding: 0.7rem 1.5rem;
+  }
+
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  nav ul li a {
+    font-size: 0.85rem;
+    padding: 0.25rem 0;
+  }
+
+  body {
+    padding-top: 0 !important;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - LAPTOPS Y DESKTOP
+   ============================================ */
+
+@media only screen and (min-width: 851px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
+    padding: 0.25rem 0;
+  }
+}
+
+/* ============================================
+   MODO HORIZONTAL (LANDSCAPE)
+   ============================================ */
+
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+  header {
+    padding: 0.4rem 1rem;
+  }
+
+  header h1 {
+    font-size: 1rem;
+  }
+
+  nav {
+    margin-top: 0.25rem;
+  }
+
+  nav ul li a {
+    font-size: 0.7rem;
+    padding: 0.15rem 0;
+  }
+
+  body {
+    padding-top: 0 !important;
+  }
+}
+
+/* ============================================
+   VARIANTES DE COLOR (ALTERNATIVAS)
+   ============================================ */
+
+/* Gradiente morado oscuro profesional */
+header.theme-dark {
+  background: linear-gradient(135deg, #2d3561 0%, #1a1f3a 100%);
+}
+
+/* Gradiente azul cielo moderno */
+header.theme-sky {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+/* Gradiente verde corporativo */
+header.theme-corporate {
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+}
+
+/* Gradiente rojo moderno */
+header.theme-red {
+  background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%);
+}
+
+/* Para usar una variante, agregar la clase al header, ej: <header className="theme-dark"> */
+
+/* ============================================
+   ANIMACIONES OPCIONALES
+   ============================================ */
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+header.animated {
+  animation: slideDown 0.5s ease-out;
+}
+
+/* ============================================
+   ACCESIBILIDAD
+   ============================================ */
+
+/* Focus visible para navegación por teclado */
+nav ul li a:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 2px;
+}
+
+/* Reducir movimiento para usuarios con preferencia */
+@media (prefers-reduced-motion: reduce) {
+
+  header,
+  header h1,
+  nav ul li a,
+  .fa-facebook-square,
+  .fa-instagram {
+    transition: none;
+    animation: none;
+  }
+}
+
+/* ============================================
+   PRINT (IMPRIMIR)
+   ============================================ */
+
+@media print {
+  header {
+    position: relative;
+    background: white;
+    color: black;
+    box-shadow: none;
+  }
+
+  header h1 {
+    color: black;
+  }
+
+  nav {
+    display: none;
+  }
+}

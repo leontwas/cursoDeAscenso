@@ -1,0 +1,128 @@
+/* Importar estilos del proyecto original */
+@import './styles/styles2.css';
+/* @import './styles/styleHeader.css'; */
+/* Header antiguo - reemplazado por modernHeader.css */
+/* @import './styles/modernHeader.css'; */
+/* Header moderno y fijo - DESHABILITADO, usando header.css personalizado */
+@import './styles/styleFooter.css';
+@import './styles/fuentes.css';
+@import './styles/testeoStyles.css';
+@import './styles/trofeos.css';
+/* Estilos para trofeos y estrellas */
+/* Estilos responsive mejorados - debe ir al final para sobrescribir */
+@import './styles/responsive.css';
+
+#root {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Estilos adicionales para el quiz */
+.error-message {
+  color: #ff4444;
+  text-align: center;
+  margin: 20px 0;
+  word-wrap: break-word;
+  padding: 0 10px;
+}
+
+.error-image-container {
+  max-width: 100%;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quiz-page,
+.home-container {
+  min-height: 100vh;
+}
+
+/* Reducir espacio superior en main */
+.main-content {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+.notification {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #28a745;
+  color: white;
+  padding: 20px 40px;
+  border-radius: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 9999;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  animation: fadeInOut 2s ease-in-out;
+  max-width: 80%;
+  text-align: center;
+}
+
+/* Notificación responsive */
+@media only screen and (max-width: 768px) {
+  .notification {
+    padding: 15px 25px;
+    font-size: 18px;
+    max-width: 90%;
+  }
+
+  .error-message {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .notification {
+    padding: 12px 20px;
+    font-size: 16px;
+    max-width: 95%;
+  }
+
+  .error-message {
+    font-size: 0.9rem;
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  80% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+}
+
+#retry-button {
+  border-radius: 25px;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Retry button responsive */
+@media only screen and (max-width: 768px) {
+  #retry-button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
