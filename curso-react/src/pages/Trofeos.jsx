@@ -1,24 +1,16 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 
 const Trofeos = () => {
   const navigate = useNavigate();
-  const [totalStars, setTotalStars] = useState(0);
-  const [unlockedTrophies, setUnlockedTrophies] = useState([]);
-
-  useEffect(() => {
-    // Obtener estrellas y trofeos del localStorage
-    const stars = parseInt(localStorage.getItem('totalStars') || '0');
-    const trophies = JSON.parse(localStorage.getItem('unlockedTrophies') || '[]');
-
-    setTotalStars(stars);
-    setUnlockedTrophies(trophies);
-  }, []);
+  // Inicializar estados directamente desde localStorage
+  const [maxStars] = useState(() => parseInt(localStorage.getItem('maxStars') || '0'));
+  const [unlockedTrophies] = useState(() => JSON.parse(localStorage.getItem('unlockedTrophies') || '[]'));
 
   // Definir los trofeos disponibles
   const allTrophies = [
-    { id: 1, name: 'Novato', requiredStars: 10, emoji: '🏆', description: 'Primeras 10 respuestas correctas' },
+    { id: 1, name: 'Novato', requiredStars: 10, emoji: '🏆', description: '10 respuestas correctas' },
     { id: 2, name: 'Aprendiz', requiredStars: 20, emoji: '🥈', description: '20 respuestas correctas' },
     { id: 3, name: 'Experto', requiredStars: 30, emoji: '🥇', description: '30 respuestas correctas' },
     { id: 4, name: 'Maestro', requiredStars: 40, emoji: '👑', description: '40 respuestas correctas' },
@@ -41,14 +33,14 @@ const Trofeos = () => {
         <div className="trofeos-header">
           <h1>Tus Trofeos</h1>
           <div className="stars-display">
-            <h2>⭐ Total de Estrellas: {totalStars}</h2>
+            <h2>⭐ Máximo de Estrellas Alcanzado: {maxStars}</h2>
           </div>
         </div>
 
         <div className="trofeos-grid">
           {allTrophies.map((trophy) => {
             const isUnlocked = isTrophyUnlocked(trophy.id);
-            const progress = Math.min((totalStars / trophy.requiredStars) * 100, 100);
+            const progress = Math.min((maxStars / trophy.requiredStars) * 100, 100);
 
             return (
               <div
@@ -67,7 +59,7 @@ const Trofeos = () => {
                   ></div>
                 </div>
                 <p className="trophy-requirement">
-                  {totalStars}/{trophy.requiredStars} ⭐
+                  {maxStars}/{trophy.requiredStars} ⭐
                 </p>
                 {isUnlocked && (
                   <div className="trophy-unlocked-badge">

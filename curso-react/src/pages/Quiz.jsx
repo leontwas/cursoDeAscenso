@@ -28,6 +28,11 @@ const Quiz = () => {
     // Cargar estrellas totales del localStorage
     const savedStars = parseInt(localStorage.getItem('totalStars') || '0');
     setTotalStars(savedStars);
+
+    // Si es una nueva partida (totalStars = 0), resetear los trofeos desbloqueados
+    if (savedStars === 0) {
+      localStorage.setItem('unlockedTrophies', '[]');
+    }
   }, [topic]);
 
   const selectRandomQuestion = (questionsArray) => {
@@ -46,6 +51,12 @@ const Quiz = () => {
       const newTotalStars = totalStars + 1;
       setTotalStars(newTotalStars);
       localStorage.setItem('totalStars', newTotalStars.toString());
+
+      // Actualizar máximo de estrellas si se supera el récord
+      const currentMaxStars = parseInt(localStorage.getItem('maxStars') || '0');
+      if (newTotalStars > currentMaxStars) {
+        localStorage.setItem('maxStars', newTotalStars.toString());
+      }
 
       // Verificar si se desbloquea un trofeo
       checkTrophyUnlock(newTotalStars);
@@ -117,11 +128,13 @@ const Quiz = () => {
 
   if (showFailure) {
     return (
-      <div className="quiz-page">
+      <div className="quiz-page error-page">
         <Header />
         <div id="quiz-container" className="text-center">
-          <h1 className="error-message">Incorrecto.</h1>
-          <h2 className="error-message">La respuesta correcta es: {failureAnswer}</h2>
+          <h1 className="error-title">Incorrecto.</h1>
+          <div className="correct-answer-container">
+            <h2 className="correct-answer-text">La respuesta correcta es: <span className="answer-highlight">{failureAnswer}</span></h2>
+          </div>
           <h2 className="error-message">Respuestas correctas: {correctAnswersCount}</h2>
           <div className="error-image-container">
             <img src={errorImage} alt="Imagen de error" className="img-fluid" />

@@ -376,8 +376,8 @@
 /* Mobile */
 @media (max-width: 768px) {
     .main-content {
-        padding: 200px 0.5rem 1.5rem 0.5rem !important;
-        /* Restaurado a valor normal */
+        padding: 120px 0.5rem 1.5rem 0.5rem !important;
+        /* Reducido para menos espacio con el navbar */
     }
 
     .quiz-page {
@@ -386,7 +386,7 @@
     }
 
     .hero-section {
-        padding: 2rem 1rem;
+        padding: 1rem 1rem;
         margin-bottom: 2rem;
     }
 

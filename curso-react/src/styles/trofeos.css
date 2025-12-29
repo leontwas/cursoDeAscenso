@@ -8,7 +8,8 @@
 .trofeos-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 140px 1rem 2rem 1rem;
+  /* Más espacio entre navbar y contenido en todas las pantallas */
 }
 
 .trofeos-header {
@@ -264,6 +265,11 @@
 
 /* Responsive */
 @media only screen and (max-width: 768px) {
+  .trofeos-container {
+    padding-top: 140px;
+    /* Más espacio entre navbar y contenido en móviles */
+  }
+
   .trofeos-header h1 {
     font-size: 2rem;
   }

@@ -5,6 +5,7 @@ import '../styles/header.css';
 const Header = () => {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -12,6 +13,11 @@ const Header = () => {
 
   const closeMenu = () => {
     setIsMenuOpen(false);
+    setIsDropdownOpen(false);
+  };
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
   };
 
   return (
@@ -31,20 +37,28 @@ const Header = () => {
 
         <nav className={`main-nav ${isMenuOpen ? 'active' : ''}`}>
           <ul>
-            <li>
-              <a href="https://www.policiadelaciudad.gob.ar/" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="https://ci.policiadelaciudad.gob.ar/" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
-                Extranet (C.I.)
-              </a>
-            </li>
-            <li>
-              <a href="https://planillascomplementaria.com.ar/detalle" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
-                Pago Complementaria
-              </a>
+            <li className={`dropdown ${isDropdownOpen ? 'active' : ''}`}>
+              <button className="dropdown-toggle" onClick={toggleDropdown}>
+                Páginas Oficiales
+                <span className="dropdown-arrow">▼</span>
+              </button>
+              <ul className="dropdown-menu">
+                <li>
+                  <a href="https://www.policiadelaciudad.gob.ar/" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
+                    Policía de la Ciudad
+                  </a>
+                </li>
+                <li>
+                  <a href="https://ci.policiadelaciudad.gob.ar/" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
+                    Comunicaciones Internas
+                  </a>
+                </li>
+                <li>
+                  <a href="https://planillascomplementaria.com.ar/detalle" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
+                    Pago de Complementaria
+                  </a>
+                </li>
+              </ul>
             </li>
             <li>
               <Link to="/" className={location.pathname === '/' ? 'active' : ''} onClick={closeMenu}>
