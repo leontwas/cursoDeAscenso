@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import pepBadge from '../assets/pep_badge.png';
 import oficialPrimeroBadge from '../assets/Of_Primero.png';
 import oficialMayorBadge from '../assets/Of_Mayor.png';
-import inspectorBadge from '../assets/inspector.png';
+import inspectorBadge from '../assets/Inspector.png';
 import '../styles/home.css';
 
 
