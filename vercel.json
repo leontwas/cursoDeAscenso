@@ -1,0 +1,11 @@
+{
+  "buildCommand": "cd curso-react && npm run build",
+  "outputDirectory": "curso-react/dist",
+  "installCommand": "cd curso-react && npm install",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
