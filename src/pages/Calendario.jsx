@@ -95,6 +95,15 @@ const Calendario = () => {
         }
     };
 
+    const deleteDate = () => {
+        if (selectedDate) {
+            const newData = { ...turnsData };
+            delete newData[selectedDate.key];
+            saveData(newData);
+            closeModal();
+        }
+    };
+
     const renderCalendar = () => {
         const daysInMonth = getDaysInMonth(currentMonth, currentYear);
         const firstDay = getFirstDayOfMonth(currentMonth, currentYear);
@@ -272,13 +281,13 @@ const Calendario = () => {
                                             onChange={(e) => handleSlotChange(index, 'size', parseInt(e.target.value))}
                                         />
                                     </div>
-                                    <button className="confirm-slot-btn" onClick={saveChanges}>
-                                        Confirmar
-                                    </button>
                                 </div>
                             ))}
 
-                            <button className="save-btn" onClick={saveChanges}>Guardar y Cerrar</button>
+                            <div className="modal-actions">
+                                <button className="save-btn" onClick={saveChanges}>Guardar y Cerrar</button>
+                                <button className="delete-btn" onClick={deleteDate}>Eliminar Notas</button>
+                            </div>
                         </div>
                     </div>
                 </div>
