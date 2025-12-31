@@ -1,9 +1,8 @@
-import { Link, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import '../styles/header.css';
 
 const Header = () => {
-  const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -61,14 +60,14 @@ const Header = () => {
               </ul>
             </li>
             <li>
-              <Link to="/" className={location.pathname === '/' ? 'active' : ''} onClick={closeMenu}>
+              <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''} onClick={closeMenu} end>
                 Preguntas de Ascenso
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/trofeos" className={location.pathname === '/trofeos' ? 'active' : ''} onClick={closeMenu}>
+              <NavLink to="/trofeos" className={({ isActive }) => isActive ? 'active' : ''} onClick={closeMenu}>
                 Trofeos
-              </Link>
+              </NavLink>
             </li>
             <li>
               <a href="https://drive.google.com/drive/folders/1_un6GDtup9WG25F0vbPhtPgIy9sgozWx?usp=drive_link" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
@@ -99,6 +98,11 @@ const Header = () => {
               <a href="https://drive.google.com/drive/folders/1tt-mpj7RCWij_o97jNAMgcmaC5oC7ll3?usp=sharing" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
                 Protocolos
               </a>
+            </li>
+            <li>
+              <NavLink to="/calendario" className={({ isActive }) => isActive ? 'active' : ''} onClick={closeMenu}>
+                Calendario
+              </NavLink>
             </li>
           </ul>
         </nav>

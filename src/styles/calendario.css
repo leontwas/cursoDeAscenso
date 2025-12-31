@@ -1,0 +1,368 @@
+.calendario-page {
+    padding-top: 100px;
+    /* Space for fixed header */
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.calendario-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.calendario-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* Month Navigation Header */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3f51b5;
+    /* Reference blue/indigo */
+    color: white;
+    padding: 15px;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 0;
+}
+
+.calendar-header h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Single Month View */
+.month-view {
+    background: white;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border-left: 1px solid #eee;
+    border-top: 1px solid #eee;
+}
+
+.day-header {
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 10px 0;
+    background-color: #f5f5f5;
+    color: #555;
+    font-weight: bold;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #ddd;
+}
+
+.day-cell {
+    min-height: 100px;
+    /* Taller cells like reference */
+    background: white;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.2s;
+}
+
+.day-cell:hover {
+    background-color: #f9f9f9;
+}
+
+.day-cell.other-month {
+    background-color: #fafafa;
+    color: #ccc;
+}
+
+.day-number {
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 4px 6px;
+    text-align: right;
+    width: 100%;
+    color: #444;
+}
+
+.day-cell.other-month .day-number {
+    color: #ccc;
+}
+
+.day-slots {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1px;
+    width: 100%;
+}
+
+.day-slot {
+    flex: 1;
+    width: 100%;
+    font-size: 0.75rem;
+    /* Slightly larger text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2px;
+    color: #000;
+    overflow: hidden;
+    white-space: normal;
+    /* Allow wrap if needed or truncate */
+    line-height: 1.1;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.editor-modal {
+    background: white;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.3s ease;
+    max-height: 90vh;
+    /* Limit height to viewport */
+    display: flex;
+    /* Flex layout */
+    flex-direction: column;
+    /* Stack children */
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #f0f0f0;
+    padding: 20px 25px;
+    /* Moved padding here */
+    flex-shrink: 0;
+    /* Prevent shrinking */
+}
+
+.modal-body {
+    padding: 20px 25px;
+    overflow-y: auto;
+    /* Enable vertical scroll */
+    flex: 1;
+    /* Take remaining space */
+}
+
+.modal-header h3 {
+    margin: 0;
+    color: #1a1a2e;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.slot-editor {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #e0e0e0;
+}
+
+.slot-editor h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #444;
+}
+
+.control-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.control-row label {
+    min-width: 60px;
+    /* Fixed width for alignment */
+    text-align: left;
+    /* Align text to the left */
+    font-weight: 500;
+}
+
+.control-row input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.control-row input[type="color"] {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.control-row input[type="number"] {
+    width: 60px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.save-btn {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    /* Changed to primary blue */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 20px;
+}
+
+.save-btn:hover {
+    background: #0056b3;
+}
+
+.confirm-slot-btn {
+    width: 100%;
+    padding: 8px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 10px;
+}
+
+.confirm-slot-btn:hover {
+    background: #218838;
+}
+
+/* Color palettes presets */
+/* Color palettes presets */
+.color-presets {
+    display: flex;
+    gap: 8px;
+    flex-wrap: nowrap;
+    /* Prevent wrapping for scroll */
+    overflow-x: auto;
+    /* Enable horizontal scrolling */
+    margin-top: 5px;
+    align-items: center;
+    padding: 5px 2px 12px 2px;
+    /* Increased bottom padding for scrollbar space */
+    max-width: 300px;
+    /* Limit width to force scroll if needed */
+    scrollbar-width: thin;
+    /* Firefox thin scrollbar */
+}
+
+/* Optional: Custom scrollbar styling for webkit */
+.color-presets::-webkit-scrollbar {
+    height: 6px;
+}
+
+.color-presets::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.color-presets::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+.color-presets::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}
+
+.color-preset {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .calendario-page {
+        padding-top: 80px;
+        /* Same as quiz responsive */
+    }
+
+    .year-navigation h2 {
+        font-size: 1.8rem;
+    }
+}
