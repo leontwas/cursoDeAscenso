@@ -13,7 +13,6 @@ const Calendario = () => {
         { color: '#ffffff', text: '', size: 10, textColor: '#000000' },
         { color: '#ffffff', text: '', size: 10, textColor: '#000000' }
     ]);
-    const [copiedSlots, setCopiedSlots] = useState(null);
     const [paintMode, setPaintMode] = useState(false);
     const [selectedFormat, setSelectedFormat] = useState(null);
     const [bottomMenu, setBottomMenu] = useState(null); // 'pintar', 'turnos', null
@@ -189,20 +188,6 @@ const Calendario = () => {
             delete newData[selectedDate.key];
             saveData(newData);
             closeModal();
-        }
-    };
-
-    const copySlots = () => {
-        setCopiedSlots(JSON.parse(JSON.stringify(editSlots)));
-        alert('Formato copiado correctamente');
-    };
-
-    const pasteSlots = () => {
-        if (copiedSlots) {
-            setEditSlots(JSON.parse(JSON.stringify(copiedSlots)));
-            alert('Formato pegado correctamente');
-        } else {
-            alert('No hay formato copiado');
         }
     };
 
