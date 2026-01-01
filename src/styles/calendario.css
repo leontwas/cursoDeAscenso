@@ -461,6 +461,208 @@
     flex-shrink: 0;
 }
 
+/* Bottom Menu Bar */
+.bottom-menu-bar {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #2c3e50;
+    display: flex;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.bottom-menu-bar button {
+    flex: 1;
+    padding: 15px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-transform: uppercase;
+}
+
+.bottom-menu-bar button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.bottom-menu-bar button.active {
+    background: rgba(255, 255, 255, 0.2);
+    border-top: 3px solid #3498db;
+}
+
+/* Formats Panel */
+.formats-panel {
+    background: #ecf0f1;
+    border-top: 1px solid #bdc3c7;
+    padding: 15px;
+    max-height: 150px;
+    overflow: hidden;
+}
+
+.formats-scroll {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+}
+
+.formats-scroll::-webkit-scrollbar {
+    height: 6px;
+}
+
+.formats-scroll::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.formats-scroll::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+.formats-scroll::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}
+
+.format-card {
+    min-width: 120px;
+    background: white;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.format-card:hover {
+    border-color: #3498db;
+}
+
+.format-card.selected {
+    border-color: #2ecc71;
+    box-shadow: 0 0 10px rgba(46, 204, 113, 0.3);
+}
+
+.format-delete-btn {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    z-index: 10;
+}
+
+.format-delete-btn:hover {
+    background: #c0392b;
+}
+
+.format-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.format-preview>div {
+    padding: 4px;
+    text-align: center;
+    font-size: 0.75rem;
+    border-radius: 3px;
+    min-height: 20px;
+}
+
+/* Shifts Panel */
+.shifts-panel {
+    background: white;
+    border-top: 1px solid #bdc3c7;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.shifts-header {
+    background: #34495e;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shifts-header h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.shifts-header button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.shifts-header button:hover {
+    background: #2980b9;
+}
+
+.shifts-list {
+    padding: 10px;
+}
+
+.shift-item {
+    background: #ecf0f1;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shift-preview {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.shift-preview>div {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.shift-actions button {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #7f8c8d;
+    transition: color 0.2s;
+}
+
+.shift-actions button:hover {
+    color: #34495e;
+}
+
 @media (max-width: 768px) {
     .calendario-page {
         padding-top: 80px;
@@ -469,5 +671,24 @@
 
     .year-navigation h2 {
         font-size: 1.8rem;
+    }
+
+    .bottom-menu-bar button {
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+
+    .formats-panel {
+        max-height: 120px;
+    }
+
+    .shifts-header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+    }
+
+    .shifts-header button {
+        width: 100%;
     }
 }

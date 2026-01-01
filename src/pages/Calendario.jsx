@@ -119,25 +119,59 @@ const Calendario = () => {
     };
 
     const saveChanges = () => {
-        if (selectedDate) {
-            const newData = { ...turnsData, [selectedDate.key]: editSlots };
-            saveData(newData);
+        if (!selectedDate) return;
 
-            // Guardar formato si tiene contenido y no existe ya
-            const hasContent = editSlots.some(slot => slot.text.trim() !== '');
-            if (hasContent) {
-                const formatExists = savedFormats.some(format =>
-                    JSON.stringify(format.slots) === JSON.stringify(editSlots)
-                );
-                if (!formatExists) {
-                    const newFormats = [...savedFormats, { id: Date.now(), slots: JSON.parse(JSON.stringify(editSlots)) }];
-                    setSavedFormats(newFormats);
-                    localStorage.setItem('savedFormats', JSON.stringify(newFormats));
-                }
-            }
-
+        // Si es un turno nuevo (no tiene fecha)
+        if (selectedDate.key === 'new-shift') {
+            const newFormat = {
+                id: Date.now(),
+                name: editSlots[0]?.text || 'Sin nombre',
+                slots: JSON.parse(JSON.stringify(editSlots))
+            };
+            const newFormats = [...savedFormats, newFormat];
+            setSavedFormats(newFormats);
+            localStorage.setItem('savedFormats', JSON.stringify(newFormats));
             closeModal();
+            return;
         }
+
+        // Si es edición de turno existente
+        if (selectedDate.key.startsWith('edit-')) {
+            const formatId = parseInt(selectedDate.key.replace('edit-', ''));
+            const newFormats = savedFormats.map(f =>
+                f.id === formatId
+                    ? { ...f, slots: JSON.parse(JSON.stringify(editSlots)), name: editSlots[0]?.text || f.name }
+                    : f
+            );
+            setSavedFormats(newFormats);
+            localStorage.setItem('savedFormats', JSON.stringify(newFormats));
+            closeModal();
+            return;
+        }
+
+        // Modo normal: guardar en fecha específica
+        const newData = { ...turnsData, [selectedDate.key]: editSlots };
+        saveData(newData);
+
+        // Auto-guardar formato único
+        const hasContent = editSlots.some(slot => slot.text.trim() !== '');
+        if (hasContent) {
+            const formatExists = savedFormats.some(format =>
+                JSON.stringify(format.slots) === JSON.stringify(editSlots)
+            );
+            if (!formatExists) {
+                const newFormat = {
+                    id: Date.now(),
+                    name: editSlots[0]?.text || 'Sin nombre',
+                    slots: JSON.parse(JSON.stringify(editSlots))
+                };
+                const newFormats = [...savedFormats, newFormat];
+                setSavedFormats(newFormats);
+                localStorage.setItem('savedFormats', JSON.stringify(newFormats));
+            }
+        }
+
+        closeModal();
     };
 
     const clearDate = () => {
@@ -161,6 +195,23 @@ const Calendario = () => {
         } else {
             alert('No hay formato copiado');
         }
+    };
+
+    const deleteFormat = (id) => {
+        const newFormats = savedFormats.filter(f => f.id !== id);
+        setSavedFormats(newFormats);
+        localStorage.setItem('savedFormats', JSON.stringify(newFormats));
+        if (selectedFormat && savedFormats.find(f => f.id === id && JSON.stringify(f.slots) === JSON.stringify(selectedFormat))) {
+            setSelectedFormat(null);
+            setPaintMode(false);
+        }
+    };
+
+    const editShift = (format) => {
+        setSelectedDate({ day: null, month: null, year: null, key: `edit-${format.id}` });
+        setEditSlots(JSON.parse(JSON.stringify(format.slots)));
+        setIsModalOpen(true);
+        setBottomMenu(null);
     };
 
     const renderCalendar = () => {
@@ -264,11 +315,150 @@ const Calendario = () => {
 
             </div>
 
+            {/* Bottom Menu Bar */}
+            <div className="bottom-menu-bar">
+                <button
+                    className={bottomMenu === 'pintar' ? 'active' : ''}
+                    onClick={() => setBottomMenu(bottomMenu === 'pintar' ? null : 'pintar')}
+                >
+                    PINTAR
+                </button>
+                <button
+                    className={bottomMenu === null ? 'active' : ''}
+                    onClick={() => {
+                        setBottomMenu(null);
+                        setPaintMode(false);
+                        setSelectedFormat(null);
+                    }}
+                >
+                    EDITAR
+                </button>
+                <button
+                    className={bottomMenu === 'turnos' ? 'active' : ''}
+                    onClick={() => setBottomMenu(bottomMenu === 'turnos' ? null : 'turnos')}
+                >
+                    TURNOS
+                </button>
+            </div>
+
+            {/* Formats Panel - PINTAR */}
+            {bottomMenu === 'pintar' && (
+                <div className="formats-panel">
+                    <div className="formats-scroll">
+                        {savedFormats.length === 0 ? (
+                            <div style={{ padding: '20px', color: '#7f8c8d', textAlign: 'center', width: '100%' }}>
+                                No hay formatos guardados. Crea un turno primero en la sección TURNOS.
+                            </div>
+                        ) : (
+                            savedFormats.map(format => (
+                                <div
+                                    key={format.id}
+                                    className={`format-card ${selectedFormat && JSON.stringify(selectedFormat) === JSON.stringify(format.slots) ? 'selected' : ''}`}
+                                    onClick={() => {
+                                        setSelectedFormat(format.slots);
+                                        setPaintMode(true);
+                                    }}
+                                >
+                                    <button
+                                        className="format-delete-btn"
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            deleteFormat(format.id);
+                                        }}
+                                        title="Eliminar formato"
+                                    >
+                                        ×
+                                    </button>
+                                    <div className="format-preview">
+                                        {format.slots.map((slot, idx) => (
+                                            <div
+                                                key={idx}
+                                                style={{
+                                                    backgroundColor: slot.color !== '#ffffff' ? slot.color : 'transparent',
+                                                    color: slot.textColor || '#000000',
+                                                    fontSize: `${slot.size || 10}px`
+                                                }}
+                                            >
+                                                {slot.text || '—'}
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            ))
+                        )}
+                    </div>
+                </div>
+            )}
+
+            {/* Shifts Panel - TURNOS */}
+            {bottomMenu === 'turnos' && (
+                <div className="shifts-panel">
+                    <div className="shifts-header">
+                        <h3>TURNOS DISPONIBLES</h3>
+                        <button
+                            onClick={() => {
+                                setIsModalOpen(true);
+                                setEditSlots([
+                                    { color: '#ffffff', text: '', size: 10, textColor: '#000000' },
+                                    { color: '#ffffff', text: '', size: 10, textColor: '#000000' },
+                                    { color: '#ffffff', text: '', size: 10, textColor: '#000000' }
+                                ]);
+                                setSelectedDate({ day: null, month: null, year: null, key: 'new-shift' });
+                                setBottomMenu(null);
+                            }}
+                        >
+                            + CREAR TURNO NUEVO
+                        </button>
+                    </div>
+                    <div className="shifts-list">
+                        {savedFormats.length === 0 ? (
+                            <div style={{ padding: '20px', color: '#7f8c8d', textAlign: 'center' }}>
+                                No hay turnos creados. Haz click en "+ CREAR TURNO NUEVO" para comenzar.
+                            </div>
+                        ) : (
+                            savedFormats.map(format => (
+                                <div key={format.id} className="shift-item">
+                                    <div className="shift-preview">
+                                        {format.slots.map((slot, idx) => (
+                                            <div
+                                                key={idx}
+                                                style={{
+                                                    background: slot.color !== '#ffffff' ? slot.color : 'transparent',
+                                                    color: slot.textColor || '#000000',
+                                                    fontSize: `${slot.size || 10}px`
+                                                }}
+                                            >
+                                                {slot.text || '—'}
+                                            </div>
+                                        ))}
+                                    </div>
+                                    <div className="shift-actions">
+                                        <button
+                                            onClick={() => editShift(format)}
+                                            title="Editar turno"
+                                        >
+                                            ⋮
+                                        </button>
+                                    </div>
+                                </div>
+                            ))
+                        )}
+                    </div>
+                </div>
+            )}
+
             {isModalOpen && selectedDate && (
                 <div className="modal-overlay" onClick={closeModal}>
                     <div className="editor-modal" onClick={e => e.stopPropagation()}>
                         <div className="modal-header">
-                            <h3>Editar {selectedDate.day} de {months[selectedDate.month]} {selectedDate.year}</h3>
+                            <h3>
+                                {selectedDate.key === 'new-shift'
+                                    ? 'Crear Nuevo Turno'
+                                    : selectedDate.key.startsWith('edit-')
+                                    ? 'Editar Turno'
+                                    : `Editar ${selectedDate.day} de ${months[selectedDate.month]} ${selectedDate.year}`
+                                }
+                            </h3>
                             <button className="close-btn" onClick={closeModal}>&times;</button>
                         </div>
 
@@ -365,19 +555,6 @@ const Calendario = () => {
                             <button className="add-slot-btn" onClick={addSlot}>
                                 + Agregar Opción
                             </button>
-
-                            <div className="copy-paste-actions">
-                                <button className="copy-btn" onClick={copySlots}>
-                                    📋 Copiar Formato
-                                </button>
-                                <button
-                                    className="paste-btn"
-                                    onClick={pasteSlots}
-                                    disabled={!copiedSlots}
-                                >
-                                    📥 Pegar Formato
-                                </button>
-                            </div>
 
                             <div className="modal-actions">
                                 <button className="save-btn" onClick={saveChanges}>Guardar</button>
