@@ -14,6 +14,10 @@ const Calendario = () => {
         { color: '#ffffff', text: '', size: 10, textColor: '#000000' }
     ]);
     const [copiedSlots, setCopiedSlots] = useState(null);
+    const [paintMode, setPaintMode] = useState(false);
+    const [selectedFormat, setSelectedFormat] = useState(null);
+    const [bottomMenu, setBottomMenu] = useState(null); // 'pintar', 'turnos', null
+    const [savedFormats, setSavedFormats] = useState([]);
 
     const months = [
         "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
@@ -27,6 +31,11 @@ const Calendario = () => {
         const savedData = localStorage.getItem('calendarTurnsData');
         if (savedData) {
             setTurnsData(JSON.parse(savedData));
+        }
+
+        const formats = localStorage.getItem('savedFormats');
+        if (formats) {
+            setSavedFormats(JSON.parse(formats));
         }
     }, []);
 
@@ -61,8 +70,17 @@ const Calendario = () => {
     };
 
     const handleDayClick = (day, month, year, isCurrentMonth = true) => {
-        if (!isCurrentMonth) return; // Optional: disable clicking other month days
+        if (!isCurrentMonth) return;
         const dateKey = `${year}-${month}-${day}`;
+
+        // Si está en modo pintar y hay un formato seleccionado
+        if (paintMode && selectedFormat) {
+            const newData = { ...turnsData, [dateKey]: JSON.parse(JSON.stringify(selectedFormat)) };
+            saveData(newData);
+            return;
+        }
+
+        // Modo normal: abrir editor
         setSelectedDate({ day, month, year, key: dateKey });
 
         if (turnsData[dateKey]) {
@@ -75,6 +93,7 @@ const Calendario = () => {
             ]);
         }
         setIsModalOpen(true);
+        setBottomMenu(null);
     };
 
     const closeModal = () => {
@@ -103,6 +122,20 @@ const Calendario = () => {
         if (selectedDate) {
             const newData = { ...turnsData, [selectedDate.key]: editSlots };
             saveData(newData);
+
+            // Guardar formato si tiene contenido y no existe ya
+            const hasContent = editSlots.some(slot => slot.text.trim() !== '');
+            if (hasContent) {
+                const formatExists = savedFormats.some(format =>
+                    JSON.stringify(format.slots) === JSON.stringify(editSlots)
+                );
+                if (!formatExists) {
+                    const newFormats = [...savedFormats, { id: Date.now(), slots: JSON.parse(JSON.stringify(editSlots)) }];
+                    setSavedFormats(newFormats);
+                    localStorage.setItem('savedFormats', JSON.stringify(newFormats));
+                }
+            }
+
             closeModal();
         }
     };
