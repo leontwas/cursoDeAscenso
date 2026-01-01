@@ -75,6 +75,15 @@ const Calendario = () => {
 
         // Si está en modo pintar y hay un formato seleccionado
         if (paintMode && selectedFormat) {
+            // Si el formato es ERASE, borrar el día
+            if (selectedFormat === 'ERASE') {
+                const newData = { ...turnsData };
+                delete newData[dateKey];
+                saveData(newData);
+                return;
+            }
+
+            // Aplicar formato normal
             const newData = { ...turnsData, [dateKey]: JSON.parse(JSON.stringify(selectedFormat)) };
             saveData(newData);
             return;
@@ -345,8 +354,28 @@ const Calendario = () => {
             {bottomMenu === 'pintar' && (
                 <div className="formats-panel">
                     <div className="formats-scroll">
+                        {/* Opción BORRAR - siempre visible */}
+                        <div
+                            className={`format-card erase-card ${selectedFormat === 'ERASE' ? 'selected' : ''}`}
+                            onClick={() => {
+                                setSelectedFormat('ERASE');
+                                setPaintMode(true);
+                            }}
+                        >
+                            <div className="format-preview erase-preview">
+                                <div style={{
+                                    backgroundColor: '#dc3545',
+                                    color: 'white',
+                                    padding: '8px',
+                                    fontWeight: 'bold'
+                                }}>
+                                    BORRAR
+                                </div>
+                            </div>
+                        </div>
+
                         {savedFormats.length === 0 ? (
-                            <div style={{ padding: '20px', color: '#7f8c8d', textAlign: 'center', width: '100%' }}>
+                            <div style={{ padding: '20px', color: '#7f8c8d', textAlign: 'center', flex: 1 }}>
                                 No hay formatos guardados. Crea un turno primero en la sección TURNOS.
                             </div>
                         ) : (

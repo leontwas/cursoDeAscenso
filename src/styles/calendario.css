@@ -7,13 +7,7 @@
 }
 
 .calendario-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.calendario-container {
-    max-width: 1000px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 10px;
 }
@@ -32,7 +26,7 @@
 }
 
 .calendar-header h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin: 0;
     text-transform: uppercase;
     font-weight: bold;
@@ -87,8 +81,8 @@
 }
 
 .day-cell {
-    min-height: 100px;
-    /* Taller cells like reference */
+    min-height: 80px;
+    /* Reduced height for notebooks */
     background: white;
     border-right: 1px solid #eee;
     border-bottom: 1px solid #eee;
@@ -111,9 +105,9 @@
 }
 
 .day-number {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: bold;
-    padding: 4px 6px;
+    padding: 3px 5px;
     text-align: center;
     color: #444;
 }
@@ -142,13 +136,13 @@
 .day-slot {
     flex: 1;
     width: 100%;
-    font-size: 0.75rem;
-    /* Slightly larger text */
+    font-size: 0.7rem;
+    /* Smaller text for notebooks */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 2px;
+    padding: 1px;
     color: #000;
     overflow: hidden;
     white-space: normal;
@@ -549,6 +543,20 @@
 .format-card.selected {
     border-color: #2ecc71;
     box-shadow: 0 0 10px rgba(46, 204, 113, 0.3);
+}
+
+.format-card.erase-card {
+    border-color: #dc3545;
+    background: #fff5f5;
+}
+
+.format-card.erase-card.selected {
+    border-color: #dc3545;
+    box-shadow: 0 0 10px rgba(220, 53, 69, 0.4);
+}
+
+.format-card.erase-card:hover {
+    border-color: #c82333;
 }
 
 .format-delete-btn {
