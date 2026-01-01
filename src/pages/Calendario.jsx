@@ -120,6 +120,12 @@ const Calendario = () => {
         const firstDay = getFirstDayOfMonth(currentMonth, currentYear);
         const days = [];
 
+        // Obtener fecha actual
+        const today = new Date();
+        const todayDay = today.getDate();
+        const todayMonth = today.getMonth();
+        const todayYear = today.getFullYear();
+
         // Previous month filler days
         const prevMonth = currentMonth === 0 ? 11 : currentMonth - 1;
         const prevMonthYear = currentMonth === 0 ? currentYear - 1 : currentYear;
@@ -144,13 +150,16 @@ const Calendario = () => {
                 { color: 'transparent', text: '' }
             ];
 
+            // Verificar si es el día actual
+            const isToday = d === todayDay && currentMonth === todayMonth && currentYear === todayYear;
+
             days.push(
                 <div
                     key={d}
                     className="day-cell"
                     onClick={() => handleDayClick(d, currentMonth, currentYear)}
                 >
-                    <span className="day-number">{d}</span>
+                    <span className={`day-number ${isToday ? 'today' : ''}`}>{d}</span>
                     <div className="day-slots">
                         {dayData.map((slot, idx) => (
                             <div

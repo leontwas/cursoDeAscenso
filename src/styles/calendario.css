@@ -118,6 +118,16 @@
     color: #444;
 }
 
+.day-number.today {
+    background-color: #dc3545;
+    color: white !important;
+    border-radius: 4px;
+    padding: 4px 8px;
+    display: inline-block;
+    min-width: 28px;
+    text-align: center;
+}
+
 .day-cell.other-month .day-number {
     color: #ccc;
 }
