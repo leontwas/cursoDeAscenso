@@ -15,8 +15,48 @@ const Calendario = () => {
     ]);
     const [paintMode, setPaintMode] = useState(false);
     const [selectedFormat, setSelectedFormat] = useState(null);
-    const [bottomMenu, setBottomMenu] = useState(null); // 'pintar', 'turnos', null
+    const [bottomMenu, setBottomMenu] = useState(null); // 'pintar', 'preestablecidos', 'turnos', null
     const [savedFormats, setSavedFormats] = useState([]);
+
+    // Esquemas preestablecidos
+    const preestablecidos = {
+        'Tercio I': [
+            { color: '#4CAF50', text: 'Tercio I', size: 10, textColor: '#ffffff' },
+            { color: '#81C784', text: 'Mañana', size: 10, textColor: '#000000' }
+        ],
+        'Tercio II': [
+            { color: '#2196F3', text: 'Tercio II', size: 10, textColor: '#ffffff' },
+            { color: '#64B5F6', text: 'Tarde', size: 10, textColor: '#000000' }
+        ],
+        'Tercio III': [
+            { color: '#FF9800', text: 'Tercio III', size: 10, textColor: '#ffffff' },
+            { color: '#FFB74D', text: 'Noche', size: 10, textColor: '#000000' }
+        ],
+        'Tercio IV': [
+            { color: '#9C27B0', text: 'Tercio IV', size: 10, textColor: '#ffffff' },
+            { color: '#BA68C8', text: 'Rotativo', size: 10, textColor: '#000000' }
+        ],
+        '4x1 4x2 Grupo A': [
+            { color: '#F44336', text: '4x1 4x2', size: 10, textColor: '#ffffff' },
+            { color: '#EF5350', text: 'Grupo A', size: 10, textColor: '#ffffff' }
+        ],
+        '4x1 4x2 Grupo B': [
+            { color: '#E91E63', text: '4x1 4x2', size: 10, textColor: '#ffffff' },
+            { color: '#EC407A', text: 'Grupo B', size: 10, textColor: '#ffffff' }
+        ],
+        '4x1 4x2 Grupo C': [
+            { color: '#9C27B0', text: '4x1 4x2', size: 10, textColor: '#ffffff' },
+            { color: '#AB47BC', text: 'Grupo C', size: 10, textColor: '#ffffff' }
+        ],
+        '12x2x2 Grupo I': [
+            { color: '#00BCD4', text: '12x2x2', size: 10, textColor: '#ffffff' },
+            { color: '#26C6DA', text: 'Grupo I', size: 10, textColor: '#000000' }
+        ],
+        '12x2x2 Grupo II': [
+            { color: '#009688', text: '12x2x2', size: 10, textColor: '#ffffff' },
+            { color: '#26A69A', text: 'Grupo II', size: 10, textColor: '#000000' }
+        ]
+    };
 
     const months = [
         "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
@@ -318,14 +358,10 @@ const Calendario = () => {
                     PINTAR
                 </button>
                 <button
-                    className={bottomMenu === null ? 'active' : ''}
-                    onClick={() => {
-                        setBottomMenu(null);
-                        setPaintMode(false);
-                        setSelectedFormat(null);
-                    }}
+                    className={bottomMenu === 'preestablecidos' ? 'active' : ''}
+                    onClick={() => setBottomMenu(bottomMenu === 'preestablecidos' ? null : 'preestablecidos')}
                 >
-                    EDITAR
+                    PREESTABLECIDOS
                 </button>
                 <button
                     className={bottomMenu === 'turnos' ? 'active' : ''}
@@ -400,6 +436,45 @@ const Calendario = () => {
                                 </div>
                             ))
                         )}
+                    </div>
+                </div>
+            )}
+
+            {/* Preestablecidos Panel */}
+            {bottomMenu === 'preestablecidos' && (
+                <div className="preestablecidos-panel">
+                    <div className="preestablecidos-grid">
+                        {Object.entries(preestablecidos).map(([nombre, slots]) => (
+                            <div
+                                key={nombre}
+                                className="preestablecido-item"
+                                onClick={() => {
+                                    setSelectedFormat(slots);
+                                    setPaintMode(true);
+                                    setBottomMenu('pintar');
+                                }}
+                            >
+                                <div className="preestablecido-preview">
+                                    {slots.map((slot, idx) => (
+                                        <div
+                                            key={idx}
+                                            style={{
+                                                backgroundColor: slot.color,
+                                                color: slot.textColor,
+                                                fontSize: `${slot.size}px`,
+                                                padding: '5px',
+                                                textAlign: 'center',
+                                                borderRadius: '3px',
+                                                marginBottom: '2px'
+                                            }}
+                                        >
+                                            {slot.text}
+                                        </div>
+                                    ))}
+                                </div>
+                                <div className="preestablecido-name">{nombre}</div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             )}
