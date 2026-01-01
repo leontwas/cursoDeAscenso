@@ -98,6 +98,7 @@
     cursor: pointer;
     position: relative;
     transition: background 0.2s;
+    align-items: flex-end;
 }
 
 .day-cell:hover {
@@ -113,10 +114,8 @@
     font-size: 0.9rem;
     font-weight: bold;
     padding: 4px 6px;
-    text-align: right;
-    width: 100%;
+    text-align: center;
     color: #444;
-    display: block;
 }
 
 .day-number.today {
@@ -124,10 +123,7 @@
     color: white !important;
     border-radius: 4px;
     padding: 2px 6px !important;
-    display: inline-block !important;
     text-align: center !important;
-    width: auto !important;
-    float: right !important;
 }
 
 .day-cell.other-month .day-number {
@@ -140,6 +136,7 @@
     flex: 1;
     gap: 1px;
     width: 100%;
+    align-self: stretch;
 }
 
 .day-slot {
