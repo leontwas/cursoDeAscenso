@@ -228,11 +228,43 @@
     border: 1px solid #e0e0e0;
 }
 
-.slot-editor h4 {
-    margin-top: 0;
+.slot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 10px;
+}
+
+.slot-editor h4 {
+    margin: 0;
     font-size: 1rem;
     color: #444;
+}
+
+.remove-slot-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    line-height: 1;
+}
+
+.remove-slot-btn:hover:not(:disabled) {
+    background: #c82333;
+}
+
+.remove-slot-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    opacity: 0.5;
 }
 
 .control-row {
@@ -296,11 +328,29 @@
     background: #0056b3;
 }
 
-.delete-btn {
+.add-slot-btn {
+    width: 100%;
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-bottom: 15px;
+}
+
+.add-slot-btn:hover {
+    background: #218838;
+}
+
+.clear-btn {
     flex: 1;
     padding: 12px;
     background: #dc3545;
-    /* Red for delete action */
+    /* Red for clear action */
     color: white;
     border: none;
     border-radius: 6px;
@@ -310,26 +360,8 @@
     transition: background 0.2s;
 }
 
-.delete-btn:hover {
+.clear-btn:hover {
     background: #c82333;
-}
-
-.confirm-slot-btn {
-    width: 100%;
-    padding: 8px;
-    background: #28a745;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s;
-    margin-top: 10px;
-}
-
-.confirm-slot-btn:hover {
-    background: #218838;
 }
 
 /* Color palettes presets */

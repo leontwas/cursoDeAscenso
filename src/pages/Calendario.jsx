@@ -87,6 +87,17 @@ const Calendario = () => {
         setEditSlots(newSlots);
     };
 
+    const addSlot = () => {
+        setEditSlots([...editSlots, { color: '#ffffff', text: '', size: 10, textColor: '#000000' }]);
+    };
+
+    const removeSlot = (index) => {
+        if (editSlots.length > 1) {
+            const newSlots = editSlots.filter((_, i) => i !== index);
+            setEditSlots(newSlots);
+        }
+    };
+
     const saveChanges = () => {
         if (selectedDate) {
             const newData = { ...turnsData, [selectedDate.key]: editSlots };
@@ -95,7 +106,7 @@ const Calendario = () => {
         }
     };
 
-    const deleteDate = () => {
+    const clearDate = () => {
         if (selectedDate) {
             const newData = { ...turnsData };
             delete newData[selectedDate.key];
@@ -207,7 +218,17 @@ const Calendario = () => {
                         <div className="modal-body">
                             {editSlots.map((slot, index) => (
                                 <div key={index} className="slot-editor">
-                                    <h4>Turno/Opción {index + 1}</h4>
+                                    <div className="slot-header">
+                                        <h4>Turno/Opción {index + 1}</h4>
+                                        <button
+                                            className="remove-slot-btn"
+                                            onClick={() => removeSlot(index)}
+                                            disabled={editSlots.length === 1}
+                                            title="Eliminar esta opción"
+                                        >
+                                            ✕
+                                        </button>
+                                    </div>
                                     <div className="control-row">
                                         <input
                                             type="text"
@@ -284,9 +305,13 @@ const Calendario = () => {
                                 </div>
                             ))}
 
+                            <button className="add-slot-btn" onClick={addSlot}>
+                                + Agregar Opción
+                            </button>
+
                             <div className="modal-actions">
-                                <button className="save-btn" onClick={saveChanges}>Guardar y Cerrar</button>
-                                <button className="delete-btn" onClick={deleteDate}>Eliminar Notas</button>
+                                <button className="save-btn" onClick={saveChanges}>Guardar</button>
+                                <button className="clear-btn" onClick={clearDate}>Limpiar</button>
                             </div>
                         </div>
                     </div>
