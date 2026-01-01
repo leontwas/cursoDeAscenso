@@ -354,6 +354,48 @@
     background: #218838;
 }
 
+.copy-paste-actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.copy-btn,
+.paste-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.copy-btn {
+    background: #17a2b8;
+    color: white;
+}
+
+.copy-btn:hover {
+    background: #138496;
+}
+
+.paste-btn {
+    background: #6c757d;
+    color: white;
+}
+
+.paste-btn:hover:not(:disabled) {
+    background: #5a6268;
+}
+
+.paste-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
 .clear-btn {
     flex: 1;
     padding: 12px;

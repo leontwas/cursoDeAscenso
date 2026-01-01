@@ -13,6 +13,7 @@ const Calendario = () => {
         { color: '#ffffff', text: '', size: 10, textColor: '#000000' },
         { color: '#ffffff', text: '', size: 10, textColor: '#000000' }
     ]);
+    const [copiedSlots, setCopiedSlots] = useState(null);
 
     const months = [
         "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
@@ -112,6 +113,20 @@ const Calendario = () => {
             delete newData[selectedDate.key];
             saveData(newData);
             closeModal();
+        }
+    };
+
+    const copySlots = () => {
+        setCopiedSlots(JSON.parse(JSON.stringify(editSlots)));
+        alert('Formato copiado correctamente');
+    };
+
+    const pasteSlots = () => {
+        if (copiedSlots) {
+            setEditSlots(JSON.parse(JSON.stringify(copiedSlots)));
+            alert('Formato pegado correctamente');
+        } else {
+            alert('No hay formato copiado');
         }
     };
 
@@ -317,6 +332,19 @@ const Calendario = () => {
                             <button className="add-slot-btn" onClick={addSlot}>
                                 + Agregar Opción
                             </button>
+
+                            <div className="copy-paste-actions">
+                                <button className="copy-btn" onClick={copySlots}>
+                                    📋 Copiar Formato
+                                </button>
+                                <button
+                                    className="paste-btn"
+                                    onClick={pasteSlots}
+                                    disabled={!copiedSlots}
+                                >
+                                    📥 Pegar Formato
+                                </button>
+                            </div>
 
                             <div className="modal-actions">
                                 <button className="save-btn" onClick={saveChanges}>Guardar</button>
