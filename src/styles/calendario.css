@@ -193,13 +193,13 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid #f0f0f0;
-    padding: 25px;
+    padding: 25px !important;
     flex-shrink: 0;
     /* Prevent shrinking */
 }
 
 .modal-body {
-    padding: 25px;
+    padding: 25px !important;
     overflow-y: auto;
     /* Enable vertical scroll */
     flex: 1;
@@ -338,7 +338,7 @@
     font-weight: 600;
     cursor: pointer;
     transition: background 0.2s;
-    margin: 10px 0 20px 0;
+    margin: 10px 0 20px 0 !important;
 }
 
 .add-slot-btn:hover {
