@@ -258,15 +258,20 @@ const Calendario = () => {
             { color: '#E91E63', text: 'Guardia', size: 10, textColor: '#ffffff' }
         ];
 
-        // Secuencia: 2 francos, 4 guardia, 1 franco (total 7 días)
+        // Secuencia: 1 franco, 4 guardia, 2 francos, 4 guardia, 1 franco (total 12 días - patrón 4x2 4x1)
         const sequence = [
             'franco',       // día 1
-            'franco',       // día 2
+            'guardia',      // día 2
             'guardia',      // día 3
             'guardia',      // día 4
             'guardia',      // día 5
-            'guardia',      // día 6
-            'franco'        // día 7
+            'franco',       // día 6
+            'franco',       // día 7
+            'guardia',      // día 8
+            'guardia',      // día 9
+            'guardia',      // día 10
+            'guardia',      // día 11
+            'franco'        // día 12
         ];
 
         let sequenceIndex = 0;
