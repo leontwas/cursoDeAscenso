@@ -350,6 +350,59 @@ const Calendario = () => {
         alert('Esquema 4x1 4x2 Grupo A aplicado a todo el año ' + currentYear);
     };
 
+    const applyScheme4x1_4x2_GrupoC = () => {
+        const newData = {};
+        const franco = [
+            { color: '#90ee90', text: 'Franco', size: 10, textColor: '#000000' }
+        ];
+        const guardia = [
+            { color: '#9C27B0', text: 'Guardia', size: 10, textColor: '#ffffff' }
+        ];
+
+        // Secuencia Grupo C: 1G, 2F, 4G, 1F, 4G, 2F (total 14 días)
+        const sequence = [
+            'guardia',      // día 1
+            'franco',       // día 2
+            'franco',       // día 3
+            'guardia',      // día 4
+            'guardia',      // día 5
+            'guardia',      // día 6
+            'guardia',      // día 7
+            'franco',       // día 8
+            'guardia',      // día 9
+            'guardia',      // día 10
+            'guardia',      // día 11
+            'guardia',      // día 12
+            'franco',       // día 13
+            'franco'        // día 14
+        ];
+
+        let sequenceIndex = 0;
+
+        // Recorrer todos los días del año
+        for (let month = 0; month < 12; month++) {
+            const daysInMonth = getDaysInMonth(month, currentYear);
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dateKey = `${currentYear}-${month}-${day}`;
+                const type = sequence[sequenceIndex % sequence.length];
+
+                if (type === 'franco') {
+                    newData[dateKey] = JSON.parse(JSON.stringify(franco));
+                } else {
+                    newData[dateKey] = JSON.parse(JSON.stringify(guardia));
+                }
+
+                sequenceIndex++;
+            }
+        }
+
+        saveData(newData);
+        localStorage.setItem('calendarScheme', '4x1 4x2 Grupo C');
+        setActiveScheme('4x1 4x2 Grupo C');
+        setBottomMenu(null);
+        alert('Esquema 4x1 4x2 Grupo C aplicado a todo el año ' + currentYear);
+    };
+
     const clearAllCalendar = () => {
         if (window.confirm('¿Estás seguro de que deseas borrar todos los turnos del calendario?')) {
             saveData({});
@@ -573,6 +626,8 @@ const Calendario = () => {
                                         applyScheme4x1_4x2_GrupoB();
                                     } else if (nombre === '4x1 4x2 Grupo A') {
                                         applyScheme4x1_4x2_GrupoA();
+                                    } else if (nombre === '4x1 4x2 Grupo C') {
+                                        applyScheme4x1_4x2_GrupoC();
                                     } else {
                                         setSelectedFormat(slots);
                                         setPaintMode(true);
@@ -599,7 +654,7 @@ const Calendario = () => {
                                     ))}
                                 </div>
                                 <div className="preestablecido-name">{nombre}</div>
-                                {(nombre === '4x1 4x2 Grupo B' || nombre === '4x1 4x2 Grupo A') && (
+                                {(nombre === '4x1 4x2 Grupo B' || nombre === '4x1 4x2 Grupo A' || nombre === '4x1 4x2 Grupo C') && (
                                     <div className="auto-apply-badge">Auto-aplica año completo</div>
                                 )}
                             </div>
