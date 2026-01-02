@@ -359,7 +359,7 @@ const Calendario = () => {
             { color: '#9C27B0', text: 'Guardia', size: 10, textColor: '#ffffff' }
         ];
 
-        // Secuencia Grupo C: 1G, 2F, 4G, 1F, 4G, 2F (total 14 días)
+        // Secuencia Grupo C: 1G, 2F, 4G, 1F, 4G, 2F, 4G, 1F, 4G, 2F, 4G, 1F (total 30 días)
         const sequence = [
             'guardia',      // día 1
             'franco',       // día 2
@@ -374,7 +374,23 @@ const Calendario = () => {
             'guardia',      // día 11
             'guardia',      // día 12
             'franco',       // día 13
-            'franco'        // día 14
+            'franco',       // día 14
+            'guardia',      // día 15
+            'guardia',      // día 16
+            'guardia',      // día 17
+            'guardia',      // día 18
+            'franco',       // día 19
+            'guardia',      // día 20
+            'guardia',      // día 21
+            'guardia',      // día 22
+            'guardia',      // día 23
+            'franco',       // día 24
+            'franco',       // día 25
+            'guardia',      // día 26
+            'guardia',      // día 27
+            'guardia',      // día 28
+            'guardia',      // día 29
+            'franco'        // día 30
         ];
 
         let sequenceIndex = 0;
