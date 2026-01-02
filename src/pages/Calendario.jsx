@@ -359,41 +359,45 @@ const Calendario = () => {
             { color: '#9C27B0', text: 'Guardia', size: 10, textColor: '#ffffff' }
         ];
 
-        // Secuencia Grupo C: Ciclo de 30 días (4G, 2F, 4G, 1F, 4G, 2F, 4G, 1F, 4G, 2F, 4G)
+        // Secuencia Grupo C: Ciclo de 33 días que contiene enero completo más 3 días de febrero
+        // Esto permite que enero día 1 empiece como último de 4G y día 30 sea 1F
         const sequence = [
-            'guardia',      // día 1 - primero de 4G
-            'guardia',      // día 2 - segundo de 4G
-            'guardia',      // día 3 - tercero de 4G
-            'guardia',      // día 4 - cuarto de 4G
-            'franco',       // día 5 - primero de 2F
-            'franco',       // día 6 - segundo de 2F
-            'guardia',      // día 7 - primero de 4G
-            'guardia',      // día 8 - segundo de 4G
-            'guardia',      // día 9 - tercero de 4G
-            'guardia',      // día 10 - cuarto de 4G
-            'franco',       // día 11 - 1F
-            'guardia',      // día 12 - primero de 4G
-            'guardia',      // día 13 - segundo de 4G
-            'guardia',      // día 14 - tercero de 4G
-            'guardia',      // día 15 - cuarto de 4G
-            'franco',       // día 16 - primero de 2F
-            'franco',       // día 17 - segundo de 2F
-            'guardia',      // día 18 - primero de 4G
-            'guardia',      // día 19 - segundo de 4G
-            'guardia',      // día 20 - tercero de 4G
-            'guardia',      // día 21 - cuarto de 4G
-            'franco',       // día 22 - 1F
-            'guardia',      // día 23 - primero de 4G
-            'guardia',      // día 24 - segundo de 4G
-            'guardia',      // día 25 - tercero de 4G
-            'guardia',      // día 26 - cuarto de 4G
-            'franco',       // día 27 - primero de 2F
-            'franco',       // día 28 - segundo de 2F
-            'guardia',      // día 29 - primero de 4G
-            'guardia'       // día 30 - segundo de 4G
+            'guardia',      // pos 0
+            'guardia',      // pos 1
+            'guardia',      // pos 2
+            'guardia',      // pos 3 - ENERO DÍA 1 (último de 4G)
+            'franco',       // pos 4 - ENERO DÍA 2
+            'franco',       // pos 5 - ENERO DÍA 3
+            'guardia',      // pos 6 - ENERO DÍA 4
+            'guardia',      // pos 7
+            'guardia',      // pos 8
+            'guardia',      // pos 9
+            'franco',       // pos 10 - ENERO DÍA 8
+            'guardia',      // pos 11 - ENERO DÍA 9
+            'guardia',      // pos 12
+            'guardia',      // pos 13
+            'guardia',      // pos 14
+            'franco',       // pos 15 - ENERO DÍA 13
+            'franco',       // pos 16 - ENERO DÍA 14
+            'guardia',      // pos 17 - ENERO DÍA 15
+            'guardia',      // pos 18
+            'guardia',      // pos 19
+            'guardia',      // pos 20
+            'franco',       // pos 21 - ENERO DÍA 19
+            'guardia',      // pos 22 - ENERO DÍA 20
+            'guardia',      // pos 23
+            'guardia',      // pos 24
+            'guardia',      // pos 25
+            'franco',       // pos 26 - ENERO DÍA 24
+            'franco',       // pos 27 - ENERO DÍA 25
+            'guardia',      // pos 28 - ENERO DÍA 26
+            'guardia',      // pos 29
+            'guardia',      // pos 30
+            'guardia',      // pos 31
+            'franco'        // pos 32 - ENERO DÍA 30
         ];
 
-        // Enero día 1 debe empezar en la posición 3 del array (cuarto día del bloque 4G anterior = último de ese bloque)
+        // Enero día 1 empieza en la posición 3 del array
         let sequenceIndex = 3;
 
         // Recorrer todos los días del año
