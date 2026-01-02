@@ -23,19 +23,19 @@ const Calendario = () => {
     const preestablecidos = {
         'Tercio I': [
             { color: '#4CAF50', text: 'Tercio I', size: 10, textColor: '#ffffff' },
-            { color: '#81C784', text: 'Mañana', size: 10, textColor: '#000000' }
+            { color: '#81C784', text: 'Rotativo', size: 10, textColor: '#000000' }
         ],
         'Tercio II': [
             { color: '#2196F3', text: 'Tercio II', size: 10, textColor: '#ffffff' },
-            { color: '#64B5F6', text: 'Tarde', size: 10, textColor: '#000000' }
+            { color: '#64B5F6', text: 'Rotativo', size: 10, textColor: '#000000' }
         ],
         'Tercio III': [
             { color: '#FF9800', text: 'Tercio III', size: 10, textColor: '#ffffff' },
-            { color: '#FFB74D', text: 'Noche', size: 10, textColor: '#000000' }
+            { color: '#FFB74D', text: 'Rotativo', size: 10, textColor: '#000000' }
         ],
         'Tercio IV': [
             { color: '#9C27B0', text: 'Tercio IV', size: 10, textColor: '#ffffff' },
-            { color: '#BA68C8', text: 'Rotativo', size: 10, textColor: '#000000' }
+            { color: '#BA68C8', text: 'Franquero', size: 10, textColor: '#000000' }
         ],
         '4x1 4x2 Grupo A': [
             { color: '#F44336', text: '4x1 4x2', size: 10, textColor: '#ffffff' },
@@ -424,6 +424,149 @@ const Calendario = () => {
         alert('Esquema 4x1 4x2 Grupo C aplicado a todo el año ' + currentYear);
     };
 
+    const applySchemeTercioIV = () => {
+        const newData = {};
+        const franco = [
+            { color: '#90ee90', text: 'Franco', size: 10, textColor: '#000000' }
+        ];
+
+        // Horarios fijos por día de la semana con colores diferenciados
+        const horariosPorDia = {
+            1: [ // Lunes
+                { color: '#2196F3', text: '06 a 14 hs', size: 10, textColor: '#ffffff' }
+            ],
+            2: [ // Martes
+                { color: '#2196F3', text: '06 a 14 hs', size: 10, textColor: '#ffffff' }
+            ],
+            3: [ // Miércoles
+                { color: '#FF9800', text: '14 a 22 hs', size: 10, textColor: '#ffffff' }
+            ],
+            4: [ // Jueves
+                { color: '#673AB7', text: '22 a 06 hs', size: 10, textColor: '#ffffff' }
+            ],
+            5: franco, // Viernes
+            6: [ // Sábado
+                { color: '#2196F3', text: '06 a 14 hs', size: 10, textColor: '#ffffff' }
+            ],
+            0: franco  // Domingo
+        };
+
+        // Recorrer todos los días del año
+        for (let month = 0; month < 12; month++) {
+            const daysInMonth = getDaysInMonth(month, currentYear);
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dateKey = `${currentYear}-${month}-${day}`;
+
+                // Obtener el día de la semana (0=Domingo, 1=Lunes, ..., 6=Sábado)
+                const date = new Date(currentYear, month, day);
+                const dayOfWeek = date.getDay();
+
+                // Asignar el horario según el día de la semana
+                newData[dateKey] = JSON.parse(JSON.stringify(horariosPorDia[dayOfWeek]));
+            }
+        }
+
+        saveData(newData);
+        localStorage.setItem('calendarScheme', 'Tercio IV');
+        setActiveScheme('Tercio IV');
+        setBottomMenu(null);
+        alert('Esquema Tercio IV aplicado a todo el año ' + currentYear);
+    };
+
+    const applyScheme12x2x2_GrupoI = () => {
+        const newData = {};
+        const franco = [
+            { color: '#90ee90', text: 'Franco', size: 10, textColor: '#000000' }
+        ];
+        const guardia = [
+            { color: '#00BCD4', text: 'Guardia', size: 10, textColor: '#ffffff' }
+        ];
+
+        // Secuencia 12x2x2 Grupo I: 2G, 2F, 2G, 2F (ciclo de 8 días)
+        // Enero día 1 empieza en segunda guardia (posición 1)
+        const sequence = [
+            'guardia',      // día 1 (segunda guardia del primer bloque)
+            'guardia',      // día 2 (primera guardia del segundo bloque)
+            'franco',       // día 3
+            'franco',       // día 4
+            'guardia',      // día 5
+            'guardia',      // día 6
+            'franco',       // día 7
+            'franco'        // día 8
+        ];
+
+        let sequenceIndex = 0; // Enero día 1 es la segunda guardia (posición 1 del ciclo completo)
+
+        for (let month = 0; month < 12; month++) {
+            const daysInMonth = getDaysInMonth(month, currentYear);
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dateKey = `${currentYear}-${month}-${day}`;
+                const type = sequence[sequenceIndex % sequence.length];
+
+                if (type === 'franco') {
+                    newData[dateKey] = JSON.parse(JSON.stringify(franco));
+                } else {
+                    newData[dateKey] = JSON.parse(JSON.stringify(guardia));
+                }
+
+                sequenceIndex++;
+            }
+        }
+
+        saveData(newData);
+        localStorage.setItem('calendarScheme', '12x2x2 Grupo I');
+        setActiveScheme('12x2x2 Grupo I');
+        setBottomMenu(null);
+        alert('Esquema 12x2x2 Grupo I aplicado a todo el año ' + currentYear);
+    };
+
+    const applyScheme12x2x2_GrupoII = () => {
+        const newData = {};
+        const franco = [
+            { color: '#90ee90', text: 'Franco', size: 10, textColor: '#000000' }
+        ];
+        const guardia = [
+            { color: '#FF5722', text: 'Guardia', size: 10, textColor: '#ffffff' }
+        ];
+
+        // Secuencia 12x2x2 Grupo II: 1F, 2G, 2F, 2G, 1F (ciclo de 8 días)
+        // Enero día 1 empieza en primer franco
+        const sequence = [
+            'franco',       // día 1 (primer franco)
+            'guardia',      // día 2
+            'guardia',      // día 3
+            'franco',       // día 4
+            'franco',       // día 5
+            'guardia',      // día 6
+            'guardia',      // día 7
+            'franco'        // día 8 (cierra ciclo)
+        ];
+
+        let sequenceIndex = 0; // Enero día 1 es el primer franco
+
+        for (let month = 0; month < 12; month++) {
+            const daysInMonth = getDaysInMonth(month, currentYear);
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dateKey = `${currentYear}-${month}-${day}`;
+                const type = sequence[sequenceIndex % sequence.length];
+
+                if (type === 'franco') {
+                    newData[dateKey] = JSON.parse(JSON.stringify(franco));
+                } else {
+                    newData[dateKey] = JSON.parse(JSON.stringify(guardia));
+                }
+
+                sequenceIndex++;
+            }
+        }
+
+        saveData(newData);
+        localStorage.setItem('calendarScheme', '12x2x2 Grupo II');
+        setActiveScheme('12x2x2 Grupo II');
+        setBottomMenu(null);
+        alert('Esquema 12x2x2 Grupo II aplicado a todo el año ' + currentYear);
+    };
+
     const clearAllCalendar = () => {
         if (window.confirm('¿Estás seguro de que deseas borrar todos los turnos del calendario?')) {
             saveData({});
@@ -649,6 +792,12 @@ const Calendario = () => {
                                         applyScheme4x1_4x2_GrupoA();
                                     } else if (nombre === '4x1 4x2 Grupo C') {
                                         applyScheme4x1_4x2_GrupoC();
+                                    } else if (nombre === 'Tercio IV') {
+                                        applySchemeTercioIV();
+                                    } else if (nombre === '12x2x2 Grupo I') {
+                                        applyScheme12x2x2_GrupoI();
+                                    } else if (nombre === '12x2x2 Grupo II') {
+                                        applyScheme12x2x2_GrupoII();
                                     } else {
                                         setSelectedFormat(slots);
                                         setPaintMode(true);
@@ -675,7 +824,7 @@ const Calendario = () => {
                                     ))}
                                 </div>
                                 <div className="preestablecido-name">{nombre}</div>
-                                {(nombre === '4x1 4x2 Grupo B' || nombre === '4x1 4x2 Grupo A' || nombre === '4x1 4x2 Grupo C') && (
+                                {(nombre === '4x1 4x2 Grupo B' || nombre === '4x1 4x2 Grupo A' || nombre === '4x1 4x2 Grupo C' || nombre === 'Tercio IV' || nombre === '12x2x2 Grupo I' || nombre === '12x2x2 Grupo II') && (
                                     <div className="auto-apply-badge">Auto-aplica año completo</div>
                                 )}
                             </div>
