@@ -299,6 +299,57 @@ const Calendario = () => {
         alert('Esquema 4x1 4x2 Grupo B aplicado a todo el año ' + currentYear);
     };
 
+    const applyScheme4x1_4x2_GrupoA = () => {
+        const newData = {};
+        const franco = [
+            { color: '#90ee90', text: 'Franco', size: 10, textColor: '#000000' }
+        ];
+        const guardia = [
+            { color: '#F44336', text: 'Guardia', size: 10, textColor: '#ffffff' }
+        ];
+
+        // Secuencia Grupo A: Empieza en el día 9 del ciclo (últimos 3 días de 4G)
+        // 3G, 1F, 4G, 2F, 4G, 1F (total 11 días - mismo ciclo pero desplazado)
+        const sequence = [
+            'guardia',      // día 1 (día 9 del ciclo base)
+            'guardia',      // día 2 (día 10 del ciclo base)
+            'guardia',      // día 3 (día 11 del ciclo base)
+            'franco',       // día 4 (día 1 del ciclo base)
+            'guardia',      // día 5 (día 2 del ciclo base)
+            'guardia',      // día 6 (día 3 del ciclo base)
+            'guardia',      // día 7 (día 4 del ciclo base)
+            'guardia',      // día 8 (día 5 del ciclo base)
+            'franco',       // día 9 (día 6 del ciclo base)
+            'franco'        // día 10 (día 7 del ciclo base)
+                            // día 11 (día 8 del ciclo base) es guardia, está en posición 0
+        ];
+
+        let sequenceIndex = 0;
+
+        // Recorrer todos los días del año
+        for (let month = 0; month < 12; month++) {
+            const daysInMonth = getDaysInMonth(month, currentYear);
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dateKey = `${currentYear}-${month}-${day}`;
+                const type = sequence[sequenceIndex % sequence.length];
+
+                if (type === 'franco') {
+                    newData[dateKey] = JSON.parse(JSON.stringify(franco));
+                } else {
+                    newData[dateKey] = JSON.parse(JSON.stringify(guardia));
+                }
+
+                sequenceIndex++;
+            }
+        }
+
+        saveData(newData);
+        localStorage.setItem('calendarScheme', '4x1 4x2 Grupo A');
+        setActiveScheme('4x1 4x2 Grupo A');
+        setBottomMenu(null);
+        alert('Esquema 4x1 4x2 Grupo A aplicado a todo el año ' + currentYear);
+    };
+
     const clearAllCalendar = () => {
         if (window.confirm('¿Estás seguro de que deseas borrar todos los turnos del calendario?')) {
             saveData({});
@@ -520,6 +571,8 @@ const Calendario = () => {
                                 onClick={() => {
                                     if (nombre === '4x1 4x2 Grupo B') {
                                         applyScheme4x1_4x2_GrupoB();
+                                    } else if (nombre === '4x1 4x2 Grupo A') {
+                                        applyScheme4x1_4x2_GrupoA();
                                     } else {
                                         setSelectedFormat(slots);
                                         setPaintMode(true);
@@ -546,7 +599,7 @@ const Calendario = () => {
                                     ))}
                                 </div>
                                 <div className="preestablecido-name">{nombre}</div>
-                                {nombre === '4x1 4x2 Grupo B' && (
+                                {(nombre === '4x1 4x2 Grupo B' || nombre === '4x1 4x2 Grupo A') && (
                                     <div className="auto-apply-badge">Auto-aplica año completo</div>
                                 )}
                             </div>
