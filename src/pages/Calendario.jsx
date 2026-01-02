@@ -17,6 +17,7 @@ const Calendario = () => {
     const [selectedFormat, setSelectedFormat] = useState(null);
     const [bottomMenu, setBottomMenu] = useState(null); // 'pintar', 'preestablecidos', 'turnos', null
     const [savedFormats, setSavedFormats] = useState([]);
+    const [activeScheme, setActiveScheme] = useState(() => localStorage.getItem('calendarScheme') || '');
 
     // Esquemas preestablecidos
     const preestablecidos = {
@@ -253,25 +254,19 @@ const Calendario = () => {
         const franco = [
             { color: '#90ee90', text: 'Franco', size: 10, textColor: '#000000' }
         ];
-        const ordinario = [
-            { color: '#E91E63', text: '4x1 4x2', size: 10, textColor: '#ffffff' },
-            { color: '#EC407A', text: 'Grupo B', size: 10, textColor: '#ffffff' }
+        const guardia = [
+            { color: '#E91E63', text: 'Guardia', size: 10, textColor: '#ffffff' }
         ];
 
-        // Secuencia: 1 franco, 4 ordinario, 1 franco, 4 ordinario, 2 franco (total 12 días)
+        // Secuencia: 2 francos, 4 guardia, 1 franco (total 7 días)
         const sequence = [
             'franco',       // día 1
-            'ordinario',    // día 2
-            'ordinario',    // día 3
-            'ordinario',    // día 4
-            'ordinario',    // día 5
-            'franco',       // día 6
-            'ordinario',    // día 7
-            'ordinario',    // día 8
-            'ordinario',    // día 9
-            'ordinario',    // día 10
-            'franco',       // día 11
-            'franco'        // día 12
+            'franco',       // día 2
+            'guardia',      // día 3
+            'guardia',      // día 4
+            'guardia',      // día 5
+            'guardia',      // día 6
+            'franco'        // día 7
         ];
 
         let sequenceIndex = 0;
@@ -286,7 +281,7 @@ const Calendario = () => {
                 if (type === 'franco') {
                     newData[dateKey] = JSON.parse(JSON.stringify(franco));
                 } else {
-                    newData[dateKey] = JSON.parse(JSON.stringify(ordinario));
+                    newData[dateKey] = JSON.parse(JSON.stringify(guardia));
                 }
 
                 sequenceIndex++;
@@ -294,6 +289,8 @@ const Calendario = () => {
         }
 
         saveData(newData);
+        localStorage.setItem('calendarScheme', '4x1 4x2 Grupo B');
+        setActiveScheme('4x1 4x2 Grupo B');
         setBottomMenu(null);
         alert('Esquema 4x1 4x2 Grupo B aplicado a todo el año ' + currentYear);
     };
@@ -301,6 +298,8 @@ const Calendario = () => {
     const clearAllCalendar = () => {
         if (window.confirm('¿Estás seguro de que deseas borrar todos los turnos del calendario?')) {
             saveData({});
+            localStorage.removeItem('calendarScheme');
+            setActiveScheme('');
             alert('Calendario limpiado correctamente');
         }
     };
@@ -391,7 +390,10 @@ const Calendario = () => {
 
                 <div className="calendar-header">
                     <button className="nav-btn" onClick={() => changeMonth(-1)}>&lt;</button>
-                    <h2>{months[currentMonth]} {currentYear}</h2>
+                    <div className="month-title-wrapper">
+                        <h2>{months[currentMonth]} {currentYear}</h2>
+                        {activeScheme && <div className="active-scheme-label">{activeScheme}</div>}
+                    </div>
                     <button className="nav-btn" onClick={() => changeMonth(1)}>&gt;</button>
                 </div>
 
