@@ -248,6 +248,63 @@ const Calendario = () => {
         setBottomMenu(null);
     };
 
+    const applyScheme4x1_4x2_GrupoB = () => {
+        const newData = {};
+        const franco = [
+            { color: '#90ee90', text: 'Franco', size: 10, textColor: '#000000' }
+        ];
+        const ordinario = [
+            { color: '#E91E63', text: '4x1 4x2', size: 10, textColor: '#ffffff' },
+            { color: '#EC407A', text: 'Grupo B', size: 10, textColor: '#ffffff' }
+        ];
+
+        // Secuencia: 1 franco, 4 ordinario, 1 franco, 4 ordinario, 2 franco (total 12 días)
+        const sequence = [
+            'franco',       // día 1
+            'ordinario',    // día 2
+            'ordinario',    // día 3
+            'ordinario',    // día 4
+            'ordinario',    // día 5
+            'franco',       // día 6
+            'ordinario',    // día 7
+            'ordinario',    // día 8
+            'ordinario',    // día 9
+            'ordinario',    // día 10
+            'franco',       // día 11
+            'franco'        // día 12
+        ];
+
+        let sequenceIndex = 0;
+
+        // Recorrer todos los días del año
+        for (let month = 0; month < 12; month++) {
+            const daysInMonth = getDaysInMonth(month, currentYear);
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dateKey = `${currentYear}-${month}-${day}`;
+                const type = sequence[sequenceIndex % sequence.length];
+
+                if (type === 'franco') {
+                    newData[dateKey] = JSON.parse(JSON.stringify(franco));
+                } else {
+                    newData[dateKey] = JSON.parse(JSON.stringify(ordinario));
+                }
+
+                sequenceIndex++;
+            }
+        }
+
+        saveData(newData);
+        setBottomMenu(null);
+        alert('Esquema 4x1 4x2 Grupo B aplicado a todo el año ' + currentYear);
+    };
+
+    const clearAllCalendar = () => {
+        if (window.confirm('¿Estás seguro de que deseas borrar todos los turnos del calendario?')) {
+            saveData({});
+            alert('Calendario limpiado correctamente');
+        }
+    };
+
     const renderCalendar = () => {
         const daysInMonth = getDaysInMonth(currentMonth, currentYear);
         const firstDay = getFirstDayOfMonth(currentMonth, currentYear);
@@ -443,15 +500,25 @@ const Calendario = () => {
             {/* Preestablecidos Panel */}
             {bottomMenu === 'preestablecidos' && (
                 <div className="preestablecidos-panel">
+                    <div className="preestablecidos-header">
+                        <h3>ESQUEMAS PREESTABLECIDOS</h3>
+                        <button className="clear-calendar-btn" onClick={clearAllCalendar}>
+                            🗑️ Limpiar Calendario
+                        </button>
+                    </div>
                     <div className="preestablecidos-grid">
                         {Object.entries(preestablecidos).map(([nombre, slots]) => (
                             <div
                                 key={nombre}
                                 className="preestablecido-item"
                                 onClick={() => {
-                                    setSelectedFormat(slots);
-                                    setPaintMode(true);
-                                    setBottomMenu('pintar');
+                                    if (nombre === '4x1 4x2 Grupo B') {
+                                        applyScheme4x1_4x2_GrupoB();
+                                    } else {
+                                        setSelectedFormat(slots);
+                                        setPaintMode(true);
+                                        setBottomMenu('pintar');
+                                    }
                                 }}
                             >
                                 <div className="preestablecido-preview">
@@ -473,6 +540,9 @@ const Calendario = () => {
                                     ))}
                                 </div>
                                 <div className="preestablecido-name">{nombre}</div>
+                                {nombre === '4x1 4x2 Grupo B' && (
+                                    <div className="auto-apply-badge">Auto-aplica año completo</div>
+                                )}
                             </div>
                         ))}
                     </div>

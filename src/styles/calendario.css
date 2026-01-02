@@ -597,15 +597,49 @@
 .preestablecidos-panel {
     background: #f8f9fa;
     border-top: 1px solid #bdc3c7;
-    padding: 15px;
-    max-height: 350px;
+    max-height: 450px;
     overflow-y: auto;
+}
+
+.preestablecidos-header {
+    background: #34495e;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.preestablecidos-header h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.clear-calendar-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+    font-size: 0.9rem;
+}
+
+.clear-calendar-btn:hover {
+    background: #c0392b;
 }
 
 .preestablecidos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 12px;
+    padding: 15px;
 }
 
 .preestablecido-item {
@@ -616,6 +650,7 @@
     cursor: pointer;
     transition: all 0.2s;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .preestablecido-item:hover {
@@ -634,6 +669,17 @@
     font-weight: 600;
     color: #34495e;
     margin-top: 5px;
+}
+
+.auto-apply-badge {
+    background: #27ae60;
+    color: white;
+    font-size: 0.7rem;
+    padding: 3px 6px;
+    border-radius: 3px;
+    text-align: center;
+    margin-top: 5px;
+    font-weight: 600;
 }
 
 /* Shifts Panel */
@@ -734,12 +780,24 @@
     }
 
     .preestablecidos-panel {
-        max-height: 300px;
+        max-height: 350px;
+    }
+
+    .preestablecidos-header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+    }
+
+    .clear-calendar-btn {
+        width: 100%;
+        font-size: 0.85rem;
     }
 
     .preestablecidos-grid {
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
         gap: 8px;
+        padding: 10px;
     }
 
     .shifts-header {
