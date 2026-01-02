@@ -309,19 +309,19 @@ const Calendario = () => {
         ];
 
         // Secuencia Grupo A: Empieza en el día 9 del ciclo (últimos 3 días de 4G)
-        // 3G, 1F, 4G, 2F, 4G, 1F (total 11 días - mismo ciclo pero desplazado)
+        // 3G, 1F, 4G, 2F, 1G (total 11 días - mismo ciclo pero desplazado)
         const sequence = [
-            'guardia',      // día 1 (día 9 del ciclo base)
-            'guardia',      // día 2 (día 10 del ciclo base)
-            'guardia',      // día 3 (día 11 del ciclo base)
-            'franco',       // día 4 (día 1 del ciclo base)
-            'guardia',      // día 5 (día 2 del ciclo base)
-            'guardia',      // día 6 (día 3 del ciclo base)
-            'guardia',      // día 7 (día 4 del ciclo base)
-            'guardia',      // día 8 (día 5 del ciclo base)
-            'franco',       // día 9 (día 6 del ciclo base)
-            'franco'        // día 10 (día 7 del ciclo base)
-                            // día 11 (día 8 del ciclo base) es guardia, está en posición 0
+            'guardia',      // día 1
+            'guardia',      // día 2
+            'guardia',      // día 3
+            'franco',       // día 4
+            'guardia',      // día 5
+            'guardia',      // día 6
+            'guardia',      // día 7
+            'guardia',      // día 8
+            'franco',       // día 9
+            'franco',       // día 10
+            'guardia'       // día 11
         ];
 
         let sequenceIndex = 0;
