@@ -258,7 +258,7 @@ const Calendario = () => {
             { color: '#E91E63', text: 'Guardia', size: 10, textColor: '#ffffff' }
         ];
 
-        // Secuencia: 1F, 4G, 2F, 4G, 1F, 4G, 2F, 4G, 1F (total 23 días - patrón completo)
+        // Secuencia 4x2 4x1: 1F, 4G, 2F, 4G (total 11 días - ciclo completo)
         const sequence = [
             'franco',       // día 1
             'guardia',      // día 2
@@ -270,19 +270,7 @@ const Calendario = () => {
             'guardia',      // día 8
             'guardia',      // día 9
             'guardia',      // día 10
-            'guardia',      // día 11
-            'franco',       // día 12
-            'guardia',      // día 13
-            'guardia',      // día 14
-            'guardia',      // día 15
-            'guardia',      // día 16
-            'franco',       // día 17
-            'franco',       // día 18
-            'guardia',      // día 19
-            'guardia',      // día 20
-            'guardia',      // día 21
-            'guardia',      // día 22
-            'franco'        // día 23
+            'guardia'       // día 11
         ];
 
         let sequenceIndex = 0;
