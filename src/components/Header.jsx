@@ -88,7 +88,7 @@ const Header = () => {
                 </li>
                 <li>
                   <a href="https://drive.google.com/drive/folders/1_un6GDtup9WG25F0vbPhtPgIy9sgozWx?usp=drive_link" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
-                    Cartillas de cursos de ascenso
+                    Cartillas de ascenso
                   </a>
                 </li>
                 <li>
@@ -98,7 +98,7 @@ const Header = () => {
                 </li>
                 <li>
                   <a href="https://drive.google.com/drive/folders/1Huaq0SJyAM8VJttjHm1WIzL17it5FGPj?usp=drive_link" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
-                    Leyes, códigos y reglamentos
+                    Leyes y códigos
                   </a>
                 </li>
                 <li>
