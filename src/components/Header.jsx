@@ -5,6 +5,7 @@ import '../styles/header.css';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isDriveDropdownOpen, setIsDriveDropdownOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -13,10 +14,15 @@ const Header = () => {
   const closeMenu = () => {
     setIsMenuOpen(false);
     setIsDropdownOpen(false);
+    setIsDriveDropdownOpen(false);
   };
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const toggleDriveDropdown = () => {
+    setIsDriveDropdownOpen(!isDriveDropdownOpen);
   };
 
   return (
@@ -69,35 +75,43 @@ const Header = () => {
                 Trofeos
               </NavLink>
             </li>
-            <li>
-              <a href="https://drive.google.com/drive/folders/1_un6GDtup9WG25F0vbPhtPgIy9sgozWx?usp=drive_link" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
-                Cartillas de Ascenso
-              </a>
-            </li>
-            <li>
-              <a href="https://drive.google.com/drive/folders/1vc8WJwWjhBtW6QcSOFQ4DpRQZsJFLXdk?usp=drive_link" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
-                Notas
-              </a>
-            </li>
-            <li>
-              <a href="https://drive.google.com/drive/folders/17DqSgI8YgyrWeRp5vRtIpu6RmFKeqFHF?usp=drive_link" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
-                Actas
-              </a>
-            </li>
-            <li>
-              <a href="https://drive.google.com/drive/folders/1Huaq0SJyAM8VJttjHm1WIzL17it5FGPj?usp=drive_link" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
-                Legislación
-              </a>
-            </li>
-            <li>
-              <a href="https://drive.google.com/drive/folders/1K8NO3R-RP-Lgj9p7jAE9lOf3czCdgzKo?usp=drive_link" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
-                Turnos Judiciales
-              </a>
-            </li>
-            <li>
-              <a href="https://drive.google.com/drive/folders/1tt-mpj7RCWij_o97jNAMgcmaC5oC7ll3?usp=sharing" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
-                Protocolos
-              </a>
+            <li className={`dropdown ${isDriveDropdownOpen ? 'active' : ''}`}>
+              <button className="dropdown-toggle" onClick={toggleDriveDropdown}>
+                Carpetas Drive
+                <span className="dropdown-arrow">▼</span>
+              </button>
+              <ul className="dropdown-menu">
+                <li>
+                  <a href="https://drive.google.com/drive/folders/17DqSgI8YgyrWeRp5vRtIpu6RmFKeqFHF?usp=drive_link" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
+                    Actas en pdf
+                  </a>
+                </li>
+                <li>
+                  <a href="https://drive.google.com/drive/folders/1_un6GDtup9WG25F0vbPhtPgIy9sgozWx?usp=drive_link" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
+                    Cartillas de cursos de ascenso
+                  </a>
+                </li>
+                <li>
+                  <a href="https://drive.google.com/drive/folders/1vc8WJwWjhBtW6QcSOFQ4DpRQZsJFLXdk?usp=drive_link" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
+                    Notas y solicitudes en pdf
+                  </a>
+                </li>
+                <li>
+                  <a href="https://drive.google.com/drive/folders/1Huaq0SJyAM8VJttjHm1WIzL17it5FGPj?usp=drive_link" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
+                    Leyes, códigos y reglamentos
+                  </a>
+                </li>
+                <li>
+                  <a href="https://drive.google.com/drive/folders/1tt-mpj7RCWij_o97jNAMgcmaC5oC7ll3?usp=sharing" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
+                    Protocolos
+                  </a>
+                </li>
+                <li>
+                  <a href="https://drive.google.com/drive/folders/1K8NO3R-RP-Lgj9p7jAE9lOf3czCdgzKo?usp=drive_link" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
+                    Turnos judiciales
+                  </a>
+                </li>
+              </ul>
             </li>
             <li>
               <NavLink to="/calendario" className={({ isActive }) => isActive ? 'active' : ''} onClick={closeMenu}>
