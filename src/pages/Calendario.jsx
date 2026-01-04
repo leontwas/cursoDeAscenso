@@ -703,81 +703,76 @@ const Calendario = () => {
         alert('Esquema Tercio II aplicado a todo el año ' + currentYear);
     };
 
-const applySchemeTercioIII = () => {
-    const newData = {};
+    const applySchemeTercioIII = () => {
+        const newData = {};
 
-    const franco = [{ color: '#90ee90', text: 'Franco', size: 10, textColor: '#000000' }];
-    const mañana = [{ color: '#1565C0', text: '06 a 14 hs', size: 10, textColor: '#ffffff' }];
-    const tarde  = [{ color: '#E65100', text: '14 a 22 hs', size: 10, textColor: '#ffffff' }];
-    const noche  = [{ color: '#4A148C', text: '22 a 06 hs', size: 10, textColor: '#ffffff' }];
+        const franco = [{ color: '#90ee90', text: 'Franco', size: 10, textColor: '#000000' }];
+        const mañana = [{ color: '#1565C0', text: '06 a 14 hs', size: 10, textColor: '#ffffff' }];
+        const tarde = [{ color: '#E65100', text: '14 a 22 hs', size: 10, textColor: '#ffffff' }];
+        const noche = [{ color: '#4A148C', text: '22 a 06 hs', size: 10, textColor: '#ffffff' }];
 
-    /**
-     * CICLO REAL TERCIO III (30 días)
-     */
-    const sequence = [
-        tarde, tarde,          // 1–2
-        noche,                 // 3
-        franco,                // 4
-        noche, noche,          // 5–6
-        noche,                 // 7 (domingo → 18–06)
-        noche, noche,          // 8–9
-        franco,                // 10
-        tarde, tarde,          // 11–12
-        franco, franco, franco, franco, // 13–16
-        mañana, mañana, mañana, mañana, // 17–20
-        mañana,                // 21 (domingo → 06–18)
-        tarde, tarde,          // 22–23
-        noche,                 // 24
-        franco,                // 25
-        noche, noche,          // 26–27
-        noche,                 // 28 (domingo → 18–06)
-        noche, noche           // 29–30
-    ];
+        // Secuencia Tercio III: mismo ciclo de 21 días que Tercio I y II
+        const sequence = [
+            franco,                                                                           // posición 0
+            [{ color: '#4A148C', text: '22 a 06 hs', size: 10, textColor: '#ffffff' }],      // posición 1
+            [{ color: '#4A148C', text: '22 a 06 hs', size: 10, textColor: '#ffffff' }],      // posición 2
+            [{ color: '#4A148C', text: '22 a 06 hs', size: 10, textColor: '#ffffff' }],      // posición 3
+            [{ color: '#4A148C', text: '22 a 06 hs', size: 10, textColor: '#ffffff' }],      // posición 4
+            [{ color: '#4A148C', text: '22 a 06 hs', size: 10, textColor: '#ffffff' }],      // posición 5
+            franco,                                                                           // posición 6
+            [{ color: '#E65100', text: '14 a 22 hs', size: 10, textColor: '#ffffff' }],      // posición 7
+            [{ color: '#E65100', text: '14 a 22 hs', size: 10, textColor: '#ffffff' }],      // posición 8
+            franco,                                                                           // posición 9
+            franco,                                                                           // posición 10
+            franco,                                                                           // posición 11
+            franco,                                                                           // posición 12
+            [{ color: '#1565C0', text: '06 a 14 hs', size: 10, textColor: '#ffffff' }],      // posición 13
+            [{ color: '#1565C0', text: '06 a 14 hs', size: 10, textColor: '#ffffff' }],      // posición 14
+            [{ color: '#1565C0', text: '06 a 14 hs', size: 10, textColor: '#ffffff' }],      // posición 15
+            [{ color: '#1565C0', text: '06 a 14 hs', size: 10, textColor: '#ffffff' }],      // posición 16
+            [{ color: '#1565C0', text: '06 a 14 hs', size: 10, textColor: '#ffffff' }],      // posición 17
+            [{ color: '#E65100', text: '14 a 22 hs', size: 10, textColor: '#ffffff' }],      // posición 18
+            [{ color: '#E65100', text: '14 a 22 hs', size: 10, textColor: '#ffffff' }],      // posición 19
+            [{ color: '#4A148C', text: '22 a 06 hs', size: 10, textColor: '#ffffff' }]       // posición 20
+        ];
 
-    let sequenceIndex = 0;
+        let sequenceIndex = 7; // Enero día 1 empieza en posición 7 (14 a 22 hs)
 
-    for (let month = 0; month < 12; month++) {
-        const daysInMonth = getDaysInMonth(month, currentYear);
+        for (let month = 0; month < 12; month++) {
+            const daysInMonth = getDaysInMonth(month, currentYear);
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dateKey = `${currentYear}-${month}-${day}`;
+                const date = new Date(currentYear, month, day);
+                const dayOfWeek = date.getDay(); // 0 = domingo
 
-        for (let day = 1; day <= daysInMonth; day++) {
-            const dateKey = `${currentYear}-${month}-${day}`;
-            const date = new Date(currentYear, month, day);
-            const dayOfWeek = date.getDay(); // 0 = domingo
+                let slots = JSON.parse(JSON.stringify(sequence[sequenceIndex % sequence.length]));
 
-            let slots = JSON.parse(
-                JSON.stringify(sequence[sequenceIndex % sequence.length])
-            );
+                // Ajuste domingos
+                if (dayOfWeek === 0 && slots[0].text !== 'Franco') {
+                    const baseShift = slots[0].text;
 
-            // Ajuste domingos
-            if (dayOfWeek === 0 && slots[0].text !== 'Franco') {
-                if (slots[0].text === '06 a 14 hs') {
-                    slots = [{
-                        color: '#0D47A1',
-                        text: '06 a 18 hs',
-                        size: 10,
-                        textColor: '#ffffff'
-                    }];
-                } else if (slots[0].text === '22 a 06 hs') {
-                    slots = [{
-                        color: '#6A1B9A',
-                        text: '18 a 06 hs',
-                        size: 10,
-                        textColor: '#ffffff'
-                    }];
+                    // Determinar qué turno de 12 horas corresponde según el turno base
+                    if (baseShift === '06 a 14 hs' || baseShift === '14 a 22 hs') {
+                        // Turno de día o tarde → 06 a 18 hs
+                        slots = [{ color: '#0D47A1', text: '06 a 18 hs', size: 10, textColor: '#ffffff' }];
+                    } else if (baseShift === '22 a 06 hs') {
+                        // Turno de noche → 18 a 06 hs
+                        slots = [{ color: '#6A1B9A', text: '18 a 06 hs', size: 10, textColor: '#ffffff' }];
+                    }
                 }
+
+                newData[dateKey] = slots;
+                sequenceIndex++;
             }
-
-            newData[dateKey] = slots;
-            sequenceIndex++;
         }
-    }
 
-    saveData(newData);
-    localStorage.setItem('calendarScheme', 'Tercio III');
-    setActiveScheme('Tercio III');
-    setBottomMenu(null);
-    alert('Esquema Tercio III aplicado correctamente para ' + currentYear);
-};
+        saveData(newData);
+        localStorage.setItem('calendarScheme', 'Tercio III');
+        setActiveScheme('Tercio III');
+        setBottomMenu(null);
+        alert('Esquema Tercio III aplicado correctamente para ' + currentYear);
+    };
+
 
     const clearAllCalendar = () => {
         if (window.confirm('¿Estás seguro de que deseas borrar todos los turnos del calendario?')) {
@@ -1116,8 +1111,8 @@ const applySchemeTercioIII = () => {
                                 {selectedDate.key === 'new-shift'
                                     ? 'Crear Nuevo Turno'
                                     : selectedDate.key.startsWith('edit-')
-                                    ? 'Editar Turno'
-                                    : `Editar ${selectedDate.day} de ${months[selectedDate.month]} ${selectedDate.year}`
+                                        ? 'Editar Turno'
+                                        : `Editar ${selectedDate.day} de ${months[selectedDate.month]} ${selectedDate.year}`
                                 }
                             </h3>
                             <button className="close-btn" onClick={closeModal}>&times;</button>
