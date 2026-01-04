@@ -573,46 +573,57 @@ const Calendario = () => {
             { color: '#90ee90', text: 'Franco', size: 10, textColor: '#000000' }
         ];
 
-        // Secuencia Tercio I: ciclo de 28 días
+        // Secuencia Tercio I: ciclo de 21 días (sin domingos específicos)
         const sequence = [
-            franco,                                                                           // día 1
-            [{ color: '#4A148C', text: '22 a 06 hs', size: 10, textColor: '#ffffff' }],      // día 2
-            [{ color: '#4A148C', text: '22 a 06 hs', size: 10, textColor: '#ffffff' }],      // día 3
-            [{ color: '#6A1B9A', text: '18 a 06 hs', size: 10, textColor: '#ffffff' }],      // día 4 (domingo)
-            [{ color: '#4A148C', text: '22 a 06 hs', size: 10, textColor: '#ffffff' }],      // día 5
-            [{ color: '#4A148C', text: '22 a 06 hs', size: 10, textColor: '#ffffff' }],      // día 6
-            franco,                                                                           // día 7
-            [{ color: '#E65100', text: '14 a 22 hs', size: 10, textColor: '#ffffff' }],      // día 8
-            [{ color: '#E65100', text: '14 a 22 hs', size: 10, textColor: '#ffffff' }],      // día 9
-            franco,                                                                           // día 10
-            franco,                                                                           // día 11
-            franco,                                                                           // día 12
-            franco,                                                                           // día 13
-            [{ color: '#1565C0', text: '06 a 14 hs', size: 10, textColor: '#ffffff' }],      // día 14
-            [{ color: '#1565C0', text: '06 a 14 hs', size: 10, textColor: '#ffffff' }],      // día 15
-            [{ color: '#1565C0', text: '06 a 14 hs', size: 10, textColor: '#ffffff' }],      // día 16
-            [{ color: '#1565C0', text: '06 a 14 hs', size: 10, textColor: '#ffffff' }],      // día 17
-            [{ color: '#0D47A1', text: '06 a 18 hs', size: 10, textColor: '#ffffff' }],      // día 18 (domingo)
-            [{ color: '#E65100', text: '14 a 22 hs', size: 10, textColor: '#ffffff' }],      // día 19
-            [{ color: '#E65100', text: '14 a 22 hs', size: 10, textColor: '#ffffff' }],      // día 20
-            [{ color: '#4A148C', text: '22 a 06 hs', size: 10, textColor: '#ffffff' }],      // día 21
-            franco,                                                                           // día 22
-            [{ color: '#4A148C', text: '22 a 06 hs', size: 10, textColor: '#ffffff' }],      // día 23
-            [{ color: '#4A148C', text: '22 a 06 hs', size: 10, textColor: '#ffffff' }],      // día 24
-            [{ color: '#6A1B9A', text: '18 a 06 hs', size: 10, textColor: '#ffffff' }],      // día 25 (domingo)
-            [{ color: '#4A148C', text: '22 a 06 hs', size: 10, textColor: '#ffffff' }],      // día 26
-            [{ color: '#4A148C', text: '22 a 06 hs', size: 10, textColor: '#ffffff' }],      // día 27
-            franco                                                                            // día 28
+            franco,                                                                           // posición 0
+            [{ color: '#4A148C', text: '22 a 06 hs', size: 10, textColor: '#ffffff' }],      // posición 1
+            [{ color: '#4A148C', text: '22 a 06 hs', size: 10, textColor: '#ffffff' }],      // posición 2
+            [{ color: '#4A148C', text: '22 a 06 hs', size: 10, textColor: '#ffffff' }],      // posición 3
+            [{ color: '#4A148C', text: '22 a 06 hs', size: 10, textColor: '#ffffff' }],      // posición 4
+            [{ color: '#4A148C', text: '22 a 06 hs', size: 10, textColor: '#ffffff' }],      // posición 5
+            franco,                                                                           // posición 6
+            [{ color: '#E65100', text: '14 a 22 hs', size: 10, textColor: '#ffffff' }],      // posición 7
+            [{ color: '#E65100', text: '14 a 22 hs', size: 10, textColor: '#ffffff' }],      // posición 8
+            franco,                                                                           // posición 9
+            franco,                                                                           // posición 10
+            franco,                                                                           // posición 11
+            franco,                                                                           // posición 12
+            [{ color: '#1565C0', text: '06 a 14 hs', size: 10, textColor: '#ffffff' }],      // posición 13
+            [{ color: '#1565C0', text: '06 a 14 hs', size: 10, textColor: '#ffffff' }],      // posición 14
+            [{ color: '#1565C0', text: '06 a 14 hs', size: 10, textColor: '#ffffff' }],      // posición 15
+            [{ color: '#1565C0', text: '06 a 14 hs', size: 10, textColor: '#ffffff' }],      // posición 16
+            [{ color: '#1565C0', text: '06 a 14 hs', size: 10, textColor: '#ffffff' }],      // posición 17
+            [{ color: '#E65100', text: '14 a 22 hs', size: 10, textColor: '#ffffff' }],      // posición 18
+            [{ color: '#E65100', text: '14 a 22 hs', size: 10, textColor: '#ffffff' }],      // posición 19
+            [{ color: '#4A148C', text: '22 a 06 hs', size: 10, textColor: '#ffffff' }]       // posición 20
         ];
 
-        let sequenceIndex = 0; // Enero día 1 empieza en posición 0
+        let sequenceIndex = 0; // Enero día 1 empieza en posición 0 del ciclo
 
         for (let month = 0; month < 12; month++) {
             const daysInMonth = getDaysInMonth(month, currentYear);
             for (let day = 1; day <= daysInMonth; day++) {
                 const dateKey = `${currentYear}-${month}-${day}`;
-                const slots = sequence[sequenceIndex % sequence.length];
-                newData[dateKey] = JSON.parse(JSON.stringify(slots));
+                const date = new Date(currentYear, month, day);
+                const dayOfWeek = date.getDay(); // 0 = domingo
+
+                let slots = JSON.parse(JSON.stringify(sequence[sequenceIndex % sequence.length]));
+
+                // Si es domingo y está trabajando (no es franco), aplicar turno de 12 horas
+                if (dayOfWeek === 0 && slots[0].text !== 'Franco') {
+                    const baseShift = slots[0].text;
+
+                    // Determinar qué turno de 12 horas corresponde según el turno base
+                    if (baseShift === '06 a 14 hs' || baseShift === '14 a 22 hs') {
+                        // Turno de día o tarde → 06 a 18 hs
+                        slots = [{ color: '#0D47A1', text: '06 a 18 hs', size: 10, textColor: '#ffffff' }];
+                    } else if (baseShift === '22 a 06 hs') {
+                        // Turno de noche → 18 a 06 hs
+                        slots = [{ color: '#6A1B9A', text: '18 a 06 hs', size: 10, textColor: '#ffffff' }];
+                    }
+                }
+
+                newData[dateKey] = slots;
                 sequenceIndex++;
             }
         }
@@ -623,6 +634,150 @@ const Calendario = () => {
         setBottomMenu(null);
         alert('Esquema Tercio I aplicado a todo el año ' + currentYear);
     };
+
+    const applySchemeTercioII = () => {
+        const newData = {};
+        const franco = [
+            { color: '#90ee90', text: 'Franco', size: 10, textColor: '#000000' }
+        ];
+
+        // Secuencia Tercio II: ciclo de 21 días (sin domingos específicos)
+        const sequence = [
+            [{ color: '#1565C0', text: '06 a 14 hs', size: 10, textColor: '#ffffff' }],      // posición 0
+            [{ color: '#1565C0', text: '06 a 14 hs', size: 10, textColor: '#ffffff' }],      // posición 1
+            [{ color: '#1565C0', text: '06 a 14 hs', size: 10, textColor: '#ffffff' }],      // posición 2
+            [{ color: '#1565C0', text: '06 a 14 hs', size: 10, textColor: '#ffffff' }],      // posición 3
+            [{ color: '#E65100', text: '14 a 22 hs', size: 10, textColor: '#ffffff' }],      // posición 4
+            [{ color: '#E65100', text: '14 a 22 hs', size: 10, textColor: '#ffffff' }],      // posición 5
+            [{ color: '#4A148C', text: '22 a 06 hs', size: 10, textColor: '#ffffff' }],      // posición 6
+            franco,                                                                           // posición 7
+            [{ color: '#4A148C', text: '22 a 06 hs', size: 10, textColor: '#ffffff' }],      // posición 8
+            [{ color: '#4A148C', text: '22 a 06 hs', size: 10, textColor: '#ffffff' }],      // posición 9
+            [{ color: '#4A148C', text: '22 a 06 hs', size: 10, textColor: '#ffffff' }],      // posición 10
+            [{ color: '#4A148C', text: '22 a 06 hs', size: 10, textColor: '#ffffff' }],      // posición 11
+            [{ color: '#4A148C', text: '22 a 06 hs', size: 10, textColor: '#ffffff' }],      // posición 12
+            franco,                                                                           // posición 13
+            [{ color: '#E65100', text: '14 a 22 hs', size: 10, textColor: '#ffffff' }],      // posición 14
+            [{ color: '#E65100', text: '14 a 22 hs', size: 10, textColor: '#ffffff' }],      // posición 15
+            franco,                                                                           // posición 16
+            franco,                                                                           // posición 17
+            franco,                                                                           // posición 18
+            franco,                                                                           // posición 19
+            [{ color: '#1565C0', text: '06 a 14 hs', size: 10, textColor: '#ffffff' }]       // posición 20
+        ];
+
+        let sequenceIndex = 0; // Enero día 1 empieza en posición 0
+
+        for (let month = 0; month < 12; month++) {
+            const daysInMonth = getDaysInMonth(month, currentYear);
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dateKey = `${currentYear}-${month}-${day}`;
+                const date = new Date(currentYear, month, day);
+                const dayOfWeek = date.getDay(); // 0 = domingo
+
+                let slots = JSON.parse(JSON.stringify(sequence[sequenceIndex % sequence.length]));
+
+                // Si es domingo y está trabajando (no es franco), aplicar turno de 12 horas
+                if (dayOfWeek === 0 && slots[0].text !== 'Franco') {
+                    const baseShift = slots[0].text;
+
+                    // Determinar qué turno de 12 horas corresponde según el turno base
+                    if (baseShift === '06 a 14 hs' || baseShift === '14 a 22 hs') {
+                        // Turno de día o tarde → 06 a 18 hs
+                        slots = [{ color: '#0D47A1', text: '06 a 18 hs', size: 10, textColor: '#ffffff' }];
+                    } else if (baseShift === '22 a 06 hs') {
+                        // Turno de noche → 18 a 06 hs
+                        slots = [{ color: '#6A1B9A', text: '18 a 06 hs', size: 10, textColor: '#ffffff' }];
+                    }
+                }
+
+                newData[dateKey] = slots;
+                sequenceIndex++;
+            }
+        }
+
+        saveData(newData);
+        localStorage.setItem('calendarScheme', 'Tercio II');
+        setActiveScheme('Tercio II');
+        setBottomMenu(null);
+        alert('Esquema Tercio II aplicado a todo el año ' + currentYear);
+    };
+
+const applySchemeTercioIII = () => {
+    const newData = {};
+
+    const franco = [{ color: '#90ee90', text: 'Franco', size: 10, textColor: '#000000' }];
+    const mañana = [{ color: '#1565C0', text: '06 a 14 hs', size: 10, textColor: '#ffffff' }];
+    const tarde  = [{ color: '#E65100', text: '14 a 22 hs', size: 10, textColor: '#ffffff' }];
+    const noche  = [{ color: '#4A148C', text: '22 a 06 hs', size: 10, textColor: '#ffffff' }];
+
+    /**
+     * CICLO REAL TERCIO III (30 días)
+     */
+    const sequence = [
+        tarde, tarde,          // 1–2
+        noche,                 // 3
+        franco,                // 4
+        noche, noche,          // 5–6
+        noche,                 // 7 (domingo → 18–06)
+        noche, noche,          // 8–9
+        franco,                // 10
+        tarde, tarde,          // 11–12
+        franco, franco, franco, franco, // 13–16
+        mañana, mañana, mañana, mañana, // 17–20
+        mañana,                // 21 (domingo → 06–18)
+        tarde, tarde,          // 22–23
+        noche,                 // 24
+        franco,                // 25
+        noche, noche,          // 26–27
+        noche,                 // 28 (domingo → 18–06)
+        noche, noche           // 29–30
+    ];
+
+    let sequenceIndex = 0;
+
+    for (let month = 0; month < 12; month++) {
+        const daysInMonth = getDaysInMonth(month, currentYear);
+
+        for (let day = 1; day <= daysInMonth; day++) {
+            const dateKey = `${currentYear}-${month}-${day}`;
+            const date = new Date(currentYear, month, day);
+            const dayOfWeek = date.getDay(); // 0 = domingo
+
+            let slots = JSON.parse(
+                JSON.stringify(sequence[sequenceIndex % sequence.length])
+            );
+
+            // Ajuste domingos
+            if (dayOfWeek === 0 && slots[0].text !== 'Franco') {
+                if (slots[0].text === '06 a 14 hs') {
+                    slots = [{
+                        color: '#0D47A1',
+                        text: '06 a 18 hs',
+                        size: 10,
+                        textColor: '#ffffff'
+                    }];
+                } else if (slots[0].text === '22 a 06 hs') {
+                    slots = [{
+                        color: '#6A1B9A',
+                        text: '18 a 06 hs',
+                        size: 10,
+                        textColor: '#ffffff'
+                    }];
+                }
+            }
+
+            newData[dateKey] = slots;
+            sequenceIndex++;
+        }
+    }
+
+    saveData(newData);
+    localStorage.setItem('calendarScheme', 'Tercio III');
+    setActiveScheme('Tercio III');
+    setBottomMenu(null);
+    alert('Esquema Tercio III aplicado correctamente para ' + currentYear);
+};
 
     const clearAllCalendar = () => {
         if (window.confirm('¿Estás seguro de que deseas borrar todos los turnos del calendario?')) {
@@ -851,6 +1006,10 @@ const Calendario = () => {
                                         applyScheme4x1_4x2_GrupoC();
                                     } else if (nombre === 'Tercio I') {
                                         applySchemeTercioI();
+                                    } else if (nombre === 'Tercio II') {
+                                        applySchemeTercioII();
+                                    } else if (nombre === 'Tercio III') {
+                                        applySchemeTercioIII();
                                     } else if (nombre === 'Tercio IV') {
                                         applySchemeTercioIV();
                                     } else if (nombre === '12x2x2 Grupo I') {
@@ -883,7 +1042,7 @@ const Calendario = () => {
                                     ))}
                                 </div>
                                 <div className="preestablecido-name">{nombre}</div>
-                                {(nombre === '4x1 4x2 Grupo B' || nombre === '4x1 4x2 Grupo A' || nombre === '4x1 4x2 Grupo C' || nombre === 'Tercio I' || nombre === 'Tercio IV' || nombre === '12x2x2 Grupo I' || nombre === '12x2x2 Grupo II') && (
+                                {(nombre === '4x1 4x2 Grupo B' || nombre === '4x1 4x2 Grupo A' || nombre === '4x1 4x2 Grupo C' || nombre === 'Tercio I' || nombre === 'Tercio II' || nombre === 'Tercio III' || nombre === 'Tercio IV' || nombre === '12x2x2 Grupo I' || nombre === '12x2x2 Grupo II') && (
                                     <div className="auto-apply-badge">Auto-aplica año completo</div>
                                 )}
                             </div>
