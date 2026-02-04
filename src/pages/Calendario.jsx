@@ -19,6 +19,29 @@ const Calendario = () => {
     const [savedFormats, setSavedFormats] = useState([]);
     const [activeScheme, setActiveScheme] = useState(() => localStorage.getItem('calendarScheme') || '');
 
+    // Feriados Argentina 2026
+    const feriados2026 = {
+        '0-1': 'Año Nuevo',
+        '1-16': 'Carnaval',
+        '1-17': 'Carnaval',
+        '2-23': 'Feriado con fines turísticos',
+        '2-24': 'Día de la Memoria',
+        '3-2': 'Día de Malvinas',
+        '3-3': 'Viernes Santo',
+        '4-1': 'Día del Trabajador',
+        '4-25': 'Revolución de Mayo',
+        '5-17': 'Paso a la Inmortalidad de Güemes',
+        '5-20': 'Paso a la Inmortalidad de Belgrano',
+        '6-9': 'Día de la Independencia',
+        '6-10': 'Feriado con fines turísticos',
+        '7-17': 'Paso a la Inmortalidad de San Martín',
+        '9-12': 'Día del Respeto a la Diversidad Cultural',
+        '10-20': 'Día de la Soberanía Nacional',
+        '11-7': 'Feriado con fines turísticos',
+        '11-8': 'Inmaculada Concepción',
+        '11-25': 'Navidad'
+    };
+
     // Esquemas preestablecidos
     const preestablecidos = {
         'Tercio I': [
@@ -78,6 +101,8 @@ const Calendario = () => {
             setSavedFormats(JSON.parse(formats));
         }
     }, []);
+
+    console.log('Calendario component rendering. Current month:', currentMonth, 'Current year:', currentYear);
 
     // Guardar datos
     const saveData = (newData) => {
@@ -820,6 +845,7 @@ const Calendario = () => {
 
             // Verificar si es el día actual
             const isToday = d === todayDay && currentMonth === todayMonth && currentYear === todayYear;
+            const holidayName = feriados2026[`${currentMonth}-${d}`]; // Assuming feriados2026 is defined elsewhere
 
             days.push(
                 <div
@@ -827,7 +853,7 @@ const Calendario = () => {
                     className="day-cell"
                     onClick={() => handleDayClick(d, currentMonth, currentYear)}
                 >
-                    <span className={`day-number ${isToday ? 'today' : ''}`}>{d}</span>
+                    <span className={`day-number ${holidayName ? 'today' : ''}`} title={holidayName || ''}>{d}</span>
                     <div className="day-slots">
                         {dayData.map((slot, idx) => (
                             <div
@@ -864,7 +890,7 @@ const Calendario = () => {
 
     return (
         <div className="calendario-page">
-            <Header />
+            {/* <Header /> */}
             <div className="calendario-container">
 
                 <div className="calendar-header">
