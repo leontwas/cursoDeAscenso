@@ -30,13 +30,13 @@ const Calendario = () => {
         '3-3': 'Viernes Santo',
         '4-1': 'Día del Trabajador',
         '4-25': 'Revolución de Mayo',
-        '5-17': 'Paso a la Inmortalidad de Güemes',
+        '5-15': 'Paso a la Inmortalidad de Güemes (Trasladado)',
         '5-20': 'Paso a la Inmortalidad de Belgrano',
         '6-9': 'Día de la Independencia',
         '6-10': 'Feriado con fines turísticos',
         '7-17': 'Paso a la Inmortalidad de San Martín',
         '9-12': 'Día del Respeto a la Diversidad Cultural',
-        '10-20': 'Día de la Soberanía Nacional',
+        '10-23': 'Día de la Soberanía Nacional (Trasladado)',
         '11-7': 'Feriado con fines turísticos',
         '11-8': 'Inmaculada Concepción',
         '11-25': 'Navidad'
@@ -298,7 +298,9 @@ const Calendario = () => {
             'guardia'       // día 11
         ];
 
-        let sequenceIndex = 0;
+        // Enero 1 de 2026 empieza en el segundo día de franco del bloque 4-2
+        // En la secuencia [F(0), 4G(1-4), 2F(5,6), 4G(7-10)], el segundo franco es índice 6
+        let sequenceIndex = 6;
 
         // Recorrer todos los días del año
         for (let month = 0; month < 12; month++) {
